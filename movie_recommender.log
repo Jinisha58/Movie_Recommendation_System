@@ -15555,3 +15555,301 @@ INFO 2025-07-22 13:42:30,657 movie_data Found official trailer for movie 1311031
 INFO 2025-07-22 13:42:31,198 movie_data No videos in main response for movie 1483549, fetching videos separately
 INFO 2025-07-22 13:42:36,975 views Generated 20 home cast movies for user 7
 INFO 2025-07-22 13:42:36,992 basehttp "GET / HTTP/1.1" 200 22245
+INFO 2025-08-04 12:44:01,958 autoreload Watching for file changes with StatReloader
+INFO 2025-08-04 12:44:03,187 mongodb_client MongoDB connection established successfully
+WARNING 2025-08-04 12:44:07,051 log Not Found: /favicon.ico
+WARNING 2025-08-04 12:44:07,052 basehttp "GET /favicon.ico HTTP/1.1" 404 5582
+INFO 2025-08-04 12:44:09,380 movie_data No videos in main response for movie 1432547, fetching videos separately
+INFO 2025-08-04 12:44:09,782 movie_data No videos in main response for movie 1432547, fetching videos separately
+INFO 2025-08-04 12:44:10,474 movie_data Found official trailer for movie 911430: ge_ABjtYx88
+INFO 2025-08-04 12:44:10,551 movie_data Found official trailer for movie 911430: ge_ABjtYx88
+INFO 2025-08-04 12:44:11,017 movie_data Found official trailer for movie 552524: VWqJifMMgZE
+INFO 2025-08-04 12:44:11,033 movie_data Found official trailer for movie 552524: VWqJifMMgZE
+INFO 2025-08-04 12:44:11,532 movie_data Found teaser for movie 1131759: EyoPb17WYUs
+INFO 2025-08-04 12:44:11,534 movie_data Found teaser for movie 1131759: EyoPb17WYUs
+INFO 2025-08-04 12:44:12,141 movie_data Found official trailer for movie 803796: AzCAwdp1uIQ
+INFO 2025-08-04 12:44:12,148 movie_data Found official trailer for movie 803796: AzCAwdp1uIQ
+INFO 2025-08-04 12:44:12,557 movie_data Found official trailer for movie 1011477: LhRXf-yEQqA
+INFO 2025-08-04 12:44:12,581 movie_data Found official trailer for movie 1011477: LhRXf-yEQqA
+INFO 2025-08-04 12:44:13,096 movie_data Found official trailer for movie 1311031: VCC958XvXpA
+INFO 2025-08-04 12:44:13,103 movie_data Found official trailer for movie 1311031: VCC958XvXpA
+INFO 2025-08-04 12:44:13,627 movie_data Found official trailer for movie 1087192: OWEq2Pf8qpk
+INFO 2025-08-04 12:44:13,630 movie_data Found official trailer for movie 1087192: OWEq2Pf8qpk
+INFO 2025-08-04 12:44:14,120 movie_data No videos in main response for movie 1483549, fetching videos separately
+INFO 2025-08-04 12:44:14,122 movie_data No videos in main response for movie 1483549, fetching videos separately
+INFO 2025-08-04 12:44:19,509 views Generated 20 home cast movies for user 7
+INFO 2025-08-04 12:44:19,510 views Generated 20 home cast movies for user 7
+INFO 2025-08-04 12:44:19,664 basehttp - Broken pipe from ('127.0.0.1', 50112)
+INFO 2025-08-04 12:44:19,665 basehttp "GET / HTTP/1.1" 200 22635
+INFO 2025-08-04 12:44:19,711 basehttp "GET /static/css/base.css HTTP/1.1" 304 0
+INFO 2025-08-04 12:44:19,713 basehttp "GET /static/css/home.css HTTP/1.1" 304 0
+INFO 2025-08-04 12:44:43,516 basehttp "GET /profile/ HTTP/1.1" 200 9973
+INFO 2025-08-04 12:44:48,641 views Generated 20 recommendations for user 7
+INFO 2025-08-04 12:44:48,701 basehttp "GET /recommendations/ HTTP/1.1" 200 21444
+INFO 2025-08-04 12:44:54,696 basehttp "GET /profile/ HTTP/1.1" 200 9973
+INFO 2025-08-04 12:44:57,705 basehttp "POST /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-04 12:44:58,234 basehttp "GET / HTTP/1.1" 200 21442
+INFO 2025-08-04 12:45:00,465 basehttp "GET /accounts/login/ HTTP/1.1" 200 4776
+INFO 2025-08-04 12:45:06,282 basehttp "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-04 12:45:06,822 movie_data Found official trailer for movie 447404: S_uE8kX0CkY
+INFO 2025-08-04 12:45:07,432 movie_data Found official trailer for movie 993784: NIm_DkLGAk4
+INFO 2025-08-04 12:45:08,050 movie_data Found official trailer for movie 1071585: 1FeiTZMtwLA
+INFO 2025-08-04 12:45:08,058 basehttp "GET /profile/ HTTP/1.1" 200 9136
+INFO 2025-08-04 12:45:12,397 views Generated 20 recommendations for user 6
+INFO 2025-08-04 12:45:12,412 basehttp "GET /recommendations/ HTTP/1.1" 200 21197
+INFO 2025-08-04 12:45:25,650 basehttp "GET /profile/ HTTP/1.1" 200 9136
+INFO 2025-08-04 12:45:30,112 models Cache miss for user 6 watchlist
+INFO 2025-08-04 12:45:30,116 models Retrieved 2 items from MongoDB for user 6
+INFO 2025-08-04 12:45:30,117 views Retrieved 2 watchlist entries for user 6
+INFO 2025-08-04 12:45:30,118 views User 6 has 2 movies in watchlist
+INFO 2025-08-04 12:45:30,246 basehttp "GET /watchlist/ HTTP/1.1" 200 27266
+INFO 2025-08-04 12:45:30,498 basehttp "GET /static/css/watchlist.css HTTP/1.1" 200 3098
+INFO 2025-08-04 12:45:33,485 views Generated 20 home cast movies for user 6
+INFO 2025-08-04 12:45:33,519 basehttp "GET / HTTP/1.1" 200 22389
+INFO 2025-08-04 12:49:09,045 views Logged search query with filters for user 6
+INFO 2025-08-04 12:49:09,502 views Search with filters returned 10 results
+INFO 2025-08-04 12:49:09,591 basehttp "GET /search/?q=inception HTTP/1.1" 200 33227
+INFO 2025-08-04 12:49:18,016 movie_data Found official trailer for movie 27205: JE9z-gy4De4
+INFO 2025-08-04 12:49:18,804 basehttp "GET /movie/27205/ HTTP/1.1" 200 28889
+INFO 2025-08-04 12:49:18,881 basehttp "GET /static/css/movie_details.css HTTP/1.1" 200 14621
+INFO 2025-08-04 12:49:50,809 views Logged search query with filters for user 6
+INFO 2025-08-04 12:49:51,298 views Search with filters returned 20 results
+INFO 2025-08-04 12:49:51,322 basehttp "GET /search/?q=the+matrix HTTP/1.1" 200 42001
+INFO 2025-08-04 12:50:22,121 views Logged search query with filters for user 6
+INFO 2025-08-04 12:50:23,105 views Search with filters returned 20 results
+INFO 2025-08-04 12:50:23,132 basehttp "GET /search/?q=toy+story&year=&genre=&language= HTTP/1.1" 200 42073
+INFO 2025-08-04 12:55:39,154 autoreload C:\Movie_Recommendation_System-main\movies\recommendation.py changed, reloading.
+INFO 2025-08-04 12:55:41,121 autoreload Watching for file changes with StatReloader
+INFO 2025-08-04 12:55:42,218 mongodb_client MongoDB connection established successfully
+INFO 2025-08-04 12:55:49,208 autoreload C:\Movie_Recommendation_System-main\movies\movie_data.py changed, reloading.
+INFO 2025-08-04 12:55:50,386 autoreload Watching for file changes with StatReloader
+INFO 2025-08-04 12:55:51,067 mongodb_client MongoDB connection established successfully
+INFO 2025-08-04 12:55:53,800 views Logged search query with filters for user 6
+INFO 2025-08-04 12:55:54,601 views Search with filters returned 20 results
+INFO 2025-08-04 12:55:54,747 basehttp "GET /search/?q=toy+story&year=&genre=&language= HTTP/1.1" 200 42073
+INFO 2025-08-04 13:08:30,332 autoreload C:\Movie_Recommendation_System-main\movies\recommendation.py changed, reloading.
+INFO 2025-08-04 13:08:31,755 autoreload Watching for file changes with StatReloader
+INFO 2025-08-04 13:08:32,469 mongodb_client MongoDB connection established successfully
+INFO 2025-08-04 13:08:58,657 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-04 13:08:59,860 autoreload Watching for file changes with StatReloader
+INFO 2025-08-04 13:09:00,507 mongodb_client MongoDB connection established successfully
+INFO 2025-08-04 13:11:03,189 views Logged search query with filters for user 6
+INFO 2025-08-04 13:11:04,012 views Search with filters returned 20 results
+INFO 2025-08-04 13:11:04,053 basehttp "GET /search/?q=toy+story&year=&genre=&language= HTTP/1.1" 200 42073
+INFO 2025-08-04 13:11:13,676 movie_data Found official trailer for movie 1071585: 1FeiTZMtwLA
+INFO 2025-08-04 13:11:14,470 movie_data Found official trailer for movie 27205: JE9z-gy4De4
+INFO 2025-08-04 13:11:14,859 movie_data Found official trailer for movie 447404: S_uE8kX0CkY
+INFO 2025-08-04 13:11:15,385 movie_data Found official trailer for movie 1011477: LhRXf-yEQqA
+INFO 2025-08-04 13:11:15,893 movie_data Found official trailer for movie 993784: NIm_DkLGAk4
+INFO 2025-08-04 13:11:18,664 views Generated 20 home cast movies for user 6
+INFO 2025-08-04 13:11:18,738 basehttp "GET / HTTP/1.1" 200 22313
+INFO 2025-08-04 13:12:23,168 views Logged search query with filters for user 6
+INFO 2025-08-04 13:12:23,575 views Search with filters returned 10 results
+INFO 2025-08-04 13:12:23,584 basehttp "GET /search/?q=inception HTTP/1.1" 200 33227
+INFO 2025-08-04 13:16:33,377 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-04 13:16:34,669 autoreload Watching for file changes with StatReloader
+INFO 2025-08-04 13:16:35,265 mongodb_client MongoDB connection established successfully
+INFO 2025-08-04 13:17:10,075 views Logged search query with filters for user 6
+INFO 2025-08-04 13:17:11,118 views Search with filters returned 10 results
+INFO 2025-08-04 13:17:11,174 basehttp "GET /search/?q=inception HTTP/1.1" 200 33227
+INFO 2025-08-04 13:20:52,281 autoreload C:\Movie_Recommendation_System-main\movies\movie_data.py changed, reloading.
+INFO 2025-08-04 13:20:53,710 autoreload Watching for file changes with StatReloader
+INFO 2025-08-04 13:20:54,463 mongodb_client MongoDB connection established successfully
+INFO 2025-08-04 13:21:17,822 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-04 13:21:18,976 autoreload Watching for file changes with StatReloader
+INFO 2025-08-04 13:23:01,999 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-04 13:23:03,210 autoreload Watching for file changes with StatReloader
+INFO 2025-08-04 13:24:25,243 autoreload Watching for file changes with StatReloader
+INFO 2025-08-05 15:25:48,865 autoreload Watching for file changes with StatReloader
+INFO 2025-08-05 15:25:50,090 mongodb_client MongoDB connection established successfully
+INFO 2025-08-05 15:25:55,946 views Logged search query with filters for user 6
+INFO 2025-08-05 15:25:57,040 views Search with filters returned 10 results
+INFO 2025-08-05 15:25:57,193 basehttp "GET /search/?q=inception HTTP/1.1" 200 33227
+WARNING 2025-08-05 15:25:57,442 log Not Found: /favicon.ico
+WARNING 2025-08-05 15:25:57,443 basehttp "GET /favicon.ico HTTP/1.1" 404 5582
+INFO 2025-08-05 15:25:58,853 views Logged search query with filters for user 6
+INFO 2025-08-05 15:25:58,854 views Search with filters returned 10 results
+INFO 2025-08-05 15:25:58,861 basehttp "GET /search/?q=inception HTTP/1.1" 200 33227
+INFO 2025-08-05 15:26:02,390 movie_data Found official trailer for movie 1071585: 1FeiTZMtwLA
+INFO 2025-08-05 15:26:03,266 movie_data Found official trailer for movie 27205: JE9z-gy4De4
+INFO 2025-08-05 15:26:03,867 movie_data Found official trailer for movie 447404: S_uE8kX0CkY
+INFO 2025-08-05 15:26:04,387 movie_data Found official trailer for movie 1011477: LhRXf-yEQqA
+INFO 2025-08-05 15:26:05,101 movie_data Found official trailer for movie 993784: NIm_DkLGAk4
+INFO 2025-08-05 15:26:09,199 views Generated 20 home cast movies for user 6
+INFO 2025-08-05 15:26:09,248 basehttp "GET / HTTP/1.1" 200 22313
+INFO 2025-08-05 15:26:31,782 views Logged search query with filters for user 6
+INFO 2025-08-05 15:26:32,231 views Search with filters returned 20 results
+INFO 2025-08-05 15:26:32,258 basehttp "GET /search/?q=the+matrix HTTP/1.1" 200 42001
+INFO 2025-08-05 15:26:37,372 movie_data No videos in main response for movie 1386216, fetching videos separately
+INFO 2025-08-05 15:26:37,870 basehttp "GET /movie/1386216/ HTTP/1.1" 200 6369
+INFO 2025-08-05 15:26:38,092 basehttp "GET /static/css/movie_details.css HTTP/1.1" 200 14621
+INFO 2025-08-05 15:26:51,183 movie_data No videos in main response for movie 221495, fetching videos separately
+INFO 2025-08-05 15:26:52,637 basehttp "GET /movie/221495/ HTTP/1.1" 200 28247
+INFO 2025-08-05 15:27:02,755 movie_data No videos in main response for movie 810336, fetching videos separately
+INFO 2025-08-05 15:27:03,774 basehttp "GET /movie/810336/ HTTP/1.1" 200 24363
+INFO 2025-08-05 15:30:03,784 autoreload C:\Movie_Recommendation_System-main\movies\movie_data.py changed, reloading.
+INFO 2025-08-05 15:30:05,997 autoreload Watching for file changes with StatReloader
+INFO 2025-08-05 15:30:43,687 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-05 15:30:45,034 autoreload Watching for file changes with StatReloader
+INFO 2025-08-05 15:30:45,839 mongodb_client MongoDB connection established successfully
+INFO 2025-08-05 15:30:51,454 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-05 15:30:52,923 autoreload Watching for file changes with StatReloader
+INFO 2025-08-05 15:30:53,497 mongodb_client MongoDB connection established successfully
+INFO 2025-08-05 15:39:41,645 autoreload C:\Movie_Recommendation_System-main\movies\recommendation.py changed, reloading.
+INFO 2025-08-05 15:39:42,939 autoreload Watching for file changes with StatReloader
+INFO 2025-08-05 15:39:43,787 mongodb_client MongoDB connection established successfully
+INFO 2025-08-05 15:42:23,792 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-05 15:42:25,032 autoreload Watching for file changes with StatReloader
+INFO 2025-08-05 15:43:10,983 autoreload C:\Movie_Recommendation_System-main\movies\movie_data.py changed, reloading.
+INFO 2025-08-05 15:43:11,932 autoreload Watching for file changes with StatReloader
+INFO 2025-08-05 15:44:23,336 autoreload C:\Movie_Recommendation_System-main\movies\movie_data.py changed, reloading.
+INFO 2025-08-05 15:44:24,321 autoreload Watching for file changes with StatReloader
+INFO 2025-08-05 15:45:51,874 movie_data No videos in main response for movie 810336, fetching videos separately
+INFO 2025-08-05 15:45:51,875 movie_data No videos in main response for movie 810336, fetching videos separately
+INFO 2025-08-05 15:45:52,057 movie_data No videos in main response for movie 810336, fetching videos separately
+INFO 2025-08-05 15:45:53,310 mongodb_client MongoDB connection established successfully
+INFO 2025-08-05 15:45:53,492 basehttp "GET /movie/810336/ HTTP/1.1" 200 24316
+INFO 2025-08-05 15:45:53,492 basehttp - Broken pipe from ('127.0.0.1', 52570)
+INFO 2025-08-05 15:45:53,493 basehttp - Broken pipe from ('127.0.0.1', 52568)
+INFO 2025-08-05 15:45:56,694 movie_data Found official trailer for movie 1071585: 1FeiTZMtwLA
+INFO 2025-08-05 15:45:57,255 movie_data Found official trailer for movie 27205: JE9z-gy4De4
+INFO 2025-08-05 15:45:57,851 movie_data No videos in main response for movie 1386216, fetching videos separately
+INFO 2025-08-05 15:45:58,797 movie_data Found official trailer for movie 447404: S_uE8kX0CkY
+INFO 2025-08-05 15:45:59,286 movie_data Found official trailer for movie 1011477: LhRXf-yEQqA
+INFO 2025-08-05 15:45:59,708 movie_data No videos in main response for movie 221495, fetching videos separately
+INFO 2025-08-05 15:46:00,723 movie_data Found official trailer for movie 993784: NIm_DkLGAk4
+INFO 2025-08-05 15:46:04,101 views Generated 20 home cast movies for user 6
+INFO 2025-08-05 15:46:04,128 basehttp "GET / HTTP/1.1" 200 22174
+INFO 2025-08-05 15:46:11,677 movie_data No videos in main response for movie 1360427, fetching videos separately
+INFO 2025-08-05 15:46:12,327 basehttp "GET /movie/1360427/ HTTP/1.1" 200 23671
+INFO 2025-08-05 15:46:29,952 basehttp "GET /profile/ HTTP/1.1" 200 9947
+INFO 2025-08-05 15:46:36,246 models Cache miss for user 6 watchlist
+INFO 2025-08-05 15:46:36,249 models Retrieved 2 items from MongoDB for user 6
+INFO 2025-08-05 15:46:36,250 views Retrieved 2 watchlist entries for user 6
+INFO 2025-08-05 15:46:36,251 views User 6 has 2 movies in watchlist
+INFO 2025-08-05 15:46:45,388 models Cache hit for user 6 watchlist
+INFO 2025-08-05 15:46:45,390 views Retrieved 2 watchlist entries for user 6
+INFO 2025-08-05 15:46:45,391 views User 6 has 2 movies in watchlist
+INFO 2025-08-05 15:47:04,127 basehttp "GET /watchlist/ HTTP/1.1" 200 14383
+INFO 2025-08-05 15:47:04,443 basehttp "GET /static/css/watchlist.css HTTP/1.1" 200 3098
+INFO 2025-08-05 15:47:04,528 basehttp - Broken pipe from ('127.0.0.1', 52572)
+INFO 2025-08-05 15:47:15,651 models Invalidated cache for user 6
+INFO 2025-08-05 15:47:15,651 models Removed movie 993784 from watchlist for user 6
+INFO 2025-08-05 15:47:15,653 basehttp "POST /remove-from-watchlist/993784/ HTTP/1.1" 200 60
+INFO 2025-08-05 15:47:19,535 views Generated 20 recommendations for user 6
+INFO 2025-08-05 15:47:19,555 basehttp "GET /recommendations/ HTTP/1.1" 200 20991
+INFO 2025-08-05 15:47:28,529 views Retrieved 20 home cast movies from cache for user 6
+INFO 2025-08-05 15:47:28,547 basehttp "GET / HTTP/1.1" 200 22174
+INFO 2025-08-05 15:47:32,948 models Cache miss for user 6 watchlist
+INFO 2025-08-05 15:47:32,951 models Retrieved 1 items from MongoDB for user 6
+INFO 2025-08-05 15:47:32,951 views Retrieved 1 watchlist entries for user 6
+INFO 2025-08-05 15:47:32,952 views User 6 has 1 movies in watchlist
+INFO 2025-08-05 15:47:32,974 basehttp "GET /watchlist/ HTTP/1.1" 200 26159
+INFO 2025-08-05 15:47:35,531 basehttp "GET /profile/ HTTP/1.1" 200 9941
+INFO 2025-08-05 15:47:45,843 views Retrieved 20 home cast movies from cache for user 6
+INFO 2025-08-05 15:47:45,858 basehttp "GET / HTTP/1.1" 200 22174
+INFO 2025-08-05 15:47:49,208 views Retrieved 20 recommendations from cache for user 6
+INFO 2025-08-05 15:47:49,226 basehttp "GET /recommendations/ HTTP/1.1" 200 20991
+INFO 2025-08-08 14:20:24,726 autoreload Watching for file changes with StatReloader
+WARNING 2025-08-08 14:20:30,674 log Not Found: /favicon.ico
+WARNING 2025-08-08 14:20:30,676 basehttp "GET /favicon.ico HTTP/1.1" 404 5582
+INFO 2025-08-08 14:20:32,888 mongodb_client MongoDB connection established successfully
+INFO 2025-08-08 14:20:34,090 movie_data No videos in main response for movie 810336, fetching videos separately
+INFO 2025-08-08 14:20:35,210 movie_data Found official trailer for movie 1071585: 1FeiTZMtwLA
+INFO 2025-08-08 14:20:36,106 movie_data Found official trailer for movie 27205: JE9z-gy4De4
+INFO 2025-08-08 14:20:36,835 movie_data No videos in main response for movie 1386216, fetching videos separately
+INFO 2025-08-08 14:20:38,473 movie_data No videos in main response for movie 1360427, fetching videos separately
+INFO 2025-08-08 14:20:38,511 basehttp "GET /search/?q= HTTP/1.1" 200 22717
+INFO 2025-08-08 14:20:38,570 basehttp "GET /static/css/home.css HTTP/1.1" 304 0
+INFO 2025-08-08 14:20:38,570 basehttp "GET /static/css/base.css HTTP/1.1" 304 0
+INFO 2025-08-08 14:20:41,737 views Logged search query with filters for user 6
+INFO 2025-08-08 14:21:00,386 views Logged search query with filters for user 6
+INFO 2025-08-08 14:21:03,226 views Logged search query with filters for user 6
+INFO 2025-08-08 14:21:04,556 views Logged search query with filters for user 6
+INFO 2025-08-08 14:21:05,358 views Logged search query with filters for user 6
+INFO 2025-08-08 14:21:05,555 views Logged search query with filters for user 6
+INFO 2025-08-08 14:21:09,261 views Search with filters returned 2 results
+INFO 2025-08-08 14:21:09,262 views Search with filters returned 2 results
+INFO 2025-08-08 14:21:09,337 basehttp "GET /search/?q=jackie+chan&year=&genre=Action&language= HTTP/1.1" 200 24559
+INFO 2025-08-08 14:21:09,338 basehttp - Broken pipe from ('127.0.0.1', 50509)
+INFO 2025-08-08 14:21:09,595 views Search with filters returned 2 results
+INFO 2025-08-08 14:21:09,598 views Search with filters returned 2 results
+INFO 2025-08-08 14:21:09,637 basehttp - Broken pipe from ('127.0.0.1', 50507)
+INFO 2025-08-08 14:21:09,637 basehttp - Broken pipe from ('127.0.0.1', 50511)
+INFO 2025-08-08 14:21:10,118 views Search with filters returned 0 results
+INFO 2025-08-08 14:21:10,138 basehttp - Broken pipe from ('127.0.0.1', 50491)
+INFO 2025-08-08 14:21:10,260 movie_data Found official trailer for movie 447404: S_uE8kX0CkY
+INFO 2025-08-08 14:21:10,727 movie_data Found official trailer for movie 1011477: LhRXf-yEQqA
+INFO 2025-08-08 14:21:11,360 movie_data No videos in main response for movie 221495, fetching videos separately
+INFO 2025-08-08 14:21:11,374 views Search with filters returned 2 results
+INFO 2025-08-08 14:21:11,394 basehttp - Broken pipe from ('127.0.0.1', 50504)
+INFO 2025-08-08 14:21:12,263 movie_data Found official trailer for movie 993784: NIm_DkLGAk4
+INFO 2025-08-08 14:21:16,283 views Generated 20 recommendations for user 6
+INFO 2025-08-08 14:21:16,294 basehttp - Broken pipe from ('127.0.0.1', 50479)
+INFO 2025-08-08 14:21:23,834 views Logged search query with filters for user 6
+INFO 2025-08-08 14:21:23,836 views Search with filters returned 2 results
+INFO 2025-08-08 14:21:23,863 basehttp "GET /search/?q=jackie+chan&year=&genre=Action&language= HTTP/1.1" 200 24559
+INFO 2025-08-08 14:21:33,193 views Logged search query with filters for user 6
+INFO 2025-08-08 14:21:33,774 views Search with filters returned 1 results
+INFO 2025-08-08 14:21:33,792 basehttp "GET /search/?q=will+smith&year=&genre=Action&language= HTTP/1.1" 200 23627
+INFO 2025-08-08 14:21:37,758 movie_data Found trailer for movie 1138325: EOzsfLeLY0Y
+INFO 2025-08-08 14:21:37,847 basehttp "GET /movie/1138325/ HTTP/1.1" 200 6989
+INFO 2025-08-08 14:21:38,057 basehttp "GET /static/css/movie_details.css HTTP/1.1" 200 14621
+INFO 2025-08-08 14:21:48,390 basehttp "GET /search/?q= HTTP/1.1" 200 22717
+INFO 2025-08-08 14:21:57,151 views Logged search query with filters for user 6
+INFO 2025-08-08 14:21:57,154 views Search with filters returned 0 results
+INFO 2025-08-08 14:21:57,215 basehttp "GET /search/?q=&year=&genre=Action&language= HTTP/1.1" 200 22758
+INFO 2025-08-08 14:22:00,603 views Logged search query with filters for user 6
+INFO 2025-08-08 14:22:00,605 views Search with filters returned 0 results
+INFO 2025-08-08 14:22:00,621 basehttp "GET /search/?q=&year=&genre=Animation&language= HTTP/1.1" 200 22758
+INFO 2025-08-08 14:23:03,347 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-08 14:23:04,509 autoreload Watching for file changes with StatReloader
+INFO 2025-08-08 14:23:13,185 basehttp "GET /search/?q=&year=&genre=Animation&language= HTTP/1.1" 200 36591
+INFO 2025-08-08 14:23:17,944 basehttp "GET /search/?q=&year=&genre=Adventure&language= HTTP/1.1" 200 36630
+INFO 2025-08-08 14:23:30,018 basehttp "GET /search/?q=&year=&genre=Documentary&language= HTTP/1.1" 200 36915
+INFO 2025-08-08 14:24:15,387 basehttp "GET /search/?q=&year=2022&genre=Documentary&language=ko HTTP/1.1" 200 37270
+INFO 2025-08-08 14:24:15,753 basehttp - Broken pipe from ('127.0.0.1', 50680)
+INFO 2025-08-08 14:24:16,170 basehttp - Broken pipe from ('127.0.0.1', 50682)
+INFO 2025-08-08 14:25:47,903 basehttp "GET /search/?q=jackie+chan&year=2022&genre=Documentary&language=ko HTTP/1.1" 200 17946
+INFO 2025-08-08 14:30:30,107 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-08 14:30:31,380 autoreload Watching for file changes with StatReloader
+INFO 2025-08-08 14:31:30,037 basehttp - Broken pipe from ('127.0.0.1', 50764)
+INFO 2025-08-08 14:31:30,986 basehttp "GET /search/?q=jackie+chan&year=2022&genre=Crime&language=ko HTTP/1.1" 200 17874
+INFO 2025-08-08 14:31:32,107 basehttp - Broken pipe from ('127.0.0.1', 50767)
+INFO 2025-08-08 14:31:35,762 basehttp - Broken pipe from ('127.0.0.1', 50769)
+INFO 2025-08-08 14:31:36,400 basehttp "GET /search/?q=jackie+chan&year=2022&genre=Comedy&language=ko HTTP/1.1" 200 17874
+INFO 2025-08-08 14:31:37,903 basehttp "GET /search/?q=jackie+chan&year=2022&genre=Action&language=ko HTTP/1.1" 200 17874
+INFO 2025-08-08 14:31:40,715 basehttp "GET /search/?q=jackie+chan&year=2022&genre=Adventure&language=ko HTTP/1.1" 200 17874
+INFO 2025-08-08 14:31:43,778 basehttp "GET /search/?q=jackie+chan&year=2022&genre=Comedy&language=ko HTTP/1.1" 200 17874
+INFO 2025-08-08 14:32:34,485 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-08 14:32:35,145 autoreload Watching for file changes with StatReloader
+INFO 2025-08-08 14:33:22,888 basehttp "GET /search/?q=jackie+chan&year=2022&genre=Comedy&language=ko HTTP/1.1" 200 17946
+INFO 2025-08-08 14:33:26,280 basehttp "GET /search/?q=jackie+chan&year=2022&genre=Animation&language=ko HTTP/1.1" 200 17946
+INFO 2025-08-08 14:33:49,303 basehttp "GET /search/?q=&year=2022&genre=Animation&language= HTTP/1.1" 200 36841
+INFO 2025-08-08 14:33:52,566 basehttp "GET /search/?q=&year=&genre=Animation&language= HTTP/1.1" 200 36591
+INFO 2025-08-08 14:37:28,429 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-08 14:37:29,254 autoreload Watching for file changes with StatReloader
+INFO 2025-08-08 14:37:44,303 mongodb_client MongoDB connection established successfully
+INFO 2025-08-08 14:37:44,307 views Logged search query with filters for user 6
+INFO 2025-08-08 14:37:45,628 views Search with filters returned 10 results
+INFO 2025-08-08 14:37:45,698 basehttp "GET /search/?q=inception HTTP/1.1" 200 33227
+INFO 2025-08-08 14:37:56,126 views Logged search query with filters for user 6
+INFO 2025-08-08 14:37:56,127 views Search with filters returned 10 results
+INFO 2025-08-08 14:37:56,152 basehttp "GET /search/?q=inception HTTP/1.1" 200 33227
+INFO 2025-08-08 14:37:57,742 views Logged search query with filters for user 6
+INFO 2025-08-08 14:37:57,743 views Search with filters returned 10 results
+INFO 2025-08-08 14:37:57,763 basehttp "GET /search/?q=inception HTTP/1.1" 200 33227
+INFO 2025-08-08 14:38:14,161 views Logged search query with filters for user 6
+INFO 2025-08-08 14:38:14,521 views Search with filters returned 20 results
+INFO 2025-08-08 14:38:14,551 basehttp "GET /search/?q=jackie+chan&year=&genre=&language= HTTP/1.1" 200 43036
+INFO 2025-08-08 14:38:21,804 views Logged search query with filters for user 6
+INFO 2025-08-08 14:38:21,806 views Search with filters returned 1 results
+INFO 2025-08-08 14:38:21,821 basehttp "GET /search/?q=jackie+chan&year=&genre=Animation&language= HTTP/1.1" 200 23648
+INFO 2025-08-08 14:38:36,146 views Logged search query with filters for user 6
+INFO 2025-08-08 14:38:36,541 views Search with filters returned 0 results
+INFO 2025-08-08 14:38:36,558 basehttp "GET /search/?q=&year=&genre=Comedy&language= HTTP/1.1" 200 22758
+INFO 2025-08-08 14:38:42,457 views Logged search query with filters for user 6
+INFO 2025-08-08 14:38:42,459 views Search with filters returned 0 results
+INFO 2025-08-08 14:38:42,475 basehttp "GET /search/?q=&year=&genre=Adventure&language= HTTP/1.1" 200 22758
+INFO 2025-08-08 14:42:58,879 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-08 14:43:00,123 autoreload Watching for file changes with StatReloader

@@ -534,24 +534,45 @@ def actor_movies(request, actor_id):
 #         messages.error(request, "An error occurred while loading trending movies. Please try again later.")
 #         return render(request, 'trending.html', {'movies': []})
 
+import requests
+from django.shortcuts import render
+from datetime import datetime
+import logging
+
+logger = logging.getLogger(__name__)
+
+TMDB_API_KEY = 'de28b601b6760e503d49d0aa40f53e89'
+
+GENRE_MAP = {
+    'Action': 28,
+    'Adventure': 12,
+    'Animation': 16,
+    'Comedy': 35,
+    'Crime': 80,
+    'Documentary': 99,
+    'Drama': 18,
+    'Family': 10751,
+    'Fantasy': 14,
+    'Horror': 27,
+    'Romance': 10749,
+    'Science Fiction': 878,
+    'Thriller': 53
+}
+
 def search(request):
-    """Search for movies by title, actor, or director with filters"""
     query = request.GET.get('q', '')
     year = request.GET.get('year', '')
     genre = request.GET.get('genre', '')
     language = request.GET.get('language', '')
-    
-    # Generate year range for dropdown (current year down to 1900)
-    import datetime
-    current_year = datetime.datetime.now().year
-    year_range = range(current_year, 1900, -1)
-    
+
+    # Generate year range for dropdown
+    current_year = datetime.now().year
+    year_range = list(range(current_year, 1950, -1))
+
     # Log search query if user is authenticated
     if request.user.is_authenticated and (query or year or genre or language):
         try:
             from .mongodb_client import search_history_collection
-            from datetime import datetime
-            
             search_history_collection.insert_one({
                 'user_id': request.user.id,
                 'query': query,
@@ -565,85 +586,56 @@ def search(request):
             logger.info(f"Logged search query with filters for user {request.user.id}")
         except Exception as e:
             logger.error(f"Error logging search query: {e}")
-            # Continue with search even if logging fails
-    
-    results = []
-    
-    # Search for movies based on provided parameters
-    if query or year or genre or language:
-        try:
-            from .movie_data import search_movies, get_popular_movies
-            import re
-            
-            # Case 1: Title search (with or without other filters)
-            if query:
-                results = search_movies(query)
-                
-                # Apply additional filters if provided
-                if year:
-                    # Filter by year
-                    year_pattern = re.compile(f'^{year}')
-                    results = [movie for movie in results if movie.get('release_date') and year_pattern.match(movie.get('release_date', ''))]
-                
-                if genre:
-                    # Filter by genre
-                    results = [movie for movie in results if genre.lower() in [g.lower() for g in movie.get('genres', [])]]
-                
-                if language:
-                    # Filter by language
-                    results = [movie for movie in results if movie.get('original_language') == language]
-            
-            # Case 2: No title, but other filters
-            else:
-                # Start with popular movies as base
-                results = get_popular_movies(limit=100)  # Get more to filter from
-                
-                # Apply filters
-                if year:
-                    # Filter by year
-                    year_pattern = re.compile(f'^{year}')
-                    results = [movie for movie in results if movie.get('release_date') and year_pattern.match(movie.get('release_date', ''))]
-                
-                if genre:
-                    # Filter by genre
-                    results = [movie for movie in results if genre.lower() in [g.lower() for g in movie.get('genres', [])]]
-                
-                if language:
-                    # Filter by language
-                    results = [movie for movie in results if movie.get('original_language') == language]
-                
-                # If only year is provided, prioritize Tamil and English movies
-                if year and not genre and not language:
-                    # First get Tamil and English movies for that year
-                    tamil_english = [movie for movie in results if movie.get('original_language') in ['ta', 'en']]
-                    other_langs = [movie for movie in results if movie.get('original_language') not in ['ta', 'en']]
-                    
-                    # Sort by popularity
-                    tamil_english.sort(key=lambda x: x.get('vote_average', 0), reverse=True)
-                    other_langs.sort(key=lambda x: x.get('vote_average', 0), reverse=True)
-                    
-                    # Combine with Tamil/English first
-                    results = tamil_english + other_langs
-                
-                # If only genre is provided, sort by release date (newest first)
-                if genre and not year and not language:
-                    results.sort(key=lambda x: x.get('release_date', ''), reverse=True)
-            
-            logger.info(f"Search with filters returned {len(results)} results")
-            
-        except Exception as e:
-            logger.error(f"Error searching for movies with filters: {e}")
-            results = []
-            messages.error(request, "An error occurred while searching. Please try again later.")
-    
+
+    base_url = 'https://api.themoviedb.org/3/discover/movie'
+    params = {
+        'api_key': TMDB_API_KEY,
+        'language': 'en-US',
+        'include_adult': False,
+        'page': 1
+    }
+
+    if genre in GENRE_MAP:
+        params['with_genres'] = GENRE_MAP[genre]
+    if year:
+        params['primary_release_year'] = year
+    if language:
+        params['with_original_language'] = language
+
+    # Use search endpoint if query is present
+    if query:
+        base_url = 'https://api.themoviedb.org/3/search/movie'
+        params['query'] = query
+
+    try:
+        response = requests.get(base_url, params=params)
+        data = response.json()
+        results = []
+
+        for movie in data.get('results', []):
+            results.append({
+                'id': movie.get('id'),
+                'title': movie.get('title'),
+                'release_date': movie.get('release_date'),
+                'vote_average': movie.get('vote_average'),
+                'poster_url': f"https://image.tmdb.org/t/p/w500{movie.get('poster_path')}" if movie.get('poster_path') else '',
+            })
+
+        logger.info(f"Search with filters returned {len(results)} results")
+
+    except Exception as e:
+        logger.error(f"Error searching movies via TMDB API: {e}")
+        results = []
+
     return render(request, 'search.html', {
+        'results': results,
         'query': query,
         'year': year,
         'genre': genre,
         'language': language,
-        'results': results,
-        'year_range': year_range
+        'year_range': year_range,
     })
+
 
 @login_required
 def recommendations(request):
@@ -824,43 +816,3 @@ def custom_logout(request):
 
 def landing(request):
     return render(request, 'landing.html')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

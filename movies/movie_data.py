@@ -1,3 +1,4 @@
+
 import requests
 import logging
 import time
@@ -672,34 +673,3 @@ def search_movies_by_person(person_id):
     except Exception as e:
         logger.error(f"Error searching movies for person {person_id}: {e}")
         return []
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

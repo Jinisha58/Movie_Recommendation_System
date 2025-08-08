@@ -195,10 +195,3 @@ def get_recommendations(user_id, limit=50):
     cache.set(cache_key, recommendations, timeout=3600)  # Cache for 1 hour
     
     return recommendations
-
-
-
-
-
-
-
