@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Recommendations - MovieHub{% endblock %}
+{% block title %}Similar Movies - {{ original_movie.title }} - MovieHub{% endblock %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/home.css' %}">
@@ -23,20 +23,42 @@
             gap: 1rem;
         }
     }
+    .original-movie-info {
+        background: linear-gradient(135deg, #285ccc 0%, #285ccc 100%);
+        color: white;
+        padding: 2rem;
+        border-radius: 10px;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    .original-movie-info h1 {
+        margin-bottom: 0.5rem;
+    }
+    .original-movie-info p {
+        margin-bottom: 0;
+        opacity: 0.9;
+    }
+    .similarity-badge {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 0.25rem 0.5rem;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        margin-left: 0.5rem;
+    }
 </style>
 {% endblock %}
 
 {% block content %}
 <div class="container mt-5">
-    <div class="section-header">
-        <h2>Recommended Movies</h2>
-        {% if message %}
-        <p class="text-muted">{{ message }}</p>
-        {% endif %}
+    <!-- Original movie info -->
+    <div class="original-movie-info">
+        <h1>Movies Similar to "{{ original_movie.title }}"</h1>
+        <p>Based on genre similarity using cosine similarity algorithm</p>
     </div>
-    {% if recommendations %}
+    
+    {% if similar_movies %}
         <div class="movie-grid">
-            {% for movie in recommendations %}
+            {% for movie in similar_movies %}
             <div class="movie-card">
                 <a href="{% url 'movie_detail' movie.id %}">
                     {% if movie.poster_url %}
@@ -57,14 +79,10 @@
                     <div class="movie-meta">
                         <span class="release-year">{{ movie.release_date|slice:":4"|default:"N/A" }}</span>
                         <span class="rating"><i class="fas fa-star"></i> {{ movie.vote_average|floatformat:1 }}</span>
+                        {% if movie.similarity_score %}
+                        <span class="similarity-badge">{{ movie.similarity_score }}</span>
+                        {% endif %}
                     </div>
-                    {% if movie.recommended_because %}
-                    <div class="recommendation-reason">
-                        <small class="text-muted">
-                            <i class="fas fa-user"></i> {{ movie.recommended_because.actor_name }}
-                        </small>
-                    </div>
-                    {% endif %}
                 </div>
             </div>
             {% endfor %}
@@ -72,9 +90,16 @@
     {% else %}
         <div class="no-results text-center">
             <i class="fas fa-film fa-3x mb-3"></i>
-            <h3>No recommendations available</h3>
-            <p class="text-muted">Try watching some movies to get personalized recommendations!</p>
+            <h3>No similar movies found</h3>
+            <p class="text-muted">Try searching for other movies or check back later.</p>
         </div>
     {% endif %}
+    
+    <!-- Back to original movie button -->
+    <div class="text-center mt-4">
+        <a href="{% url 'movie_detail' original_movie.id %}" class="btn btn-primary">
+            <i class="fas fa-arrow-left me-2"></i>Back to {{ original_movie.title }}
+        </a>
+    </div>
 </div>
 {% endblock %}

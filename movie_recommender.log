@@ -15853,3 +15853,1723 @@ INFO 2025-08-08 14:38:42,459 views Search with filters returned 0 results
 INFO 2025-08-08 14:38:42,475 basehttp "GET /search/?q=&year=&genre=Adventure&language= HTTP/1.1" 200 22758
 INFO 2025-08-08 14:42:58,879 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
 INFO 2025-08-08 14:43:00,123 autoreload Watching for file changes with StatReloader
+INFO 2025-08-08 14:43:03,939 mongodb_client MongoDB connection established successfully
+INFO 2025-08-08 14:43:03,941 views Logged search query with filters for user 6
+INFO 2025-08-08 14:43:05,357 views Search with filters returned 20 results
+INFO 2025-08-08 14:43:05,390 basehttp "GET /search/?q=&year=&genre=Adventure&language= HTTP/1.1" 200 36630
+INFO 2025-08-08 14:43:07,910 views Logged search query with filters for user 6
+INFO 2025-08-08 14:43:08,621 views Search with filters returned 20 results
+INFO 2025-08-08 14:43:08,645 basehttp "GET /search/?q=&year=&genre=Adventure&language= HTTP/1.1" 200 36630
+INFO 2025-08-08 14:43:12,696 views Logged search query with filters for user 6
+INFO 2025-08-08 14:43:13,485 views Search with filters returned 20 results
+INFO 2025-08-08 14:43:13,550 basehttp "GET /search/?q=jackie+chan&year=&genre=Adventure&language= HTTP/1.1" 200 38194
+INFO 2025-08-08 14:43:26,225 views Search with filters returned 20 results
+INFO 2025-08-08 14:43:26,238 basehttp "GET /search/?q=&year=&genre=&language= HTTP/1.1" 200 17867
+INFO 2025-08-08 14:43:32,188 views Logged search query with filters for user 6
+INFO 2025-08-08 14:43:33,088 views Search with filters returned 20 results
+INFO 2025-08-08 14:43:33,112 basehttp "GET /search/?q=&year=&genre=Thriller&language= HTTP/1.1" 200 36558
+INFO 2025-08-08 14:43:39,249 views Logged search query with filters for user 6
+INFO 2025-08-08 14:43:40,261 views Search with filters returned 20 results
+INFO 2025-08-08 14:43:40,285 basehttp "GET /search/?q=&year=&genre=Science+Fiction&language= HTTP/1.1" 200 36637
+INFO 2025-08-08 14:44:26,027 views Logged search query with filters for user 6
+INFO 2025-08-08 14:44:27,194 views Search with filters returned 20 results
+INFO 2025-08-08 14:44:27,212 basehttp "GET /search/?q=&year=&genre=Comedy&language= HTTP/1.1" 200 36475
+INFO 2025-08-08 14:44:40,956 views Logged search query with filters for user 6
+INFO 2025-08-08 14:44:41,906 views Search with filters returned 20 results
+INFO 2025-08-08 14:44:41,932 basehttp "GET /search/?q=&year=&genre=Drama&language= HTTP/1.1" 200 36535
+INFO 2025-08-08 14:44:51,878 views Logged search query with filters for user 6
+INFO 2025-08-08 14:44:52,768 views Search with filters returned 20 results
+INFO 2025-08-08 14:44:52,791 basehttp "GET /search/?q=&year=&genre=Action&language= HTTP/1.1" 200 36508
+INFO 2025-08-08 14:45:06,455 views Logged search query with filters for user 6
+INFO 2025-08-08 14:45:07,311 views Search with filters returned 20 results
+INFO 2025-08-08 14:45:07,335 basehttp "GET /search/?q=&year=&genre=Action&language=en HTTP/1.1" 200 36539
+INFO 2025-08-08 14:45:20,792 views Logged search query with filters for user 6
+INFO 2025-08-08 14:45:21,730 views Search with filters returned 20 results
+INFO 2025-08-08 14:45:21,751 basehttp "GET /search/?q=&year=&genre=Action&language=ja HTTP/1.1" 200 36954
+INFO 2025-08-08 14:45:54,922 movie_data No videos in main response for movie 810336, fetching videos separately
+INFO 2025-08-08 14:45:55,841 movie_data Found official trailer for movie 1071585: 1FeiTZMtwLA
+INFO 2025-08-08 14:45:56,252 movie_data Found official trailer for movie 27205: JE9z-gy4De4
+INFO 2025-08-08 14:45:56,672 movie_data No videos in main response for movie 1386216, fetching videos separately
+INFO 2025-08-08 14:45:57,572 movie_data No videos in main response for movie 1360427, fetching videos separately
+INFO 2025-08-08 14:45:58,499 movie_data Found official trailer for movie 447404: S_uE8kX0CkY
+INFO 2025-08-08 14:45:59,011 movie_data Found official trailer for movie 1011477: LhRXf-yEQqA
+INFO 2025-08-08 14:45:59,417 movie_data Found trailer for movie 1138325: EOzsfLeLY0Y
+INFO 2025-08-08 14:45:59,930 movie_data No videos in main response for movie 221495, fetching videos separately
+INFO 2025-08-08 14:46:01,581 movie_data Found official trailer for movie 993784: NIm_DkLGAk4
+INFO 2025-08-08 14:46:02,190 movie_data Found official trailer for movie 993784: NIm_DkLGAk4
+INFO 2025-08-08 14:46:04,954 views Generated 20 home cast movies for user 6
+INFO 2025-08-08 14:46:04,979 basehttp - Broken pipe from ('127.0.0.1', 50972)
+INFO 2025-08-08 14:46:05,270 views Generated 20 home cast movies for user 6
+INFO 2025-08-08 14:46:05,286 basehttp "GET / HTTP/1.1" 200 22183
+INFO 2025-08-08 14:46:10,997 movie_data Found official trailer for movie 939243: LH1J1EbqCaI
+INFO 2025-08-08 14:46:11,647 basehttp "GET /movie/939243/ HTTP/1.1" 200 28998
+WARNING 2025-08-08 14:46:25,614 log Not Found: /favicon.ico
+WARNING 2025-08-08 14:46:25,615 basehttp "GET /favicon.ico HTTP/1.1" 404 5582
+INFO 2025-08-08 14:46:36,582 views Retrieved 20 home cast movies from cache for user 6
+INFO 2025-08-08 14:46:36,600 basehttp "GET / HTTP/1.1" 200 22183
+INFO 2025-08-08 14:46:39,910 models Cache miss for user 6 watchlist
+INFO 2025-08-08 14:46:39,962 models Retrieved 1 items from MongoDB for user 6
+INFO 2025-08-08 14:46:39,963 views Retrieved 1 watchlist entries for user 6
+INFO 2025-08-08 14:46:39,964 views User 6 has 1 movies in watchlist
+INFO 2025-08-08 14:46:40,911 basehttp "GET /watchlist/ HTTP/1.1" 200 13279
+INFO 2025-08-08 14:46:41,130 basehttp "GET /static/css/watchlist.css HTTP/1.1" 200 3098
+INFO 2025-08-08 14:46:44,285 views Retrieved 20 home cast movies from cache for user 6
+INFO 2025-08-08 14:46:44,305 basehttp "GET / HTTP/1.1" 200 22183
+INFO 2025-08-08 14:46:47,806 movie_data No videos in main response for movie 1486770, fetching videos separately
+INFO 2025-08-08 14:46:49,130 basehttp "GET /movie/1486770/ HTTP/1.1" 200 27794
+INFO 2025-08-08 14:46:58,362 views Retrieved 20 home cast movies from cache for user 6
+INFO 2025-08-08 14:46:58,375 basehttp "GET / HTTP/1.1" 200 22183
+INFO 2025-08-08 14:47:10,919 views Retrieved 5 recommendations from cache for user 6
+INFO 2025-08-08 14:47:10,929 basehttp "GET /recommendations/ HTTP/1.1" 200 8549
+INFO 2025-08-08 14:47:16,386 views Retrieved 5 recommendations from cache for user 6
+INFO 2025-08-08 14:47:16,394 basehttp "GET /recommendations/ HTTP/1.1" 200 8549
+INFO 2025-08-08 14:47:17,608 views Retrieved 20 home cast movies from cache for user 6
+INFO 2025-08-08 14:47:17,622 basehttp "GET / HTTP/1.1" 200 22183
+INFO 2025-08-08 18:10:45,158 autoreload Watching for file changes with StatReloader
+INFO 2025-08-08 18:11:20,471 mongodb_client MongoDB connection established successfully
+INFO 2025-08-08 18:11:21,754 movie_data No videos in main response for movie 1486770, fetching videos separately
+INFO 2025-08-08 18:11:22,784 movie_data Found official trailer for movie 939243: LH1J1EbqCaI
+INFO 2025-08-08 18:11:23,179 movie_data Found trailer for movie 1138325: EOzsfLeLY0Y
+INFO 2025-08-08 18:11:23,860 movie_data No videos in main response for movie 1360427, fetching videos separately
+INFO 2025-08-08 18:11:24,720 movie_data No videos in main response for movie 810336, fetching videos separately
+INFO 2025-08-08 18:11:25,300 basehttp "GET /profile/ HTTP/1.1" 200 10077
+INFO 2025-08-08 18:11:50,935 movie_data Found official trailer for movie 1071585: 1FeiTZMtwLA
+INFO 2025-08-08 18:11:51,548 movie_data Found official trailer for movie 27205: JE9z-gy4De4
+INFO 2025-08-08 18:11:52,158 movie_data No videos in main response for movie 1386216, fetching videos separately
+INFO 2025-08-08 18:11:53,306 movie_data Found official trailer for movie 447404: S_uE8kX0CkY
+INFO 2025-08-08 18:11:53,797 movie_data Found official trailer for movie 1011477: LhRXf-yEQqA
+INFO 2025-08-08 18:11:54,349 movie_data No videos in main response for movie 221495, fetching videos separately
+INFO 2025-08-08 18:11:55,343 movie_data Found official trailer for movie 993784: NIm_DkLGAk4
+INFO 2025-08-08 18:12:01,293 views Generated 20 home cast movies for user 6
+INFO 2025-08-08 18:12:01,333 basehttp "GET / HTTP/1.1" 200 22069
+INFO 2025-08-08 18:12:58,394 basehttp "GET /profile/ HTTP/1.1" 200 10077
+INFO 2025-08-08 18:13:00,846 models Cache miss for user 6 watchlist
+INFO 2025-08-08 18:13:00,850 models Retrieved 1 items from MongoDB for user 6
+INFO 2025-08-08 18:13:00,851 views Retrieved 1 watchlist entries for user 6
+INFO 2025-08-08 18:13:00,853 views User 6 has 1 movies in watchlist
+INFO 2025-08-08 18:13:01,416 basehttp "GET /watchlist/ HTTP/1.1" 200 13279
+INFO 2025-08-08 18:13:03,407 views Retrieved 20 home cast movies from cache for user 6
+INFO 2025-08-08 18:13:03,422 basehttp "GET / HTTP/1.1" 200 22069
+INFO 2025-08-08 18:13:10,781 movie_data Found official trailer for movie 541671: b9Rr9ygb-ac
+INFO 2025-08-08 18:13:11,496 basehttp "GET /movie/541671/ HTTP/1.1" 200 28140
+INFO 2025-08-08 18:13:16,371 views Retrieved 20 home cast movies from cache for user 6
+INFO 2025-08-08 18:13:16,384 basehttp "GET / HTTP/1.1" 200 22069
+INFO 2025-08-08 18:13:24,059 views Search with filters returned 20 results
+INFO 2025-08-08 18:13:24,113 basehttp "GET /search/?q= HTTP/1.1" 200 17867
+INFO 2025-08-08 18:13:28,123 views Logged search query with filters for user 6
+INFO 2025-08-08 18:13:28,727 views Search with filters returned 20 results
+INFO 2025-08-08 18:13:28,750 basehttp "GET /search/?q=&year=&genre=Comedy&language= HTTP/1.1" 200 36475
+INFO 2025-08-08 18:13:59,954 views Search with filters returned 20 results
+INFO 2025-08-08 18:13:59,960 basehttp "GET /search/?q=&year=&genre=&language= HTTP/1.1" 200 17867
+INFO 2025-08-08 18:25:28,316 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-08 18:25:30,476 autoreload Watching for file changes with StatReloader
+INFO 2025-08-08 18:25:59,965 autoreload C:\Movie_Recommendation_System-main\movies\movie_data.py changed, reloading.
+INFO 2025-08-08 18:26:01,360 autoreload Watching for file changes with StatReloader
+INFO 2025-08-08 18:27:24,315 autoreload C:\Movie_Recommendation_System-main\movies\recommender.py changed, reloading.
+INFO 2025-08-08 18:27:25,451 autoreload Watching for file changes with StatReloader
+INFO 2025-08-08 18:27:51,506 autoreload C:\Movie_Recommendation_System-main\movies\recommender.py changed, reloading.
+INFO 2025-08-08 18:27:52,347 autoreload Watching for file changes with StatReloader
+INFO 2025-08-08 18:29:39,142 autoreload C:\Movie_Recommendation_System-main\movies\movie_data.py changed, reloading.
+INFO 2025-08-08 18:29:39,958 autoreload Watching for file changes with StatReloader
+INFO 2025-08-08 18:33:50,459 autoreload C:\Movie_Recommendation_System-main\movies\movie_data.py changed, reloading.
+INFO 2025-08-08 18:33:51,542 autoreload Watching for file changes with StatReloader
+INFO 2025-08-08 18:35:18,018 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-08 18:35:18,822 autoreload Watching for file changes with StatReloader
+INFO 2025-08-08 18:35:56,625 mongodb_client MongoDB connection established successfully
+INFO 2025-08-08 18:35:56,626 views Logged search query with filters for user 6
+INFO 2025-08-08 18:35:57,927 views Search with filters returned 20 results
+INFO 2025-08-08 18:35:57,992 basehttp "GET /search/?q=&year=&genre=Adventure&language= HTTP/1.1" 200 36630
+INFO 2025-08-08 18:36:00,723 views Logged search query with filters for user 6
+INFO 2025-08-08 18:36:02,265 views Search with filters returned 20 results
+INFO 2025-08-08 18:36:02,279 basehttp "GET /search/?q=&year=2024&genre=Adventure&language= HTTP/1.1" 200 36705
+INFO 2025-08-08 18:36:14,520 views Logged search query with filters for user 6
+INFO 2025-08-08 18:36:16,397 views Search with filters returned 20 results
+INFO 2025-08-08 18:36:16,405 basehttp "GET /search/?q=jackie+chan HTTP/1.1" 200 38186
+INFO 2025-08-08 18:37:25,125 autoreload Watching for file changes with StatReloader
+INFO 2025-08-08 19:01:48,858 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-08 19:01:49,850 autoreload Watching for file changes with StatReloader
+INFO 2025-08-08 19:03:51,198 autoreload C:\Movie_Recommendation_System-main\movies\urls.py changed, reloading.
+INFO 2025-08-08 19:03:51,954 autoreload Watching for file changes with StatReloader
+WARNING 2025-08-08 19:06:34,887 log Not Found: /search/
+WARNING 2025-08-08 19:06:34,888 basehttp "GET /search/?q=jackie+chan HTTP/1.1" 404 2869
+WARNING 2025-08-08 19:06:43,118 log Not Found: /search/
+WARNING 2025-08-08 19:06:43,124 basehttp "GET /search/?q=jackie+chan HTTP/1.1" 404 2869
+WARNING 2025-08-08 19:06:43,552 log Not Found: /search/
+WARNING 2025-08-08 19:06:43,554 basehttp "GET /search/?q=jackie+chan HTTP/1.1" 404 2869
+INFO 2025-08-08 19:07:37,525 autoreload C:\Movie_Recommendation_System-main\movies\urls.py changed, reloading.
+INFO 2025-08-08 19:07:38,355 autoreload Watching for file changes with StatReloader
+WARNING 2025-08-08 19:07:46,335 log Not Found: /search/
+WARNING 2025-08-08 19:07:46,337 basehttp "GET /search/?q=jackie+chan HTTP/1.1" 404 2869
+WARNING 2025-08-08 19:07:48,485 log Not Found: /search/
+WARNING 2025-08-08 19:07:48,487 basehttp "GET /search/?q=jackie+chan HTTP/1.1" 404 2869
+WARNING 2025-08-08 19:07:48,813 log Not Found: /search/
+WARNING 2025-08-08 19:07:48,815 basehttp "GET /search/?q=jackie+chan HTTP/1.1" 404 2869
+WARNING 2025-08-08 19:07:49,092 log Not Found: /search/
+WARNING 2025-08-08 19:07:49,095 basehttp "GET /search/?q=jackie+chan HTTP/1.1" 404 2869
+INFO 2025-08-08 19:09:04,773 autoreload C:\Movie_Recommendation_System-main\movies\urls.py changed, reloading.
+INFO 2025-08-08 19:09:05,945 autoreload Watching for file changes with StatReloader
+WARNING 2025-08-08 19:09:08,396 log Not Found: /search/
+WARNING 2025-08-08 19:09:08,398 basehttp "GET /search/?q=jackie+chan HTTP/1.1" 404 2869
+WARNING 2025-08-08 19:09:08,771 log Not Found: /search/
+WARNING 2025-08-08 19:09:08,774 basehttp "GET /search/?q=jackie+chan HTTP/1.1" 404 2869
+WARNING 2025-08-08 19:09:09,115 log Not Found: /search/
+WARNING 2025-08-08 19:09:09,116 basehttp "GET /search/?q=jackie+chan HTTP/1.1" 404 2869
+WARNING 2025-08-08 19:09:09,553 log Not Found: /search/
+WARNING 2025-08-08 19:09:09,554 basehttp "GET /search/?q=jackie+chan HTTP/1.1" 404 2869
+WARNING 2025-08-08 19:09:09,808 log Not Found: /search/
+WARNING 2025-08-08 19:09:09,809 basehttp "GET /search/?q=jackie+chan HTTP/1.1" 404 2869
+WARNING 2025-08-08 19:09:10,046 log Not Found: /search/
+WARNING 2025-08-08 19:09:10,047 basehttp "GET /search/?q=jackie+chan HTTP/1.1" 404 2869
+WARNING 2025-08-08 19:09:10,244 log Not Found: /search/
+WARNING 2025-08-08 19:09:10,246 basehttp "GET /search/?q=jackie+chan HTTP/1.1" 404 2869
+WARNING 2025-08-08 19:09:10,491 log Not Found: /search/
+WARNING 2025-08-08 19:09:10,492 basehttp "GET /search/?q=jackie+chan HTTP/1.1" 404 2869
+WARNING 2025-08-08 19:09:10,683 log Not Found: /search/
+WARNING 2025-08-08 19:09:10,684 basehttp "GET /search/?q=jackie+chan HTTP/1.1" 404 2869
+WARNING 2025-08-08 19:09:10,906 log Not Found: /search/
+WARNING 2025-08-08 19:09:10,907 basehttp "GET /search/?q=jackie+chan HTTP/1.1" 404 2869
+WARNING 2025-08-08 19:09:12,205 log Not Found: /search/
+WARNING 2025-08-08 19:09:12,206 basehttp "GET /search/?q=jackie+chan HTTP/1.1" 404 2869
+WARNING 2025-08-08 19:09:12,442 log Not Found: /search/
+WARNING 2025-08-08 19:09:12,444 basehttp "GET /search/?q=jackie+chan HTTP/1.1" 404 2869
+WARNING 2025-08-08 19:09:12,640 log Not Found: /search/
+WARNING 2025-08-08 19:09:12,641 basehttp "GET /search/?q=jackie+chan HTTP/1.1" 404 2869
+INFO 2025-08-08 19:10:07,951 autoreload C:\Movie_Recommendation_System-main\movies\urls.py changed, reloading.
+INFO 2025-08-08 19:10:08,914 autoreload Watching for file changes with StatReloader
+INFO 2025-08-08 19:10:21,319 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-08 19:10:22,538 autoreload Watching for file changes with StatReloader
+INFO 2025-08-08 19:10:27,252 mongodb_client MongoDB connection established successfully
+INFO 2025-08-08 19:10:27,254 views Logged search query with filters for user 6
+INFO 2025-08-08 19:10:28,588 views Search with filters returned 20 results
+INFO 2025-08-08 19:10:28,664 basehttp "GET /search/?q=jackie+chan HTTP/1.1" 200 38186
+INFO 2025-08-08 19:10:41,447 movie_data No videos in main response for movie 810336, fetching videos separately
+INFO 2025-08-08 19:10:42,480 movie_data Found official trailer for movie 1071585: 1FeiTZMtwLA
+INFO 2025-08-08 19:10:43,277 movie_data Found official trailer for movie 27205: JE9z-gy4De4
+INFO 2025-08-08 19:10:44,462 movie_data Found official trailer for movie 541671: b9Rr9ygb-ac
+INFO 2025-08-08 19:10:44,943 movie_data No videos in main response for movie 1386216, fetching videos separately
+INFO 2025-08-08 19:10:45,942 movie_data Found official trailer for movie 939243: LH1J1EbqCaI
+INFO 2025-08-08 19:10:46,604 movie_data Found official trailer for movie 447404: S_uE8kX0CkY
+INFO 2025-08-08 19:10:47,016 movie_data No videos in main response for movie 1360427, fetching videos separately
+INFO 2025-08-08 19:10:47,827 movie_data No videos in main response for movie 1486770, fetching videos separately
+INFO 2025-08-08 19:10:48,852 movie_data Found official trailer for movie 1011477: LhRXf-yEQqA
+INFO 2025-08-08 19:10:49,283 movie_data Found trailer for movie 1138325: EOzsfLeLY0Y
+INFO 2025-08-08 19:10:49,670 movie_data No videos in main response for movie 221495, fetching videos separately
+INFO 2025-08-08 19:10:51,105 movie_data Found official trailer for movie 993784: NIm_DkLGAk4
+INFO 2025-08-08 19:10:55,398 movie_data No videos in main response for movie 46122, fetching videos separately
+INFO 2025-08-08 19:10:55,921 views Generated 20 recommendations for user 6
+INFO 2025-08-08 19:10:55,973 basehttp - Broken pipe from ('127.0.0.1', 52192)
+INFO 2025-08-08 19:10:56,084 basehttp "GET /movie/46122/ HTTP/1.1" 200 28386
+INFO 2025-08-08 19:12:25,767 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-08 19:12:26,821 autoreload Watching for file changes with StatReloader
+INFO 2025-08-08 19:12:38,066 mongodb_client MongoDB connection established successfully
+INFO 2025-08-08 19:12:38,934 movie_data No videos in main response for movie 810336, fetching videos separately
+INFO 2025-08-08 19:12:39,759 movie_data Found official trailer for movie 1071585: 1FeiTZMtwLA
+INFO 2025-08-08 19:12:40,328 movie_data Found official trailer for movie 27205: JE9z-gy4De4
+INFO 2025-08-08 19:12:40,891 movie_data Found official trailer for movie 541671: b9Rr9ygb-ac
+INFO 2025-08-08 19:12:41,292 movie_data No videos in main response for movie 1386216, fetching videos separately
+INFO 2025-08-08 19:12:42,213 movie_data No videos in main response for movie 46122, fetching videos separately
+INFO 2025-08-08 19:12:43,243 movie_data Found official trailer for movie 939243: LH1J1EbqCaI
+INFO 2025-08-08 19:12:43,847 movie_data Found official trailer for movie 447404: S_uE8kX0CkY
+INFO 2025-08-08 19:13:30,073 movie_data No videos in main response for movie 1360427, fetching videos separately
+INFO 2025-08-08 19:13:30,074 movie_data No videos in main response for movie 1360427, fetching videos separately
+INFO 2025-08-08 19:13:31,193 movie_data No videos in main response for movie 1486770, fetching videos separately
+INFO 2025-08-08 19:13:31,195 movie_data No videos in main response for movie 1360427, fetching videos separately
+INFO 2025-08-08 19:13:31,200 movie_data No videos in main response for movie 1486770, fetching videos separately
+INFO 2025-08-08 19:13:31,197 movie_data No videos in main response for movie 1486770, fetching videos separately
+INFO 2025-08-08 19:13:31,400 movie_data No videos in main response for movie 1360427, fetching videos separately
+INFO 2025-08-08 19:13:31,402 movie_data No videos in main response for movie 1486770, fetching videos separately
+INFO 2025-08-08 19:13:31,947 movie_data Found official trailer for movie 1011477: LhRXf-yEQqA
+INFO 2025-08-08 19:13:32,193 movie_data Found official trailer for movie 1011477: LhRXf-yEQqA
+INFO 2025-08-08 19:13:32,287 movie_data Found official trailer for movie 1011477: LhRXf-yEQqA
+INFO 2025-08-08 19:13:32,582 movie_data Found trailer for movie 1138325: EOzsfLeLY0Y
+INFO 2025-08-08 19:13:32,788 movie_data Found trailer for movie 1138325: EOzsfLeLY0Y
+INFO 2025-08-08 19:13:32,789 movie_data Found trailer for movie 1138325: EOzsfLeLY0Y
+INFO 2025-08-08 19:13:32,791 movie_data Found official trailer for movie 1011477: LhRXf-yEQqA
+INFO 2025-08-08 19:13:33,064 movie_data No videos in main response for movie 221495, fetching videos separately
+INFO 2025-08-08 19:13:33,220 movie_data No videos in main response for movie 221495, fetching videos separately
+INFO 2025-08-08 19:13:33,241 movie_data No videos in main response for movie 221495, fetching videos separately
+INFO 2025-08-08 19:13:33,252 movie_data No videos in main response for movie 221495, fetching videos separately
+INFO 2025-08-08 19:13:34,182 movie_data Found official trailer for movie 993784: NIm_DkLGAk4
+INFO 2025-08-08 19:13:34,659 movie_data Found official trailer for movie 993784: NIm_DkLGAk4
+INFO 2025-08-08 19:13:34,667 movie_data Found official trailer for movie 993784: NIm_DkLGAk4
+INFO 2025-08-08 19:13:34,671 movie_data Found official trailer for movie 993784: NIm_DkLGAk4
+INFO 2025-08-08 19:13:39,536 views Generated 20 recommendations for user 6
+INFO 2025-08-08 19:13:39,602 basehttp - Broken pipe from ('127.0.0.1', 52268)
+INFO 2025-08-08 19:13:39,654 views Generated 20 home cast movies for user 6
+INFO 2025-08-08 19:13:39,680 basehttp - Broken pipe from ('127.0.0.1', 52258)
+INFO 2025-08-08 19:13:39,868 views Generated 20 recommendations for user 6
+INFO 2025-08-08 19:13:39,869 views Generated 20 recommendations for user 6
+INFO 2025-08-08 19:13:39,899 basehttp - Broken pipe from ('127.0.0.1', 52266)
+INFO 2025-08-08 19:13:39,900 basehttp "GET /recommendations/ HTTP/1.1" 200 20863
+INFO 2025-08-08 19:13:45,708 movie_data Found official trailer for movie 1472668: LaEjB78QLSE
+INFO 2025-08-08 19:13:45,739 basehttp "GET /movie/1472668/ HTTP/1.1" 200 28371
+INFO 2025-08-14 12:07:30,691 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 12:07:44,038 movie_data Found official trailer for movie 1472668: LaEjB78QLSE
+INFO 2025-08-14 12:07:45,624 mongodb_client MongoDB connection established successfully
+INFO 2025-08-14 12:07:45,890 basehttp "GET /movie/1472668/ HTTP/1.1" 200 28371
+INFO 2025-08-14 12:07:46,204 basehttp "GET /static/css/movie_details.css HTTP/1.1" 200 14621
+WARNING 2025-08-14 12:07:49,551 log Not Found: /favicon.ico
+WARNING 2025-08-14 12:07:49,552 basehttp "GET /favicon.ico HTTP/1.1" 404 5582
+INFO 2025-08-14 12:08:00,670 movie_data No videos in main response for movie 810336, fetching videos separately
+INFO 2025-08-14 12:08:01,724 movie_data Found official trailer for movie 1071585: 1FeiTZMtwLA
+INFO 2025-08-14 12:08:02,475 movie_data Found official trailer for movie 27205: JE9z-gy4De4
+INFO 2025-08-14 12:08:03,387 movie_data Found official trailer for movie 541671: b9Rr9ygb-ac
+INFO 2025-08-14 12:08:03,936 movie_data No videos in main response for movie 1386216, fetching videos separately
+INFO 2025-08-14 12:08:05,114 movie_data No videos in main response for movie 46122, fetching videos separately
+INFO 2025-08-14 12:08:06,363 movie_data Found official trailer for movie 939243: LH1J1EbqCaI
+INFO 2025-08-14 12:08:06,821 movie_data Found official trailer for movie 447404: S_uE8kX0CkY
+INFO 2025-08-14 12:08:07,267 movie_data No videos in main response for movie 1360427, fetching videos separately
+INFO 2025-08-14 12:08:08,388 movie_data No videos in main response for movie 1486770, fetching videos separately
+INFO 2025-08-14 12:08:09,627 movie_data Found official trailer for movie 1011477: LhRXf-yEQqA
+INFO 2025-08-14 12:08:10,135 movie_data Found trailer for movie 1138325: EOzsfLeLY0Y
+INFO 2025-08-14 12:08:10,661 movie_data No videos in main response for movie 221495, fetching videos separately
+INFO 2025-08-14 12:08:11,579 movie_data Found official trailer for movie 993784: NIm_DkLGAk4
+INFO 2025-08-14 12:08:18,128 views Generated 20 home cast movies for user 6
+INFO 2025-08-14 12:08:18,222 basehttp "GET / HTTP/1.1" 200 21993
+INFO 2025-08-14 12:08:18,324 basehttp "GET /static/css/base.css HTTP/1.1" 304 0
+INFO 2025-08-14 12:08:18,352 basehttp "GET /static/css/home.css HTTP/1.1" 200 7251
+INFO 2025-08-14 12:08:37,517 views Logged search query with filters for user 6
+INFO 2025-08-14 12:08:39,449 views Search with filters returned 20 results
+INFO 2025-08-14 12:08:39,571 basehttp "GET /search/?q=toy+story HTTP/1.1" 200 37223
+INFO 2025-08-14 12:09:16,626 autoreload C:\Movie_Recommendation_System-main\movies\recommender.py changed, reloading.
+INFO 2025-08-14 12:09:17,906 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 12:11:21,800 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 12:11:22,971 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 12:11:56,461 mongodb_client MongoDB connection established successfully
+INFO 2025-08-14 12:11:56,463 views Logged search query with filters for user 6
+INFO 2025-08-14 12:11:57,258 views Search with filters returned 20 results
+INFO 2025-08-14 12:11:57,286 basehttp "GET /search/?q=toy+story&year=&genre=&language= HTTP/1.1" 200 37223
+INFO 2025-08-14 12:12:15,939 views Logged search query with filters for user 6
+INFO 2025-08-14 12:12:16,931 views Search with filters returned 12 results
+INFO 2025-08-14 12:12:16,961 basehttp "GET /search/?q=the+karate+kid+ HTTP/1.1" 200 29591
+INFO 2025-08-14 12:13:30,455 movie_data No videos in main response for movie 810336, fetching videos separately
+INFO 2025-08-14 12:13:31,317 movie_data Found official trailer for movie 1071585: 1FeiTZMtwLA
+INFO 2025-08-14 12:13:31,855 movie_data Found official trailer for movie 27205: JE9z-gy4De4
+INFO 2025-08-14 12:13:32,376 movie_data Found official trailer for movie 541671: b9Rr9ygb-ac
+INFO 2025-08-14 12:13:32,828 movie_data No videos in main response for movie 1386216, fetching videos separately
+INFO 2025-08-14 12:13:34,224 movie_data No videos in main response for movie 46122, fetching videos separately
+INFO 2025-08-14 12:13:35,124 movie_data Found official trailer for movie 939243: LH1J1EbqCaI
+INFO 2025-08-14 12:13:35,580 movie_data Found official trailer for movie 447404: S_uE8kX0CkY
+INFO 2025-08-14 12:13:36,013 movie_data No videos in main response for movie 1360427, fetching videos separately
+INFO 2025-08-14 12:13:36,926 movie_data No videos in main response for movie 1486770, fetching videos separately
+INFO 2025-08-14 12:13:37,904 movie_data Found official trailer for movie 1011477: LhRXf-yEQqA
+INFO 2025-08-14 12:13:38,524 movie_data Found trailer for movie 1138325: EOzsfLeLY0Y
+INFO 2025-08-14 12:13:38,857 movie_data No videos in main response for movie 221495, fetching videos separately
+INFO 2025-08-14 12:13:39,752 movie_data Found official trailer for movie 993784: NIm_DkLGAk4
+INFO 2025-08-14 12:13:40,159 movie_data Found official trailer for movie 1472668: LaEjB78QLSE
+INFO 2025-08-14 12:13:45,389 views Generated 20 recommendations for user 6
+INFO 2025-08-14 12:13:45,546 basehttp - Broken pipe from ('127.0.0.1', 50439)
+INFO 2025-08-14 12:13:45,806 views Generated 20 recommendations for user 6
+INFO 2025-08-14 12:13:45,822 basehttp "GET /recommendations/ HTTP/1.1" 200 20801
+INFO 2025-08-14 12:13:55,506 views Generated 20 home cast movies for user 6
+INFO 2025-08-14 12:13:55,551 basehttp "GET / HTTP/1.1" 200 21993
+INFO 2025-08-14 12:15:36,784 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 12:15:38,566 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 12:16:31,750 autoreload C:\Movie_Recommendation_System-main\movies\urls.py changed, reloading.
+INFO 2025-08-14 12:16:32,629 autoreload Watching for file changes with StatReloader
+ERROR 2025-08-14 12:19:55,606 log Internal Server Error: /recommendations/
+Traceback (most recent call last):
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Movie_Recommendation_System-main\movies\views.py", line 830, in recommendations_view
+    return render(request, "movies/recommendations.html", context)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: movies/recommendations.html
+ERROR 2025-08-14 12:19:55,614 basehttp "GET /recommendations/ HTTP/1.1" 500 95619
+ERROR 2025-08-14 12:20:30,527 log Internal Server Error: /recommendations/
+Traceback (most recent call last):
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Movie_Recommendation_System-main\movies\views.py", line 830, in recommendations_view
+    return render(request, "movies/recommendations.html", context)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: movies/recommendations.html
+ERROR 2025-08-14 12:20:30,530 basehttp "GET /recommendations/ HTTP/1.1" 500 95619
+ERROR 2025-08-14 12:21:25,386 log Internal Server Error: /recommendations/
+Traceback (most recent call last):
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Movie_Recommendation_System-main\movies\views.py", line 830, in recommendations_view
+    return render(request, "movies/recommendations.html", context)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: movies/recommendations.html
+ERROR 2025-08-14 12:21:25,388 basehttp "GET /recommendations/ HTTP/1.1" 500 95756
+INFO 2025-08-14 12:23:17,009 autoreload Watching for file changes with StatReloader
+ERROR 2025-08-14 12:23:50,107 log Internal Server Error: /recommendations/
+Traceback (most recent call last):
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Movie_Recommendation_System-main\movies\views.py", line 830, in recommendations_view
+    return render(request, "movies/recommendations.html", context)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: movies/recommendations.html
+ERROR 2025-08-14 12:23:50,113 basehttp "GET /recommendations/ HTTP/1.1" 500 95756
+ERROR 2025-08-14 12:24:04,731 log Internal Server Error: /recommendations/
+Traceback (most recent call last):
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Movie_Recommendation_System-main\movies\views.py", line 830, in recommendations_view
+    return render(request, "movies/recommendations.html", context)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: movies/recommendations.html
+ERROR 2025-08-14 12:24:04,734 basehttp "GET /recommendations/ HTTP/1.1" 500 95756
+INFO 2025-08-14 12:25:58,282 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 12:25:59,760 autoreload Watching for file changes with StatReloader
+ERROR 2025-08-14 12:26:10,230 log Internal Server Error: /recommendations/
+Traceback (most recent call last):
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Movie_Recommendation_System-main\movies\views.py", line 830, in recommendations_view
+    return render(request, "movies/templates/recommendations.html", context)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: movies/templates/recommendations.html
+ERROR 2025-08-14 12:26:10,234 basehttp "GET /recommendations/ HTTP/1.1" 500 95976
+INFO 2025-08-14 12:28:19,770 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 12:28:21,049 autoreload Watching for file changes with StatReloader
+ERROR 2025-08-14 12:28:27,676 log Internal Server Error: /recommendations/
+Traceback (most recent call last):
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Movie_Recommendation_System-main\movies\views.py", line 830, in recommendations_view
+    return render(request, "recommendations.html", context)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'home' not found. 'home' is not a valid view function or pattern name.
+ERROR 2025-08-14 12:28:27,683 basehttp "GET /recommendations/ HTTP/1.1" 500 155674
+ERROR 2025-08-14 12:33:54,353 log Internal Server Error: /recommendations/
+Traceback (most recent call last):
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Movie_Recommendation_System-main\movies\views.py", line 830, in recommendations_view
+    return render(request, "recommendations.html", context)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'home' not found. 'home' is not a valid view function or pattern name.
+ERROR 2025-08-14 12:33:54,356 basehttp "GET /recommendations/ HTTP/1.1" 500 155618
+INFO 2025-08-14 12:34:29,239 autoreload Watching for file changes with StatReloader
+ERROR 2025-08-14 12:34:37,096 log Internal Server Error: /recommendations/
+Traceback (most recent call last):
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Movie_Recommendation_System-main\movies\views.py", line 830, in recommendations_view
+    return render(request, "recommendations.html", context)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'home' not found. 'home' is not a valid view function or pattern name.
+INFO 2025-08-14 12:34:37,105 basehttp - Broken pipe from ('127.0.0.1', 50584)
+ERROR 2025-08-14 12:34:37,277 log Internal Server Error: /recommendations/
+Traceback (most recent call last):
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Movie_Recommendation_System-main\movies\views.py", line 830, in recommendations_view
+    return render(request, "recommendations.html", context)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'home' not found. 'home' is not a valid view function or pattern name.
+INFO 2025-08-14 12:34:37,281 basehttp - Broken pipe from ('127.0.0.1', 50586)
+ERROR 2025-08-14 12:34:37,490 log Internal Server Error: /recommendations/
+Traceback (most recent call last):
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Movie_Recommendation_System-main\movies\views.py", line 830, in recommendations_view
+    return render(request, "recommendations.html", context)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'home' not found. 'home' is not a valid view function or pattern name.
+ERROR 2025-08-14 12:34:37,493 basehttp "GET /recommendations/ HTTP/1.1" 500 155618
+ERROR 2025-08-14 12:37:34,028 log Internal Server Error: /recommendations/
+Traceback (most recent call last):
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Movie_Recommendation_System-main\movies\views.py", line 830, in recommendations_view
+    return render(request, "recommendations.html", context)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'home' not found. 'home' is not a valid view function or pattern name.
+INFO 2025-08-14 12:37:34,033 basehttp - Broken pipe from ('127.0.0.1', 50611)
+ERROR 2025-08-14 12:37:34,278 log Internal Server Error: /recommendations/
+Traceback (most recent call last):
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Movie_Recommendation_System-main\movies\views.py", line 830, in recommendations_view
+    return render(request, "recommendations.html", context)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'home' not found. 'home' is not a valid view function or pattern name.
+INFO 2025-08-14 12:37:34,281 basehttp - Broken pipe from ('127.0.0.1', 50613)
+ERROR 2025-08-14 12:37:34,456 log Internal Server Error: /recommendations/
+Traceback (most recent call last):
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Movie_Recommendation_System-main\movies\views.py", line 830, in recommendations_view
+    return render(request, "recommendations.html", context)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'home' not found. 'home' is not a valid view function or pattern name.
+ERROR 2025-08-14 12:37:34,464 basehttp "GET /recommendations/ HTTP/1.1" 500 155562
+ERROR 2025-08-14 12:37:34,529 log Internal Server Error: /recommendations/
+Traceback (most recent call last):
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Movie_Recommendation_System-main\movies\views.py", line 830, in recommendations_view
+    return render(request, "recommendations.html", context)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Movie_Recommendation_System-main\venv\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'home' not found. 'home' is not a valid view function or pattern name.
+INFO 2025-08-14 12:37:34,543 basehttp - Broken pipe from ('127.0.0.1', 50615)
+INFO 2025-08-14 12:39:26,598 autoreload C:\Movie_Recommendation_System-main\movies\urls.py changed, reloading.
+INFO 2025-08-14 12:39:27,591 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 12:39:34,722 mongodb_client MongoDB connection established successfully
+INFO 2025-08-14 12:39:38,217 movie_data No videos in main response for movie 810336, fetching videos separately
+INFO 2025-08-14 12:39:39,519 movie_data Found official trailer for movie 1071585: 1FeiTZMtwLA
+INFO 2025-08-14 12:39:40,258 movie_data Found official trailer for movie 27205: JE9z-gy4De4
+INFO 2025-08-14 12:39:40,956 movie_data Found official trailer for movie 541671: b9Rr9ygb-ac
+INFO 2025-08-14 12:39:41,553 movie_data No videos in main response for movie 1386216, fetching videos separately
+INFO 2025-08-14 12:39:42,383 movie_data No videos in main response for movie 46122, fetching videos separately
+INFO 2025-08-14 12:39:43,440 movie_data Found official trailer for movie 939243: LH1J1EbqCaI
+INFO 2025-08-14 12:39:43,930 movie_data Found official trailer for movie 447404: S_uE8kX0CkY
+INFO 2025-08-14 12:39:44,428 movie_data No videos in main response for movie 1360427, fetching videos separately
+INFO 2025-08-14 12:39:45,235 movie_data No videos in main response for movie 1486770, fetching videos separately
+INFO 2025-08-14 12:39:46,197 movie_data Found official trailer for movie 1011477: LhRXf-yEQqA
+INFO 2025-08-14 12:39:46,818 movie_data Found trailer for movie 1138325: EOzsfLeLY0Y
+INFO 2025-08-14 12:39:47,142 movie_data No videos in main response for movie 221495, fetching videos separately
+INFO 2025-08-14 12:39:48,112 movie_data Found official trailer for movie 993784: NIm_DkLGAk4
+INFO 2025-08-14 12:39:48,624 movie_data Found official trailer for movie 1472668: LaEjB78QLSE
+INFO 2025-08-14 12:39:53,849 views Generated 20 recommendations for user 6
+INFO 2025-08-14 12:39:53,879 basehttp "GET /recommendations/ HTTP/1.1" 200 20801
+INFO 2025-08-14 12:41:27,772 views Retrieved 20 recommendations from cache for user 6
+INFO 2025-08-14 12:41:27,800 basehttp "GET /recommendations/ HTTP/1.1" 200 20801
+INFO 2025-08-14 12:41:32,018 movie_data Found official trailer for movie 1042834: w860o1CceTk
+INFO 2025-08-14 12:41:32,767 basehttp "GET /movie/1042834/ HTTP/1.1" 200 28238
+INFO 2025-08-14 12:41:43,137 views Generated 20 home cast movies for user 6
+INFO 2025-08-14 12:41:43,157 basehttp "GET / HTTP/1.1" 200 22015
+INFO 2025-08-14 12:41:48,987 views Logged search query with filters for user 6
+INFO 2025-08-14 12:41:50,167 views Search with filters returned 10 results
+INFO 2025-08-14 12:41:50,215 basehttp "GET /search/?q=inception HTTP/1.1" 200 28377
+INFO 2025-08-14 12:41:58,628 views Logged search query with filters for user 6
+INFO 2025-08-14 12:41:59,510 views Search with filters returned 10 results
+INFO 2025-08-14 12:41:59,532 basehttp "GET /search/?q=inception&year=&genre=Action&language= HTTP/1.1" 200 28385
+INFO 2025-08-14 12:42:11,835 views Logged search query with filters for user 6
+INFO 2025-08-14 12:42:12,596 views Search with filters returned 20 results
+INFO 2025-08-14 12:42:12,619 basehttp "GET /search/?q=&year=&genre=Animation&language= HTTP/1.1" 200 36636
+INFO 2025-08-14 12:42:30,489 views Retrieved 20 home cast movies from cache for user 6
+INFO 2025-08-14 12:42:30,506 basehttp "GET / HTTP/1.1" 200 22015
+INFO 2025-08-14 12:42:38,053 views Retrieved 20 home cast movies from cache for user 6
+INFO 2025-08-14 12:42:38,074 basehttp "GET / HTTP/1.1" 200 22015
+INFO 2025-08-14 12:42:45,268 models Cache miss for user 6 watchlist
+INFO 2025-08-14 12:42:45,323 models Retrieved 1 items from MongoDB for user 6
+INFO 2025-08-14 12:42:45,324 views Retrieved 1 watchlist entries for user 6
+INFO 2025-08-14 12:42:45,325 views User 6 has 1 movies in watchlist
+INFO 2025-08-14 12:42:45,488 basehttp "GET /watchlist/ HTTP/1.1" 200 25840
+INFO 2025-08-14 12:42:45,740 basehttp "GET /static/css/watchlist.css HTTP/1.1" 200 3098
+INFO 2025-08-14 12:42:49,011 views Retrieved 20 recommendations from cache for user 6
+INFO 2025-08-14 12:42:49,026 basehttp "GET /recommendations/ HTTP/1.1" 200 20801
+INFO 2025-08-14 12:42:54,072 basehttp "GET /profile/ HTTP/1.1" 200 9894
+INFO 2025-08-14 12:42:59,910 views Retrieved 20 home cast movies from cache for user 6
+INFO 2025-08-14 12:42:59,928 basehttp "GET / HTTP/1.1" 200 22015
+INFO 2025-08-14 13:00:08,372 autoreload C:\Movie_Recommendation_System-main\movies\recommender.py changed, reloading.
+INFO 2025-08-14 13:00:11,510 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 13:00:20,748 autoreload C:\Movie_Recommendation_System-main\movies\recommender.py changed, reloading.
+INFO 2025-08-14 13:00:21,964 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 13:03:32,944 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 13:03:36,164 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 13:03:56,389 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 13:03:57,485 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 13:04:10,935 autoreload C:\Movie_Recommendation_System-main\movies\urls.py changed, reloading.
+INFO 2025-08-14 13:04:12,189 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 13:08:34,839 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 13:10:48,888 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 13:10:59,075 basehttp "GET / HTTP/1.1" 200 21436
+INFO 2025-08-14 13:10:59,440 basehttp "GET /static/css/home.css HTTP/1.1" 200 7251
+INFO 2025-08-14 13:10:59,442 basehttp "GET /static/css/base.css HTTP/1.1" 200 8193
+WARNING 2025-08-14 13:11:01,223 log Not Found: /favicon.ico
+WARNING 2025-08-14 13:11:01,225 basehttp "GET /favicon.ico HTTP/1.1" 404 6187
+INFO 2025-08-14 13:11:15,937 basehttp "GET /accounts/login/ HTTP/1.1" 200 4776
+INFO 2025-08-14 13:11:46,815 basehttp "POST /accounts/login/ HTTP/1.1" 200 4967
+INFO 2025-08-14 13:11:54,773 basehttp "GET /accounts/register/ HTTP/1.1" 200 5723
+INFO 2025-08-14 13:12:23,275 basehttp "POST /accounts/register/ HTTP/1.1" 302 0
+INFO 2025-08-14 13:12:23,300 basehttp "GET /accounts/login/ HTTP/1.1" 200 5108
+INFO 2025-08-14 13:12:28,870 basehttp "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-14 13:12:29,854 mongodb_client MongoDB connection established successfully
+INFO 2025-08-14 13:12:30,032 basehttp "GET /profile/ HTTP/1.1" 200 6417
+INFO 2025-08-14 13:12:34,486 views Generated 20 home cast movies for user 8
+INFO 2025-08-14 13:12:34,515 basehttp "GET / HTTP/1.1" 200 22014
+INFO 2025-08-14 13:13:15,720 movie_data Found official trailer for movie 1155281: GR1LszelGoU
+INFO 2025-08-14 13:13:16,259 basehttp - Broken pipe from ('127.0.0.1', 52832)
+INFO 2025-08-14 13:13:17,006 movie_data Found official trailer for movie 1155281: GR1LszelGoU
+INFO 2025-08-14 13:13:17,038 basehttp "GET /movie/1155281/ HTTP/1.1" 200 28627
+INFO 2025-08-14 13:13:17,073 basehttp "GET /static/css/movie_details.css HTTP/1.1" 200 14621
+INFO 2025-08-14 13:14:10,713 models Invalidated cache for user 8
+INFO 2025-08-14 13:14:10,714 models Added movie 1155281 to watchlist for user 8
+INFO 2025-08-14 13:14:10,716 basehttp "POST /add-to-watchlist/1155281/ HTTP/1.1" 302 0
+INFO 2025-08-14 13:14:10,738 basehttp "GET /movie/1155281/ HTTP/1.1" 200 28983
+INFO 2025-08-14 13:14:16,828 basehttp "GET /cosine-recommendations/1155281/ HTTP/1.1" 200 29284
+INFO 2025-08-14 13:15:16,878 views Retrieved 20 home cast movies from cache for user 8
+INFO 2025-08-14 13:15:16,910 basehttp "GET / HTTP/1.1" 200 22014
+INFO 2025-08-14 13:15:31,823 movie_data Found official trailer for movie 1311031: VCC958XvXpA
+INFO 2025-08-14 13:15:32,411 basehttp "GET /movie/1311031/ HTTP/1.1" 200 30272
+INFO 2025-08-14 13:16:39,601 basehttp "GET /cosine-recommendations/1311031/ HTTP/1.1" 200 30048
+INFO 2025-08-14 13:16:54,360 autoreload C:\Movie_Recommendation_System-main\movies\movie_data.py changed, reloading.
+INFO 2025-08-14 13:16:55,682 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 13:16:56,843 mongodb_client MongoDB connection established successfully
+ERROR 2025-08-14 13:16:58,414 views Error generating recommendations: 'Cursor' object has no attribute 'count'
+INFO 2025-08-14 13:16:59,265 basehttp "GET /recommendations/ HTTP/1.1" 200 22348
+ERROR 2025-08-14 13:17:09,309 views Error in cosine recommendations: 'Cursor' object has no attribute 'count'
+INFO 2025-08-14 13:17:09,312 basehttp "GET /cosine-recommendations/ HTTP/1.1" 302 0
+INFO 2025-08-14 13:17:09,994 movie_data Found official trailer for movie 1155281: GR1LszelGoU
+INFO 2025-08-14 13:17:10,457 movie_data Found official trailer for movie 1311031: VCC958XvXpA
+INFO 2025-08-14 13:17:11,752 views Generated 20 home cast movies for user 8
+INFO 2025-08-14 13:17:11,783 basehttp "GET / HTTP/1.1" 200 23059
+ERROR 2025-08-14 13:17:22,558 views Error generating recommendations: 'Cursor' object has no attribute 'count'
+INFO 2025-08-14 13:17:22,585 basehttp "GET /recommendations/ HTTP/1.1" 200 22348
+INFO 2025-08-14 13:17:23,029 autoreload C:\Movie_Recommendation_System-main\movies\recommender.py changed, reloading.
+INFO 2025-08-14 13:17:24,895 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 13:18:29,153 autoreload C:\Movie_Recommendation_System-main\movies\recommender.py changed, reloading.
+INFO 2025-08-14 13:18:30,855 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 13:18:58,398 autoreload C:\Movie_Recommendation_System-main\movies\movie_data.py changed, reloading.
+INFO 2025-08-14 13:19:00,064 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 13:21:05,824 autoreload C:\Movie_Recommendation_System-main\movies\recommender.py changed, reloading.
+INFO 2025-08-14 13:21:07,501 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 13:21:25,966 autoreload C:\Movie_Recommendation_System-main\movies\recommender.py changed, reloading.
+INFO 2025-08-14 13:21:27,214 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 13:21:53,141 mongodb_client MongoDB connection established successfully
+ERROR 2025-08-14 13:22:21,554 views Error generating recommendations: 'Cursor' object has no attribute 'count'
+INFO 2025-08-14 13:22:22,140 basehttp "GET /recommendations/ HTTP/1.1" 200 22348
+ERROR 2025-08-14 13:23:07,199 views Error generating recommendations: 'Cursor' object has no attribute 'count'
+INFO 2025-08-14 13:23:07,227 basehttp "GET /recommendations/ HTTP/1.1" 200 22348
+INFO 2025-08-14 13:23:09,980 movie_data Found official trailer for movie 1155281: GR1LszelGoU
+INFO 2025-08-14 13:23:10,629 movie_data Found official trailer for movie 1311031: VCC958XvXpA
+INFO 2025-08-14 13:23:11,963 views Generated 20 home cast movies for user 8
+INFO 2025-08-14 13:23:12,142 basehttp "GET / HTTP/1.1" 200 22703
+INFO 2025-08-14 13:24:24,784 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 13:24:33,992 mongodb_client MongoDB connection established successfully
+ERROR 2025-08-14 13:24:35,711 views Error generating recommendations: 'Cursor' object has no attribute 'count'
+INFO 2025-08-14 13:24:36,311 basehttp "GET /recommendations/ HTTP/1.1" 200 22348
+ERROR 2025-08-14 13:24:40,119 views Error generating recommendations: 'Cursor' object has no attribute 'count'
+INFO 2025-08-14 13:24:40,145 basehttp "GET /recommendations/ HTTP/1.1" 200 22348
+ERROR 2025-08-14 13:24:42,367 views Error in cosine recommendations: 'Cursor' object has no attribute 'count'
+INFO 2025-08-14 13:24:42,371 basehttp "GET /cosine-recommendations/ HTTP/1.1" 302 0
+INFO 2025-08-14 13:24:42,781 movie_data Found official trailer for movie 1155281: GR1LszelGoU
+INFO 2025-08-14 13:24:43,294 movie_data Found official trailer for movie 1311031: VCC958XvXpA
+INFO 2025-08-14 13:24:44,214 views Generated 20 home cast movies for user 8
+INFO 2025-08-14 13:24:44,240 basehttp "GET / HTTP/1.1" 200 23059
+INFO 2025-08-14 13:26:56,232 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 13:26:57,845 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 13:27:07,994 autoreload C:\Movie_Recommendation_System-main\movies\urls.py changed, reloading.
+INFO 2025-08-14 13:27:09,453 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 13:29:19,380 mongodb_client MongoDB connection established successfully
+ERROR 2025-08-14 13:29:20,677 views Error generating recommendations: 'Cursor' object has no attribute 'count'
+INFO 2025-08-14 13:29:21,212 basehttp "GET /recommendations/ HTTP/1.1" 200 21880
+INFO 2025-08-14 13:29:33,281 movie_data Found official trailer for movie 1071585: 1FeiTZMtwLA
+INFO 2025-08-14 13:29:33,707 basehttp "GET /movie/1071585/ HTTP/1.1" 200 20789
+INFO 2025-08-14 13:29:43,783 models Invalidated cache for user 8
+INFO 2025-08-14 13:29:43,784 models Added movie 1071585 to watchlist for user 8
+INFO 2025-08-14 13:29:43,789 basehttp "POST /add-to-watchlist/1071585/ HTTP/1.1" 302 0
+INFO 2025-08-14 13:29:43,849 basehttp "GET /movie/1071585/ HTTP/1.1" 200 21118
+INFO 2025-08-14 13:29:47,105 movie_data Found official trailer for movie 1311031: VCC958XvXpA
+INFO 2025-08-14 13:29:47,534 movie_data Found official trailer for movie 1155281: GR1LszelGoU
+INFO 2025-08-14 13:29:47,556 basehttp "GET /profile/ HTTP/1.1" 200 8524
+INFO 2025-08-14 13:29:47,871 basehttp "GET /profile/ HTTP/1.1" 200 8524
+ERROR 2025-08-14 13:29:53,537 views Error generating recommendations: 'Cursor' object has no attribute 'count'
+INFO 2025-08-14 13:29:53,568 basehttp "GET /recommendations/ HTTP/1.1" 200 21880
+INFO 2025-08-14 13:30:18,457 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 13:30:21,039 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 13:33:09,361 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 13:55:19,413 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 13:55:21,026 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 13:56:04,490 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 13:56:06,540 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 13:56:09,760 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 13:56:12,004 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 13:56:31,878 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 13:56:32,962 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 13:57:22,830 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 13:57:24,090 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 13:57:30,354 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 13:57:32,273 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 13:57:43,230 mongodb_client MongoDB connection established successfully
+ERROR 2025-08-14 13:57:44,755 views Error generating recommendations for user 8: 'Cursor' object has no attribute 'count'
+ERROR 2025-08-14 13:57:44,776 views Traceback (most recent call last):
+  File "C:\Movie_Recommendation_System-main\movies\views.py", line 686, in recommendations
+    if recent_view.count() > 0:
+       ^^^^^^^^^^^^^^^^^
+AttributeError: 'Cursor' object has no attribute 'count'
+
+INFO 2025-08-14 13:57:45,325 basehttp "GET /recommendations/ HTTP/1.1" 200 22713
+ERROR 2025-08-14 13:57:49,575 views Error generating recommendations for user 8: 'Cursor' object has no attribute 'count'
+ERROR 2025-08-14 13:57:49,579 views Traceback (most recent call last):
+  File "C:\Movie_Recommendation_System-main\movies\views.py", line 686, in recommendations
+    if recent_view.count() > 0:
+       ^^^^^^^^^^^^^^^^^
+AttributeError: 'Cursor' object has no attribute 'count'
+
+INFO 2025-08-14 13:57:49,609 basehttp "GET /recommendations/ HTTP/1.1" 200 22713
+ERROR 2025-08-14 13:57:53,318 views Error generating recommendations for user 8: 'Cursor' object has no attribute 'count'
+ERROR 2025-08-14 13:57:53,327 views Traceback (most recent call last):
+  File "C:\Movie_Recommendation_System-main\movies\views.py", line 686, in recommendations
+    if recent_view.count() > 0:
+       ^^^^^^^^^^^^^^^^^
+AttributeError: 'Cursor' object has no attribute 'count'
+
+INFO 2025-08-14 13:57:53,393 basehttp "GET /recommendations/ HTTP/1.1" 200 22713
+INFO 2025-08-14 13:57:59,953 movie_data Found official trailer for movie 1071585: 1FeiTZMtwLA
+INFO 2025-08-14 13:58:00,403 movie_data Found official trailer for movie 1155281: GR1LszelGoU
+INFO 2025-08-14 13:58:01,037 movie_data Found official trailer for movie 1311031: VCC958XvXpA
+INFO 2025-08-14 13:58:02,356 views Generated 20 home cast movies for user 8
+INFO 2025-08-14 13:58:02,452 basehttp "GET / HTTP/1.1" 200 22703
+ERROR 2025-08-14 13:58:05,687 views Error generating recommendations for user 8: 'Cursor' object has no attribute 'count'
+ERROR 2025-08-14 13:58:05,697 views Traceback (most recent call last):
+  File "C:\Movie_Recommendation_System-main\movies\views.py", line 686, in recommendations
+    if recent_view.count() > 0:
+       ^^^^^^^^^^^^^^^^^
+AttributeError: 'Cursor' object has no attribute 'count'
+
+INFO 2025-08-14 13:58:05,745 basehttp "GET /recommendations/ HTTP/1.1" 200 22713
+INFO 2025-08-14 13:58:17,238 movie_data Found official trailer for movie 1087192: OWEq2Pf8qpk
+INFO 2025-08-14 13:58:17,900 basehttp "GET /movie/1087192/ HTTP/1.1" 200 18080
+INFO 2025-08-14 13:58:21,238 views Retrieved 20 home cast movies from cache for user 8
+INFO 2025-08-14 13:58:21,260 basehttp "GET / HTTP/1.1" 200 22703
+INFO 2025-08-14 13:58:50,257 movie_data No videos in main response for movie 1483549, fetching videos separately
+INFO 2025-08-14 13:58:51,747 basehttp "GET /movie/1483549/ HTTP/1.1" 200 19725
+INFO 2025-08-14 14:00:02,072 basehttp "GET /cosine-recommendations/1483549/ HTTP/1.1" 302 0
+INFO 2025-08-14 14:00:02,103 views Retrieved 20 home cast movies from cache for user 8
+INFO 2025-08-14 14:00:02,157 basehttp "GET / HTTP/1.1" 200 23024
+INFO 2025-08-14 14:00:30,823 movie_data No videos in main response for movie 1519438, fetching videos separately
+INFO 2025-08-14 14:00:31,507 basehttp "GET /movie/1519438/ HTTP/1.1" 200 26275
+INFO 2025-08-14 14:00:33,680 basehttp "GET /cosine-recommendations/1519438/ HTTP/1.1" 302 0
+INFO 2025-08-14 14:00:33,714 views Retrieved 20 home cast movies from cache for user 8
+INFO 2025-08-14 14:00:33,756 basehttp "GET / HTTP/1.1" 200 23024
+INFO 2025-08-14 14:01:36,986 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:01:45,720 mongodb_client MongoDB connection established successfully
+INFO 2025-08-14 14:01:46,825 movie_data Found official trailer for movie 1071585: 1FeiTZMtwLA
+INFO 2025-08-14 14:01:47,212 movie_data No videos in main response for movie 1519438, fetching videos separately
+INFO 2025-08-14 14:01:48,249 movie_data Found official trailer for movie 1155281: GR1LszelGoU
+INFO 2025-08-14 14:01:48,850 movie_data Found official trailer for movie 1311031: VCC958XvXpA
+INFO 2025-08-14 14:01:49,463 movie_data Found official trailer for movie 1087192: OWEq2Pf8qpk
+INFO 2025-08-14 14:01:49,976 movie_data No videos in main response for movie 1483549, fetching videos separately
+INFO 2025-08-14 14:02:09,430 views Generated 20 home cast movies for user 8
+INFO 2025-08-14 14:02:09,489 basehttp "GET / HTTP/1.1" 200 22581
+INFO 2025-08-14 14:03:02,107 autoreload C:\Movie_Recommendation_System-main\movies\movie_data.py changed, reloading.
+INFO 2025-08-14 14:03:03,865 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:03:07,755 autoreload C:\Movie_Recommendation_System-main\movies\movie_data.py changed, reloading.
+INFO 2025-08-14 14:03:09,758 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:03:12,102 autoreload C:\Movie_Recommendation_System-main\movies\recommender.py changed, reloading.
+INFO 2025-08-14 14:03:15,215 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:04:28,940 autoreload C:\Movie_Recommendation_System-main\movies\recommender.py changed, reloading.
+INFO 2025-08-14 14:04:31,606 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:04:44,140 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 14:04:45,221 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:04:54,694 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 14:04:56,041 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:05:53,137 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 14:05:54,394 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:06:00,558 autoreload C:\Movie_Recommendation_System-main\movies\urls.py changed, reloading.
+INFO 2025-08-14 14:06:01,588 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:06:17,261 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 14:06:18,820 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:06:22,912 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 14:06:23,887 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:06:41,028 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 14:06:42,183 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:06:49,244 autoreload C:\Movie_Recommendation_System-main\movies\urls.py changed, reloading.
+INFO 2025-08-14 14:06:50,381 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:08:41,963 autoreload C:\Movie_Recommendation_System-main\movies\movie_data.py changed, reloading.
+INFO 2025-08-14 14:08:43,086 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:10:07,417 autoreload C:\Movie_Recommendation_System-main\movies\movie_data.py changed, reloading.
+INFO 2025-08-14 14:10:09,087 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:10:18,155 autoreload C:\Movie_Recommendation_System-main\movies\movie_data.py changed, reloading.
+INFO 2025-08-14 14:10:19,636 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:10:35,276 mongodb_client MongoDB connection established successfully
+INFO 2025-08-14 14:10:36,273 movie_data Found official trailer for movie 1071585: 1FeiTZMtwLA
+INFO 2025-08-14 14:10:36,716 movie_data No videos in main response for movie 1519438, fetching videos separately
+INFO 2025-08-14 14:10:37,639 movie_data Found official trailer for movie 1155281: GR1LszelGoU
+INFO 2025-08-14 14:10:38,051 movie_data Found official trailer for movie 1311031: VCC958XvXpA
+INFO 2025-08-14 14:10:38,398 movie_data Found official trailer for movie 1087192: OWEq2Pf8qpk
+INFO 2025-08-14 14:10:38,964 movie_data No videos in main response for movie 1483549, fetching videos separately
+INFO 2025-08-14 14:10:41,624 views Generated 20 home cast movies for user 8
+INFO 2025-08-14 14:10:41,706 basehttp "GET / HTTP/1.1" 200 22581
+INFO 2025-08-14 14:10:49,408 views Logged search query with filters for user 8
+INFO 2025-08-14 14:11:01,753 views Search with filters returned 14 results
+INFO 2025-08-14 14:11:01,811 basehttp "GET /search/?q=the+karate+kid HTTP/1.1" 200 31505
+INFO 2025-08-14 14:11:08,868 movie_data Found official trailer for movie 38575: XY8amUImEu0
+INFO 2025-08-14 14:11:09,526 basehttp "GET /movie/38575/ HTTP/1.1" 200 29424
+INFO 2025-08-14 14:11:13,577 basehttp "GET /cosine-recommendations/38575/ HTTP/1.1" 302 0
+INFO 2025-08-14 14:11:13,593 views Retrieved 20 home cast movies from cache for user 8
+INFO 2025-08-14 14:11:13,612 basehttp "GET / HTTP/1.1" 200 22902
+ERROR 2025-08-14 14:12:26,787 views Error generating recommendations: 'Cursor' object has no attribute 'count'
+ERROR 2025-08-14 14:12:39,419 views Error generating recommendations: 'Cursor' object has no attribute 'count'
+INFO 2025-08-14 14:12:48,451 basehttp - Broken pipe from ('127.0.0.1', 60502)
+INFO 2025-08-14 14:12:50,259 basehttp "GET /recommendations/ HTTP/1.1" 200 22348
+INFO 2025-08-14 14:14:04,953 movie_data Found official trailer for movie 1234821: 2ZhB-YO5Tnk
+INFO 2025-08-14 14:14:05,010 movie_data Found official trailer for movie 1234821: 2ZhB-YO5Tnk
+INFO 2025-08-14 14:14:06,081 basehttp - Broken pipe from ('127.0.0.1', 60593)
+INFO 2025-08-14 14:14:06,094 basehttp "GET /movie/1234821/ HTTP/1.1" 200 29155
+INFO 2025-08-14 14:14:11,517 basehttp "GET /cosine-recommendations/1234821/ HTTP/1.1" 200 29850
+INFO 2025-08-14 14:14:35,611 movie_data Found official trailer for movie 1097311: KQiZ5zMhliw
+INFO 2025-08-14 14:14:36,349 basehttp "GET /movie/1097311/ HTTP/1.1" 200 28560
+INFO 2025-08-14 14:14:48,531 basehttp "GET /cosine-recommendations/1097311/ HTTP/1.1" 302 0
+INFO 2025-08-14 14:14:49,133 movie_data No videos in main response for movie 810336, fetching videos separately
+INFO 2025-08-14 14:14:50,153 movie_data Found official trailer for movie 27205: JE9z-gy4De4
+INFO 2025-08-14 14:14:50,573 movie_data Found official trailer for movie 541671: b9Rr9ygb-ac
+INFO 2025-08-14 14:14:51,074 movie_data No videos in main response for movie 1386216, fetching videos separately
+INFO 2025-08-14 14:14:51,943 movie_data No videos in main response for movie 46122, fetching videos separately
+INFO 2025-08-14 14:14:54,128 movie_data Found official trailer for movie 939243: LH1J1EbqCaI
+INFO 2025-08-14 14:14:54,735 movie_data Found official trailer for movie 447404: S_uE8kX0CkY
+INFO 2025-08-14 14:14:55,386 movie_data No videos in main response for movie 1360427, fetching videos separately
+INFO 2025-08-14 14:14:56,207 movie_data Found official trailer for movie 1042834: w860o1CceTk
+INFO 2025-08-14 14:14:56,711 movie_data No videos in main response for movie 1486770, fetching videos separately
+INFO 2025-08-14 14:14:57,668 movie_data Found official trailer for movie 1011477: LhRXf-yEQqA
+INFO 2025-08-14 14:14:58,257 movie_data Found trailer for movie 1138325: EOzsfLeLY0Y
+INFO 2025-08-14 14:14:58,658 movie_data No videos in main response for movie 221495, fetching videos separately
+INFO 2025-08-14 14:15:00,096 movie_data Found official trailer for movie 993784: NIm_DkLGAk4
+INFO 2025-08-14 14:15:00,540 movie_data Found official trailer for movie 1472668: LaEjB78QLSE
+INFO 2025-08-14 14:15:07,161 views Generated 20 home cast movies for user 6
+INFO 2025-08-14 14:15:07,172 basehttp "GET / HTTP/1.1" 200 22359
+INFO 2025-08-14 14:16:05,324 basehttp "GET /cosine-recommendations/1234821/ HTTP/1.1" 200 29850
+INFO 2025-08-14 14:16:08,100 views Retrieved 20 home cast movies from cache for user 8
+INFO 2025-08-14 14:16:08,133 basehttp "GET / HTTP/1.1" 200 22581
+INFO 2025-08-14 14:16:20,176 movie_data No videos in main response for movie 1519456, fetching videos separately
+INFO 2025-08-14 14:16:20,819 basehttp "GET /movie/1519456/ HTTP/1.1" 200 25163
+INFO 2025-08-14 14:16:26,568 basehttp "GET /cosine-recommendations/1519456/ HTTP/1.1" 302 0
+INFO 2025-08-14 14:16:26,586 views Retrieved 20 home cast movies from cache for user 8
+INFO 2025-08-14 14:16:26,608 basehttp "GET / HTTP/1.1" 200 22902
+INFO 2025-08-14 14:16:33,365 views Retrieved 20 home cast movies from cache for user 8
+INFO 2025-08-14 14:16:33,381 basehttp "GET / HTTP/1.1" 200 22581
+INFO 2025-08-14 14:16:36,156 basehttp "GET /movie/1519456/ HTTP/1.1" 200 25163
+INFO 2025-08-14 14:16:37,938 basehttp "GET /cosine-recommendations/1519456/ HTTP/1.1" 302 0
+INFO 2025-08-14 14:16:37,960 views Retrieved 20 home cast movies from cache for user 8
+INFO 2025-08-14 14:16:38,002 basehttp "GET / HTTP/1.1" 200 22902
+ERROR 2025-08-14 14:16:45,448 views Error generating recommendations: 'Cursor' object has no attribute 'count'
+INFO 2025-08-14 14:16:45,475 basehttp "GET /recommendations/ HTTP/1.1" 200 22348
+INFO 2025-08-14 14:16:49,388 basehttp "GET /movie/1234821/ HTTP/1.1" 200 29184
+INFO 2025-08-14 14:16:51,020 basehttp "GET /cosine-recommendations/1234821/ HTTP/1.1" 200 29850
+INFO 2025-08-14 14:19:27,024 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 14:19:28,819 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:21:37,619 movie_data Found official trailer for movie 1333100: 3xNH23QkNpk
+INFO 2025-08-14 14:21:38,855 mongodb_client MongoDB connection established successfully
+INFO 2025-08-14 14:21:38,948 basehttp "GET /movie/1333100/ HTTP/1.1" 200 29846
+INFO 2025-08-14 14:21:42,186 basehttp "GET /cosine-recommendations/1333100/ HTTP/1.1" 200 31127
+INFO 2025-08-14 14:21:56,559 movie_data Found official trailer for movie 1195631: dex9bWjroao
+INFO 2025-08-14 14:21:57,273 basehttp "GET /movie/1195631/ HTTP/1.1" 200 28707
+INFO 2025-08-14 14:30:18,191 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 14:30:21,185 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:32:18,372 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 14:32:19,449 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:32:29,284 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 14:32:30,620 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:32:32,822 autoreload C:\Movie_Recommendation_System-main\movies\urls.py changed, reloading.
+INFO 2025-08-14 14:32:33,925 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:33:08,813 autoreload C:\Movie_Recommendation_System-main\movies\urls.py changed, reloading.
+INFO 2025-08-14 14:33:10,972 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:33:27,163 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 14:33:28,962 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:34:58,061 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 14:34:59,690 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:37:48,746 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 14:37:50,624 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:37:56,069 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 14:37:57,819 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:39:05,100 movie_data Found official trailer for movie 1333100: 3xNH23QkNpk
+INFO 2025-08-14 14:39:05,168 basehttp "GET /cosine-recommendations/1333100/ HTTP/1.1" 200 31103
+INFO 2025-08-14 14:39:06,556 mongodb_client MongoDB connection established successfully
+INFO 2025-08-14 14:39:07,001 movie_data No videos in main response for movie 1519456, fetching videos separately
+INFO 2025-08-14 14:39:08,258 movie_data Found official trailer for movie 1071585: 1FeiTZMtwLA
+INFO 2025-08-14 14:39:08,858 movie_data Found official trailer for movie 1234821: 2ZhB-YO5Tnk
+INFO 2025-08-14 14:39:09,535 movie_data No videos in main response for movie 1519438, fetching videos separately
+INFO 2025-08-14 14:39:10,531 movie_data Found official trailer for movie 1195631: dex9bWjroao
+INFO 2025-08-14 14:39:11,418 movie_data Found official trailer for movie 38575: XY8amUImEu0
+INFO 2025-08-14 14:39:11,923 movie_data Found official trailer for movie 1155281: GR1LszelGoU
+INFO 2025-08-14 14:39:12,846 movie_data Found official trailer for movie 1311031: VCC958XvXpA
+INFO 2025-08-14 14:39:13,412 movie_data Found official trailer for movie 1087192: OWEq2Pf8qpk
+INFO 2025-08-14 14:39:14,701 movie_data No videos in main response for movie 1483549, fetching videos separately
+INFO 2025-08-14 14:39:21,196 views Generated 20 home cast movies for user 8
+INFO 2025-08-14 14:39:21,198 views Generated 20 home cast movies for user 8
+INFO 2025-08-14 14:39:21,300 basehttp "GET / HTTP/1.1" 200 22565
+INFO 2025-08-14 14:39:21,303 basehttp - Broken pipe from ('127.0.0.1', 63746)
+INFO 2025-08-14 14:39:28,304 movie_data Found official trailer for movie 985602: tdhh-2iW_n8
+INFO 2025-08-14 14:39:28,356 basehttp "GET /movie/985602/ HTTP/1.1" 200 20553
+INFO 2025-08-14 14:39:30,543 basehttp "GET /cosine-recommendations/985602/ HTTP/1.1" 200 27269
+ERROR 2025-08-14 14:39:38,090 views Error in cosine recommendations: 'Cursor' object has no attribute 'count'
+INFO 2025-08-14 14:39:38,109 basehttp "GET /cosine-recommendations/ HTTP/1.1" 302 0
+INFO 2025-08-14 14:39:38,132 views Retrieved 20 home cast movies from cache for user 8
+INFO 2025-08-14 14:39:38,155 basehttp "GET / HTTP/1.1" 200 22921
+ERROR 2025-08-14 14:39:45,575 views Error generating recommendations: 'Cursor' object has no attribute 'count'
+INFO 2025-08-14 14:39:46,134 basehttp "GET /recommendations/ HTTP/1.1" 200 22324
+ERROR 2025-08-14 14:39:49,458 views Error generating recommendations: 'Cursor' object has no attribute 'count'
+INFO 2025-08-14 14:39:49,505 basehttp "GET /recommendations/ HTTP/1.1" 200 22324
+INFO 2025-08-14 14:39:57,202 basehttp "GET /movie/1155281/ HTTP/1.1" 200 20419
+INFO 2025-08-14 14:40:11,508 basehttp "GET /cosine-recommendations/1155281/ HTTP/1.1" 200 29260
+INFO 2025-08-14 14:41:29,143 autoreload C:\Movie_Recommendation_System-main\movies\urls.py changed, reloading.
+INFO 2025-08-14 14:41:31,899 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:44:44,404 autoreload C:\Movie_Recommendation_System-main\movies\urls.py changed, reloading.
+INFO 2025-08-14 14:44:45,823 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:45:11,359 autoreload C:\Movie_Recommendation_System-main\movies\movie_data.py changed, reloading.
+INFO 2025-08-14 14:45:12,925 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:45:17,423 autoreload C:\Movie_Recommendation_System-main\movies\movie_data.py changed, reloading.
+INFO 2025-08-14 14:45:18,815 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:46:03,300 autoreload C:\Movie_Recommendation_System-main\movies\movie_data.py changed, reloading.
+INFO 2025-08-14 14:46:04,978 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:47:49,868 autoreload C:\Movie_Recommendation_System-main\movies\movie_data.py changed, reloading.
+INFO 2025-08-14 14:47:51,278 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:47:54,254 autoreload C:\Movie_Recommendation_System-main\movies\movie_data.py changed, reloading.
+INFO 2025-08-14 14:47:55,991 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:48:58,441 autoreload C:\Movie_Recommendation_System-main\movies\movie_data.py changed, reloading.
+INFO 2025-08-14 14:49:00,294 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:49:15,419 autoreload C:\Movie_Recommendation_System-main\movies\movie_data.py changed, reloading.
+INFO 2025-08-14 14:49:16,115 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:49:41,988 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 14:49:42,647 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:50:36,252 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 14:50:37,029 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 14:51:18,418 autoreload C:\Movie_Recommendation_System-main\movies\movie_data.py changed, reloading.
+INFO 2025-08-14 14:51:19,058 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 17:46:12,081 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 17:47:10,451 autoreload C:\Movie_Recommendation_System-main\movies\movie_data.py changed, reloading.
+INFO 2025-08-14 17:47:11,774 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 17:47:30,060 autoreload C:\Movie_Recommendation_System-main\movies\movie_data.py changed, reloading.
+INFO 2025-08-14 17:47:30,940 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 17:47:40,815 autoreload C:\Movie_Recommendation_System-main\movies\movie_data.py changed, reloading.
+INFO 2025-08-14 17:47:41,842 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 17:47:58,011 autoreload C:\Movie_Recommendation_System-main\movies\movie_data.py changed, reloading.
+INFO 2025-08-14 17:47:58,841 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 17:48:35,201 autoreload C:\Movie_Recommendation_System-main\movies\urls.py changed, reloading.
+INFO 2025-08-14 17:48:36,011 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 17:48:37,891 autoreload C:\Movie_Recommendation_System-main\movies\urls.py changed, reloading.
+INFO 2025-08-14 17:48:38,814 autoreload Watching for file changes with StatReloader
+ERROR 2025-08-14 17:49:38,317 views Error in home view: No module named 'pymongo'
+INFO 2025-08-14 17:49:40,336 basehttp "GET / HTTP/1.1" 200 22014
+WARNING 2025-08-14 17:49:42,331 log Not Found: /favicon.ico
+WARNING 2025-08-14 17:49:42,332 basehttp "GET /favicon.ico HTTP/1.1" 404 5582
+ERROR 2025-08-14 17:49:46,222 views Error in profile view for user 8: No module named 'pymongo'
+INFO 2025-08-14 17:49:46,269 basehttp "GET /profile/ HTTP/1.1" 200 6765
+ERROR 2025-08-14 17:50:01,704 views Error in home view: No module named 'pymongo'
+INFO 2025-08-14 17:50:01,719 basehttp "GET / HTTP/1.1" 200 22014
+ERROR 2025-08-14 17:50:03,628 views Error in profile view for user 8: No module named 'pymongo'
+INFO 2025-08-14 17:50:03,634 basehttp "GET /profile/ HTTP/1.1" 200 6765
+INFO 2025-08-14 17:56:23,080 autoreload C:\Movie_Recommendation_System-main\movies\movie_data.py changed, reloading.
+INFO 2025-08-14 17:56:24,558 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 17:56:49,440 autoreload C:\Movie_Recommendation_System-main\movies\urls.py changed, reloading.
+INFO 2025-08-14 17:56:50,334 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 17:57:11,092 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 17:57:11,931 autoreload Watching for file changes with StatReloader
+ERROR 2025-08-14 17:59:25,490 views Error in profile view for user 8: No module named 'pymongo'
+INFO 2025-08-14 17:59:25,638 basehttp "GET /profile/ HTTP/1.1" 200 6765
+ERROR 2025-08-14 17:59:28,646 views Error in home view: No module named 'pymongo'
+INFO 2025-08-14 17:59:35,798 basehttp "GET / HTTP/1.1" 200 22014
+ERROR 2025-08-14 17:59:38,017 views Error in profile view for user 8: No module named 'pymongo'
+INFO 2025-08-14 17:59:38,025 basehttp "GET /profile/ HTTP/1.1" 200 6765
+ERROR 2025-08-14 17:59:45,166 views Error in home view: No module named 'pymongo'
+INFO 2025-08-14 17:59:45,176 basehttp "GET / HTTP/1.1" 200 22014
+INFO 2025-08-14 17:59:48,606 movie_data Found official trailer for movie 1234821: 2ZhB-YO5Tnk
+ERROR 2025-08-14 17:59:50,116 views Error in movie_detail view for movie 1234821: No module named 'pymongo'
+INFO 2025-08-14 17:59:50,125 basehttp - Broken pipe from ('127.0.0.1', 51306)
+ERROR 2025-08-14 17:59:50,999 views Error in movie_detail view for movie 1234821: No module named 'pymongo'
+INFO 2025-08-14 17:59:51,002 basehttp "GET /movie/1234821/ HTTP/1.1" 302 0
+ERROR 2025-08-14 17:59:51,039 views Error in home view: No module named 'pymongo'
+INFO 2025-08-14 17:59:51,088 basehttp "GET / HTTP/1.1" 200 22365
+ERROR 2025-08-14 17:59:54,782 views Error in movie_detail view for movie 1234821: No module named 'pymongo'
+INFO 2025-08-14 17:59:54,785 basehttp "GET /movie/1234821/ HTTP/1.1" 302 0
+ERROR 2025-08-14 17:59:54,830 views Error in home view: No module named 'pymongo'
+INFO 2025-08-14 17:59:54,857 basehttp "GET / HTTP/1.1" 200 22365
+INFO 2025-08-14 18:08:46,977 autoreload Watching for file changes with StatReloader
+WARNING 2025-08-14 18:10:44,907 log Not Found: /favicon.ico
+WARNING 2025-08-14 18:10:44,909 basehttp "GET /favicon.ico HTTP/1.1" 404 5582
+WARNING 2025-08-14 18:10:48,941 log Not Found: /cosine-recommendations/1234821/
+WARNING 2025-08-14 18:10:48,945 basehttp "GET /cosine-recommendations/1234821/ HTTP/1.1" 404 5642
+WARNING 2025-08-14 18:10:50,974 log Not Found: /cosine-recommendations/1234821/
+WARNING 2025-08-14 18:10:50,976 basehttp "GET /cosine-recommendations/1234821/ HTTP/1.1" 404 5642
+INFO 2025-08-14 18:10:59,209 mongodb_client MongoDB connection established successfully
+INFO 2025-08-14 18:11:02,272 movie_data No videos in main response for movie 810336, fetching videos separately
+INFO 2025-08-14 18:11:03,452 movie_data Found official trailer for movie 1071585: 1FeiTZMtwLA
+INFO 2025-08-14 18:11:05,506 movie_data Found official trailer for movie 27205: JE9z-gy4De4
+INFO 2025-08-14 18:11:06,405 movie_data Found official trailer for movie 1234821: 2ZhB-YO5Tnk
+INFO 2025-08-14 18:11:07,010 movie_data Found official trailer for movie 541671: b9Rr9ygb-ac
+INFO 2025-08-14 18:11:07,546 movie_data No videos in main response for movie 1386216, fetching videos separately
+INFO 2025-08-14 18:11:08,821 movie_data No videos in main response for movie 46122, fetching videos separately
+INFO 2025-08-14 18:11:10,482 movie_data Found official trailer for movie 939243: LH1J1EbqCaI
+INFO 2025-08-14 18:11:11,192 movie_data Found official trailer for movie 447404: S_uE8kX0CkY
+INFO 2025-08-14 18:11:11,961 movie_data No videos in main response for movie 1360427, fetching videos separately
+INFO 2025-08-14 18:11:13,433 movie_data Found official trailer for movie 1042834: w860o1CceTk
+INFO 2025-08-14 18:11:14,080 movie_data No videos in main response for movie 1486770, fetching videos separately
+INFO 2025-08-14 18:11:14,956 movie_data Found official trailer for movie 1011477: LhRXf-yEQqA
+INFO 2025-08-14 18:11:15,596 movie_data Found trailer for movie 1138325: EOzsfLeLY0Y
+INFO 2025-08-14 18:11:16,127 movie_data No videos in main response for movie 221495, fetching videos separately
+INFO 2025-08-14 18:11:17,617 movie_data Found official trailer for movie 993784: NIm_DkLGAk4
+INFO 2025-08-14 18:11:18,214 movie_data Found official trailer for movie 1472668: LaEjB78QLSE
+INFO 2025-08-14 18:11:19,203 movie_data Found official trailer for movie 1097311: KQiZ5zMhliw
+INFO 2025-08-14 18:11:30,161 views Generated 20 home cast movies for user 6
+INFO 2025-08-14 18:11:30,196 basehttp "GET / HTTP/1.1" 200 22192
+INFO 2025-08-14 18:11:53,546 views Generated 20 recommendations for user 6
+INFO 2025-08-14 18:11:53,565 basehttp "GET /recommendations/ HTTP/1.1" 200 21000
+INFO 2025-08-14 18:11:59,708 views Retrieved 20 recommendations from cache for user 6
+INFO 2025-08-14 18:11:59,740 basehttp "GET /recommendations/ HTTP/1.1" 200 21000
+INFO 2025-08-14 18:12:02,608 basehttp "GET /profile/ HTTP/1.1" 200 9811
+INFO 2025-08-14 18:12:05,719 views Retrieved 20 recommendations from cache for user 6
+INFO 2025-08-14 18:12:05,740 basehttp "GET /recommendations/ HTTP/1.1" 200 21000
+INFO 2025-08-14 18:12:10,452 models Cache miss for user 6 watchlist
+INFO 2025-08-14 18:12:10,455 models Retrieved 1 items from MongoDB for user 6
+INFO 2025-08-14 18:12:10,456 views Retrieved 1 watchlist entries for user 6
+INFO 2025-08-14 18:12:10,457 views User 6 has 1 movies in watchlist
+INFO 2025-08-14 18:12:10,586 basehttp "GET /watchlist/ HTTP/1.1" 200 25958
+INFO 2025-08-14 18:12:12,736 views Retrieved 20 home cast movies from cache for user 6
+INFO 2025-08-14 18:12:12,754 basehttp "GET / HTTP/1.1" 200 22192
+INFO 2025-08-14 18:24:37,090 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 18:24:47,025 movie_data No videos in main response for movie 1519456, fetching videos separately
+INFO 2025-08-14 18:24:47,867 movie_data Found official trailer for movie 985602: tdhh-2iW_n8
+INFO 2025-08-14 18:24:48,457 movie_data Found official trailer for movie 1333100: 3xNH23QkNpk
+INFO 2025-08-14 18:24:49,063 movie_data No videos in main response for movie 1519438, fetching videos separately
+INFO 2025-08-14 18:24:50,296 movie_data Found official trailer for movie 38575: XY8amUImEu0
+INFO 2025-08-14 18:24:50,801 movie_data Found official trailer for movie 1195631: dex9bWjroao
+INFO 2025-08-14 18:24:51,423 movie_data Found official trailer for movie 1155281: GR1LszelGoU
+INFO 2025-08-14 18:24:51,787 movie_data Found official trailer for movie 1311031: VCC958XvXpA
+INFO 2025-08-14 18:24:52,338 movie_data Found official trailer for movie 1087192: OWEq2Pf8qpk
+INFO 2025-08-14 18:24:52,830 movie_data No videos in main response for movie 1483549, fetching videos separately
+INFO 2025-08-14 18:24:56,941 views Generated 20 home cast movies for user 8
+INFO 2025-08-14 18:24:56,989 basehttp "GET / HTTP/1.1" 200 22589
+INFO 2025-08-14 18:25:04,604 basehttp "GET /profile/ HTTP/1.1" 200 10020
+INFO 2025-08-14 18:25:12,734 models Cache miss for user 8 watchlist
+INFO 2025-08-14 18:25:12,738 models Retrieved 2 items from MongoDB for user 8
+INFO 2025-08-14 18:25:12,741 views Retrieved 2 watchlist entries for user 8
+INFO 2025-08-14 18:25:12,742 views User 8 has 2 movies in watchlist
+INFO 2025-08-14 18:25:13,129 basehttp "GET /watchlist/ HTTP/1.1" 200 14367
+INFO 2025-08-14 18:25:13,351 basehttp "GET /static/css/watchlist.css HTTP/1.1" 200 3098
+INFO 2025-08-14 18:25:16,768 basehttp "GET /profile/ HTTP/1.1" 200 10020
+INFO 2025-08-14 18:25:20,309 views Retrieved 5 recommendations from cache for user 8
+INFO 2025-08-14 18:25:20,316 basehttp "GET /recommendations/ HTTP/1.1" 200 8517
+INFO 2025-08-14 18:25:25,577 models Cache hit for user 8 watchlist
+INFO 2025-08-14 18:25:25,578 views Retrieved 2 watchlist entries for user 8
+INFO 2025-08-14 18:25:25,579 views User 8 has 2 movies in watchlist
+INFO 2025-08-14 18:25:25,589 basehttp "GET /watchlist/ HTTP/1.1" 200 14367
+INFO 2025-08-14 18:25:28,756 views Retrieved 20 home cast movies from cache for user 8
+INFO 2025-08-14 18:25:28,780 basehttp "GET / HTTP/1.1" 200 22589
+INFO 2025-08-14 18:25:32,384 views Retrieved 5 recommendations from cache for user 8
+INFO 2025-08-14 18:25:32,391 basehttp "GET /recommendations/ HTTP/1.1" 200 8517
+INFO 2025-08-14 18:25:37,132 views Retrieved 20 home cast movies from cache for user 8
+INFO 2025-08-14 18:25:37,148 basehttp "GET / HTTP/1.1" 200 22589
+INFO 2025-08-14 18:28:59,858 views Retrieved 5 recommendations from cache for user 8
+INFO 2025-08-14 18:28:59,866 basehttp "GET /recommendations/ HTTP/1.1" 200 8517
+INFO 2025-08-14 18:29:02,818 views Retrieved 5 recommendations from cache for user 8
+INFO 2025-08-14 18:29:02,823 basehttp "GET /recommendations/ HTTP/1.1" 200 8517
+INFO 2025-08-14 18:33:21,483 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 18:33:21,631 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 18:33:22,840 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 18:33:23,785 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 18:33:58,234 views Search with filters returned 20 results
+INFO 2025-08-14 18:33:58,305 basehttp "GET /search/?q= HTTP/1.1" 200 17867
+ERROR 2025-08-14 18:34:00,757 views Error logging search query: No module named 'pymongo'
+INFO 2025-08-14 18:34:02,234 views Search with filters returned 20 results
+INFO 2025-08-14 18:34:02,286 basehttp "GET /search/?q=&year=&genre=Adventure&language= HTTP/1.1" 200 36623
+ERROR 2025-08-14 18:34:14,678 views Error logging search query: No module named 'pymongo'
+INFO 2025-08-14 18:34:43,696 views Search with filters returned 20 results
+INFO 2025-08-14 18:34:43,739 basehttp "GET /search/?q=&year=&genre=Crime&language= HTTP/1.1" 200 36443
+INFO 2025-08-14 18:37:58,223 autoreload C:\Movie_Recommendation_System-main\movie_recommender\settings.py changed, reloading.
+INFO 2025-08-14 18:37:59,132 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 18:38:20,140 autoreload Watching for file changes with StatReloader
+ERROR 2025-08-14 18:43:24,725 views Error in home view: No module named 'pymongo'
+INFO 2025-08-14 18:43:25,750 basehttp "GET / HTTP/1.1" 200 22014
+ERROR 2025-08-14 18:43:27,389 views Error generating recommendations for user 8: No module named 'pymongo'
+ERROR 2025-08-14 18:43:27,394 views Traceback (most recent call last):
+  File "C:\Movie_Recommendation_System-main\movies\views.py", line 657, in recommendations
+    from .mongodb_client import viewed_movies_collection, watchlists_collection
+  File "C:\Movie_Recommendation_System-main\movies\mongodb_client.py", line 4, in <module>
+    from pymongo import MongoClient
+ModuleNotFoundError: No module named 'pymongo'
+
+INFO 2025-08-14 18:43:27,444 basehttp "GET /recommendations/ HTTP/1.1" 200 26770
+INFO 2025-08-14 18:43:39,169 movie_data Found official trailer for movie 1234821: 2ZhB-YO5Tnk
+ERROR 2025-08-14 18:43:39,598 views Error in movie_detail view for movie 1234821: No module named 'pymongo'
+INFO 2025-08-14 18:43:39,628 basehttp "GET /movie/1234821/ HTTP/1.1" 302 0
+ERROR 2025-08-14 18:43:39,646 views Error in home view: No module named 'pymongo'
+INFO 2025-08-14 18:43:39,661 basehttp "GET / HTTP/1.1" 200 22365
+INFO 2025-08-14 18:43:45,403 movie_data Found official trailer for movie 980477: ETlOSBR92Fs
+ERROR 2025-08-14 18:43:45,930 views Error in movie_detail view for movie 980477: No module named 'pymongo'
+INFO 2025-08-14 18:43:45,932 basehttp "GET /movie/980477/ HTTP/1.1" 302 0
+ERROR 2025-08-14 18:43:45,944 views Error in home view: No module named 'pymongo'
+INFO 2025-08-14 18:43:45,958 basehttp "GET / HTTP/1.1" 200 22365
+ERROR 2025-08-14 18:43:48,665 views Error generating recommendations for user 8: No module named 'pymongo'
+ERROR 2025-08-14 18:43:48,666 views Traceback (most recent call last):
+  File "C:\Movie_Recommendation_System-main\movies\views.py", line 657, in recommendations
+    from .mongodb_client import viewed_movies_collection, watchlists_collection
+  File "C:\Movie_Recommendation_System-main\movies\mongodb_client.py", line 4, in <module>
+    from pymongo import MongoClient
+ModuleNotFoundError: No module named 'pymongo'
+
+INFO 2025-08-14 18:43:48,682 basehttp "GET /recommendations/ HTTP/1.1" 200 26770
+INFO 2025-08-14 18:46:25,998 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 18:46:26,893 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 18:46:27,986 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 18:46:28,391 autoreload Watching for file changes with StatReloader
+ERROR 2025-08-14 18:46:44,792 views Error generating recommendations for user 8: No module named 'pymongo'
+ERROR 2025-08-14 18:46:44,795 views Traceback (most recent call last):
+  File "C:\Movie_Recommendation_System-main\movies\views.py", line 657, in recommendations
+    from .mongodb_client import viewed_movies_collection, watchlists_collection
+  File "C:\Movie_Recommendation_System-main\movies\mongodb_client.py", line 4, in <module>
+    from pymongo import MongoClient
+ModuleNotFoundError: No module named 'pymongo'
+
+INFO 2025-08-14 18:46:46,105 basehttp "GET /recommendations/ HTTP/1.1" 200 21178
+INFO 2025-08-14 18:46:56,763 models Cache miss for user 8 watchlist
+ERROR 2025-08-14 18:46:56,768 models Error getting user watchlist: No module named 'pymongo'
+ERROR 2025-08-14 18:46:56,772 models Traceback (most recent call last):
+  File "C:\Movie_Recommendation_System-main\movies\models.py", line 67, in get_user_watchlist
+    from .mongodb_client import watchlists_collection
+  File "C:\Movie_Recommendation_System-main\movies\mongodb_client.py", line 4, in <module>
+    from pymongo import MongoClient
+ModuleNotFoundError: No module named 'pymongo'
+
+INFO 2025-08-14 18:46:56,774 views Retrieved 0 watchlist entries for user 8
+INFO 2025-08-14 18:46:56,774 views User 8 has 0 movies in watchlist
+INFO 2025-08-14 18:46:56,786 basehttp "GET /watchlist/ HTTP/1.1" 200 7903
+ERROR 2025-08-14 18:46:59,979 views Error in home view: No module named 'pymongo'
+INFO 2025-08-14 18:47:00,007 basehttp "GET / HTTP/1.1" 200 22014
+ERROR 2025-08-14 18:47:01,637 views Error in profile view for user 8: No module named 'pymongo'
+INFO 2025-08-14 18:47:01,665 basehttp "GET /profile/ HTTP/1.1" 200 6765
+INFO 2025-08-14 18:47:07,701 views Retrieved 5 recommendations from cache for user 8
+INFO 2025-08-14 18:47:07,710 basehttp "GET /recommendations/ HTTP/1.1" 200 8517
+ERROR 2025-08-14 18:47:10,714 views Error in home view: No module named 'pymongo'
+INFO 2025-08-14 18:47:10,747 basehttp "GET / HTTP/1.1" 200 22014
+INFO 2025-08-14 18:47:12,811 views Retrieved 5 recommendations from cache for user 8
+INFO 2025-08-14 18:47:12,819 basehttp "GET /recommendations/ HTTP/1.1" 200 8517
+ERROR 2025-08-14 18:47:15,257 views Error in profile view for user 8: No module named 'pymongo'
+INFO 2025-08-14 18:47:15,274 basehttp "GET /profile/ HTTP/1.1" 200 6765
+INFO 2025-08-14 18:47:16,846 views Retrieved 5 recommendations from cache for user 8
+INFO 2025-08-14 18:47:16,855 basehttp "GET /recommendations/ HTTP/1.1" 200 8723
+INFO 2025-08-14 18:47:19,248 models Cache miss for user 8 watchlist
+ERROR 2025-08-14 18:47:19,253 models Error getting user watchlist: No module named 'pymongo'
+ERROR 2025-08-14 18:47:19,256 models Traceback (most recent call last):
+  File "C:\Movie_Recommendation_System-main\movies\models.py", line 67, in get_user_watchlist
+    from .mongodb_client import watchlists_collection
+  File "C:\Movie_Recommendation_System-main\movies\mongodb_client.py", line 4, in <module>
+    from pymongo import MongoClient
+ModuleNotFoundError: No module named 'pymongo'
+
+INFO 2025-08-14 18:47:19,257 views Retrieved 0 watchlist entries for user 8
+INFO 2025-08-14 18:47:19,258 views User 8 has 0 movies in watchlist
+INFO 2025-08-14 18:47:19,267 basehttp "GET /watchlist/ HTTP/1.1" 200 7903
+ERROR 2025-08-14 18:47:21,005 views Error in profile view for user 8: No module named 'pymongo'
+INFO 2025-08-14 18:47:21,012 basehttp "GET /profile/ HTTP/1.1" 200 6765
+ERROR 2025-08-14 18:49:19,664 views Error in profile view for user 8: No module named 'pymongo'
+INFO 2025-08-14 18:49:19,669 basehttp "GET /profile/ HTTP/1.1" 200 6765
+ERROR 2025-08-14 18:49:21,361 views Error in home view: No module named 'pymongo'
+INFO 2025-08-14 18:49:21,372 basehttp "GET / HTTP/1.1" 200 22014
+INFO 2025-08-14 18:49:25,088 views Retrieved 5 recommendations from cache for user 8
+INFO 2025-08-14 18:49:25,103 basehttp "GET /recommendations/ HTTP/1.1" 200 8723
+INFO 2025-08-14 18:50:30,223 movie_data Found official trailer for movie 755898: d9erkpdh5o0
+ERROR 2025-08-14 18:50:30,816 views Error in movie_detail view for movie 755898: No module named 'pymongo'
+INFO 2025-08-14 18:50:30,818 basehttp "GET /movie/755898/ HTTP/1.1" 302 0
+ERROR 2025-08-14 18:50:30,831 views Error in home view: No module named 'pymongo'
+INFO 2025-08-14 18:50:30,837 basehttp "GET / HTTP/1.1" 200 22365
+INFO 2025-08-14 18:53:05,320 mongodb_client MongoDB connection established successfully
+INFO 2025-08-14 18:53:06,243 movie_data No videos in main response for movie 1519456, fetching videos separately
+INFO 2025-08-14 18:53:06,244 movie_data No videos in main response for movie 1519456, fetching videos separately
+INFO 2025-08-14 18:53:06,395 movie_data No videos in main response for movie 1519456, fetching videos separately
+INFO 2025-08-14 18:53:07,059 movie_data Found official trailer for movie 1071585: 1FeiTZMtwLA
+INFO 2025-08-14 18:53:07,071 movie_data Found official trailer for movie 1071585: 1FeiTZMtwLA
+INFO 2025-08-14 18:53:07,363 movie_data Found official trailer for movie 1071585: 1FeiTZMtwLA
+INFO 2025-08-14 18:53:07,578 movie_data Found official trailer for movie 985602: tdhh-2iW_n8
+INFO 2025-08-14 18:53:07,582 movie_data Found official trailer for movie 985602: tdhh-2iW_n8
+INFO 2025-08-14 18:53:07,893 movie_data Found official trailer for movie 985602: tdhh-2iW_n8
+INFO 2025-08-14 18:53:07,993 movie_data Found official trailer for movie 1234821: 2ZhB-YO5Tnk
+INFO 2025-08-14 18:53:08,001 movie_data Found official trailer for movie 1234821: 2ZhB-YO5Tnk
+INFO 2025-08-14 18:53:08,388 movie_data Found official trailer for movie 1234821: 2ZhB-YO5Tnk
+INFO 2025-08-14 18:53:08,453 movie_data Found official trailer for movie 1333100: 3xNH23QkNpk
+INFO 2025-08-14 18:53:08,456 movie_data Found official trailer for movie 1333100: 3xNH23QkNpk
+INFO 2025-08-14 18:53:08,795 movie_data No videos in main response for movie 1519438, fetching videos separately
+INFO 2025-08-14 18:53:08,798 movie_data No videos in main response for movie 1519438, fetching videos separately
+INFO 2025-08-14 18:53:08,801 movie_data Found official trailer for movie 1333100: 3xNH23QkNpk
+INFO 2025-08-14 18:53:08,820 movie_data No videos in main response for movie 1519438, fetching videos separately
+INFO 2025-08-14 18:53:09,722 movie_data Found official trailer for movie 38575: XY8amUImEu0
+INFO 2025-08-14 18:53:09,725 movie_data Found official trailer for movie 38575: XY8amUImEu0
+INFO 2025-08-14 18:53:09,727 movie_data Found official trailer for movie 38575: XY8amUImEu0
+INFO 2025-08-14 18:53:10,153 movie_data Found official trailer for movie 1195631: dex9bWjroao
+INFO 2025-08-14 18:53:10,339 movie_data Found official trailer for movie 1195631: dex9bWjroao
+INFO 2025-08-14 18:53:10,341 movie_data Found official trailer for movie 1195631: dex9bWjroao
+INFO 2025-08-14 18:53:11,184 movie_data Found official trailer for movie 1155281: GR1LszelGoU
+INFO 2025-08-14 18:53:11,187 movie_data Found official trailer for movie 1155281: GR1LszelGoU
+INFO 2025-08-14 18:53:11,203 movie_data Found official trailer for movie 1155281: GR1LszelGoU
+INFO 2025-08-14 18:53:12,153 movie_data Found official trailer for movie 1311031: VCC958XvXpA
+INFO 2025-08-14 18:53:12,158 movie_data Found official trailer for movie 1311031: VCC958XvXpA
+INFO 2025-08-14 18:53:12,170 movie_data Found official trailer for movie 1311031: VCC958XvXpA
+INFO 2025-08-14 18:53:12,587 movie_data Found official trailer for movie 1087192: OWEq2Pf8qpk
+INFO 2025-08-14 18:53:12,605 movie_data Found official trailer for movie 1087192: OWEq2Pf8qpk
+INFO 2025-08-14 18:53:12,609 movie_data Found official trailer for movie 1087192: OWEq2Pf8qpk
+INFO 2025-08-14 18:53:12,889 movie_data No videos in main response for movie 1483549, fetching videos separately
+INFO 2025-08-14 18:53:13,035 movie_data No videos in main response for movie 1483549, fetching videos separately
+INFO 2025-08-14 18:53:13,040 movie_data No videos in main response for movie 1483549, fetching videos separately
+INFO 2025-08-14 18:53:15,179 basehttp "GET /movie/1234821/ HTTP/1.1" 200 28881
+INFO 2025-08-14 18:53:21,235 models Invalidated cache for user 8
+INFO 2025-08-14 18:53:21,236 models Added movie 1234821 to watchlist for user 8
+INFO 2025-08-14 18:53:21,239 basehttp "POST /add-to-watchlist/1234821/ HTTP/1.1" 302 0
+INFO 2025-08-14 18:53:21,345 basehttp "GET /movie/1234821/ HTTP/1.1" 200 29223
+INFO 2025-08-14 18:53:26,500 basehttp "GET /profile/ HTTP/1.1" 200 9918
+INFO 2025-08-14 18:53:29,775 models Cache miss for user 8 watchlist
+INFO 2025-08-14 18:53:29,778 models Retrieved 3 items from MongoDB for user 8
+INFO 2025-08-14 18:53:29,779 views Retrieved 3 watchlist entries for user 8
+INFO 2025-08-14 18:53:29,780 views User 8 has 3 movies in watchlist
+INFO 2025-08-14 18:53:40,998 basehttp "GET /movie/1234821/ HTTP/1.1" 200 28881
+INFO 2025-08-14 18:53:43,325 models Invalidated cache for user 8
+INFO 2025-08-14 18:53:43,326 models Added movie 1234821 to watchlist for user 8
+INFO 2025-08-14 18:53:43,328 basehttp "POST /add-to-watchlist/1234821/ HTTP/1.1" 302 0
+INFO 2025-08-14 18:53:43,387 basehttp "GET /movie/1234821/ HTTP/1.1" 200 29223
+INFO 2025-08-14 18:53:48,365 basehttp - Broken pipe from ('127.0.0.1', 62498)
+INFO 2025-08-14 18:53:49,449 views Generated 20 home cast movies for user 8
+INFO 2025-08-14 18:53:49,481 basehttp - Broken pipe from ('127.0.0.1', 62411)
+INFO 2025-08-14 18:53:50,023 views Generated 20 home cast movies for user 8
+INFO 2025-08-14 18:53:50,028 views Generated 20 home cast movies for user 8
+INFO 2025-08-14 18:53:50,082 basehttp - Broken pipe from ('127.0.0.1', 62420)
+INFO 2025-08-14 18:53:50,156 basehttp - Broken pipe from ('127.0.0.1', 62415)
+INFO 2025-08-14 19:00:05,293 autoreload C:\Movie_Recommendation_System-main\movies\urls.py changed, reloading.
+INFO 2025-08-14 19:00:06,479 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 19:00:22,705 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 19:00:23,804 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 19:00:45,335 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 19:00:47,037 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 19:01:41,701 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 19:01:43,017 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 19:01:49,092 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 19:01:50,145 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 19:01:59,128 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 19:02:00,319 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 19:02:02,138 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 19:02:03,042 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 19:03:09,026 mongodb_client MongoDB connection established successfully
+INFO 2025-08-14 19:03:11,032 movie_data No videos in main response for movie 1519456, fetching videos separately
+INFO 2025-08-14 19:03:11,943 movie_data Found official trailer for movie 1071585: 1FeiTZMtwLA
+INFO 2025-08-14 19:03:12,464 movie_data Found official trailer for movie 985602: tdhh-2iW_n8
+INFO 2025-08-14 19:03:13,273 movie_data Found official trailer for movie 1234821: 2ZhB-YO5Tnk
+INFO 2025-08-14 19:03:13,783 movie_data Found official trailer for movie 1333100: 3xNH23QkNpk
+INFO 2025-08-14 19:03:14,194 movie_data No videos in main response for movie 1519438, fetching videos separately
+INFO 2025-08-14 19:03:28,800 movie_data Found official trailer for movie 38575: XY8amUImEu0
+INFO 2025-08-14 19:03:29,415 movie_data Found official trailer for movie 1195631: dex9bWjroao
+INFO 2025-08-14 19:03:30,014 movie_data Found official trailer for movie 1155281: GR1LszelGoU
+INFO 2025-08-14 19:03:30,582 movie_data Found official trailer for movie 1311031: VCC958XvXpA
+INFO 2025-08-14 19:03:31,116 movie_data Found official trailer for movie 1087192: OWEq2Pf8qpk
+INFO 2025-08-14 19:03:31,522 movie_data No videos in main response for movie 1483549, fetching videos separately
+INFO 2025-08-14 19:03:36,813 views Generated 20 home cast movies for user 8
+INFO 2025-08-14 19:03:36,883 basehttp "GET / HTTP/1.1" 200 22589
+INFO 2025-08-14 19:04:34,249 views Retrieved 20 home cast movies from cache for user 8
+INFO 2025-08-14 19:04:34,260 basehttp "GET / HTTP/1.1" 200 22593
+INFO 2025-08-14 19:04:39,297 movie_data No videos in main response for movie 1406607, fetching videos separately
+INFO 2025-08-14 19:04:40,413 basehttp "GET /movie/1406607/ HTTP/1.1" 200 28110
+INFO 2025-08-14 19:04:46,414 basehttp "GET /movie/1406607/similar/ HTTP/1.1" 200 16263
+INFO 2025-08-14 19:04:58,582 basehttp "GET /movie/1406607/ HTTP/1.1" 200 28110
+INFO 2025-08-14 19:05:07,999 views Retrieved 20 home cast movies from cache for user 8
+INFO 2025-08-14 19:05:08,021 basehttp "GET / HTTP/1.1" 200 22593
+INFO 2025-08-14 19:06:00,279 movie_data No videos in main response for movie 1505898, fetching videos separately
+INFO 2025-08-14 19:06:00,744 basehttp "GET /movie/1505898/ HTTP/1.1" 200 28337
+INFO 2025-08-14 19:06:08,281 views Generated 14 recommendations for user 8
+INFO 2025-08-14 19:06:08,298 basehttp - Broken pipe from ('127.0.0.1', 63271)
+INFO 2025-08-14 19:06:09,113 views Generated 14 recommendations for user 8
+INFO 2025-08-14 19:06:09,115 views Generated 14 recommendations for user 8
+INFO 2025-08-14 19:06:09,150 basehttp - Broken pipe from ('127.0.0.1', 63273)
+INFO 2025-08-14 19:06:09,151 basehttp - Broken pipe from ('127.0.0.1', 63270)
+INFO 2025-08-14 19:06:12,276 basehttp "GET /movie/1505898/similar/ HTTP/1.1" 200 15705
+INFO 2025-08-14 19:06:34,549 basehttp "GET /movie/1505898/ HTTP/1.1" 200 28337
+INFO 2025-08-14 19:06:39,646 basehttp "GET /movie/985602/ HTTP/1.1" 200 28672
+INFO 2025-08-14 19:06:59,995 basehttp "GET /movie/985602/similar/ HTTP/1.1" 200 15910
+INFO 2025-08-14 19:07:42,495 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-14 19:07:44,115 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 19:07:51,193 movie_data Found official trailer for movie 985602: tdhh-2iW_n8
+INFO 2025-08-14 19:07:53,442 basehttp "GET /movie/985602/similar/ HTTP/1.1" 200 15910
+WARNING 2025-08-14 19:07:55,946 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-14 19:07:55,951 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5984
+INFO 2025-08-14 19:09:52,818 basehttp "GET /movie/985602/similar/ HTTP/1.1" 200 15910
+INFO 2025-08-14 19:10:02,657 mongodb_client MongoDB connection established successfully
+INFO 2025-08-14 19:10:02,683 basehttp "GET /movie/985602/ HTTP/1.1" 200 28672
+INFO 2025-08-14 19:11:07,382 movie_data Found official trailer for movie 1371727: RiRiTEhiyP4
+INFO 2025-08-14 19:11:07,928 basehttp "GET /movie/985602/similar/ HTTP/1.1" 200 15910
+INFO 2025-08-14 19:11:08,037 basehttp "GET /movie/1371727/ HTTP/1.1" 200 27149
+INFO 2025-08-14 19:11:20,729 basehttp "GET /movie/1371727/similar/ HTTP/1.1" 200 16315
+INFO 2025-08-14 19:13:39,912 basehttp "GET /movie/1371727/similar/ HTTP/1.1" 200 16315
+INFO 2025-08-14 19:14:24,184 basehttp "GET /movie/1371727/ HTTP/1.1" 200 27149
+WARNING 2025-08-14 19:15:53,890 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-14 19:15:53,891 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5984
+INFO 2025-08-14 19:17:37,585 basehttp "GET /movie/1371727/similar/ HTTP/1.1" 200 16315
+INFO 2025-08-14 19:20:46,811 models Invalidated cache for user 8
+INFO 2025-08-14 19:20:46,812 models Added movie 1371727 to watchlist for user 8
+INFO 2025-08-14 19:20:46,815 basehttp "POST /add-to-watchlist/1371727/ HTTP/1.1" 302 0
+INFO 2025-08-14 19:20:46,867 basehttp "GET /movie/1371727/ HTTP/1.1" 200 27483
+WARNING 2025-08-14 19:20:47,028 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-14 19:20:47,030 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5984
+INFO 2025-08-14 19:21:10,800 basehttp "GET /movie/1371727/similar/ HTTP/1.1" 200 16315
+WARNING 2025-08-14 19:21:11,152 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-14 19:21:11,156 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5984
+INFO 2025-08-14 19:21:17,856 basehttp "GET /movie/1371727/ HTTP/1.1" 200 27149
+WARNING 2025-08-14 19:21:18,116 log Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-14 19:21:18,117 basehttp "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5984
+INFO 2025-08-14 19:25:42,110 basehttp "GET /movie/1371727/ HTTP/1.1" 200 27200
+INFO 2025-08-14 19:25:44,866 basehttp "GET /movie/1371727/ HTTP/1.1" 200 27200
+INFO 2025-08-14 19:26:28,049 basehttp "GET /movie/1371727/ HTTP/1.1" 200 27149
+INFO 2025-08-14 19:26:28,315 basehttp "GET /movie/1371727/ HTTP/1.1" 200 27149
+INFO 2025-08-14 19:26:28,575 basehttp "GET /movie/1371727/ HTTP/1.1" 200 27149
+INFO 2025-08-14 19:26:42,103 basehttp "GET /movie/1371727/similar/ HTTP/1.1" 200 16315
+INFO 2025-08-14 19:27:18,140 movie_data No videos in main response for movie 1519456, fetching videos separately
+INFO 2025-08-14 19:27:19,661 movie_data Found official trailer for movie 1071585: 1FeiTZMtwLA
+INFO 2025-08-14 19:27:20,358 movie_data Found official trailer for movie 1234821: 2ZhB-YO5Tnk
+INFO 2025-08-14 19:27:21,118 movie_data No videos in main response for movie 1505898, fetching videos separately
+INFO 2025-08-14 19:27:22,154 movie_data Found official trailer for movie 1333100: 3xNH23QkNpk
+INFO 2025-08-14 19:27:22,854 movie_data No videos in main response for movie 1519438, fetching videos separately
+INFO 2025-08-14 19:27:23,742 movie_data Found official trailer for movie 38575: XY8amUImEu0
+INFO 2025-08-14 19:27:24,204 movie_data Found official trailer for movie 1195631: dex9bWjroao
+INFO 2025-08-14 19:27:24,644 movie_data Found official trailer for movie 1155281: GR1LszelGoU
+INFO 2025-08-14 19:27:25,228 movie_data No videos in main response for movie 1406607, fetching videos separately
+INFO 2025-08-14 19:27:26,435 movie_data Found official trailer for movie 1311031: VCC958XvXpA
+INFO 2025-08-14 19:27:26,844 movie_data Found official trailer for movie 1087192: OWEq2Pf8qpk
+INFO 2025-08-14 19:27:27,243 movie_data No videos in main response for movie 1483549, fetching videos separately
+INFO 2025-08-14 19:27:32,726 views Generated 20 home cast movies for user 8
+INFO 2025-08-14 19:27:32,749 basehttp "GET / HTTP/1.1" 200 22608
+INFO 2025-08-14 19:30:08,857 autoreload Watching for file changes with StatReloader
+INFO 2025-08-14 19:30:18,560 movie_data No videos in main response for movie 810336, fetching videos separately
+INFO 2025-08-14 19:30:19,717 movie_data Found official trailer for movie 27205: JE9z-gy4De4
+INFO 2025-08-14 19:30:20,220 movie_data Found official trailer for movie 541671: b9Rr9ygb-ac
+INFO 2025-08-14 19:30:20,752 movie_data No videos in main response for movie 1386216, fetching videos separately
+INFO 2025-08-14 19:30:22,551 movie_data No videos in main response for movie 46122, fetching videos separately
+INFO 2025-08-14 19:30:23,705 movie_data Found official trailer for movie 939243: LH1J1EbqCaI
+INFO 2025-08-14 19:30:24,228 movie_data Found official trailer for movie 447404: S_uE8kX0CkY
+INFO 2025-08-14 19:30:24,639 movie_data No videos in main response for movie 1360427, fetching videos separately
+INFO 2025-08-14 19:30:25,348 movie_data Found official trailer for movie 1042834: w860o1CceTk
+INFO 2025-08-14 19:30:25,827 movie_data No videos in main response for movie 1486770, fetching videos separately
+INFO 2025-08-14 19:30:26,863 movie_data Found official trailer for movie 1011477: LhRXf-yEQqA
+INFO 2025-08-14 19:30:27,266 movie_data Found trailer for movie 1138325: EOzsfLeLY0Y
+INFO 2025-08-14 19:30:27,700 movie_data No videos in main response for movie 221495, fetching videos separately
+INFO 2025-08-14 19:30:28,861 movie_data Found official trailer for movie 993784: NIm_DkLGAk4
+INFO 2025-08-14 19:30:29,246 movie_data Found official trailer for movie 1472668: LaEjB78QLSE
+INFO 2025-08-14 19:30:29,633 movie_data Found official trailer for movie 1097311: KQiZ5zMhliw
+INFO 2025-08-14 19:30:36,185 views Generated 20 home cast movies for user 6
+INFO 2025-08-14 19:30:36,258 basehttp "GET / HTTP/1.1" 200 22196
+INFO 2025-08-14 19:30:59,872 views Search with filters returned 20 results
+INFO 2025-08-14 19:30:59,898 basehttp "GET /search/?q= HTTP/1.1" 200 17869
+INFO 2025-08-14 19:31:02,998 views Logged search query with filters for user 6
+INFO 2025-08-14 19:31:03,888 views Search with filters returned 20 results
+INFO 2025-08-14 19:31:03,922 basehttp "GET /search/?q=&year=&genre=Adventure&language= HTTP/1.1" 200 36625
+INFO 2025-08-14 19:31:08,036 movie_data Found official trailer for movie 980477: ETlOSBR92Fs
+INFO 2025-08-14 19:31:08,558 basehttp "GET /movie/980477/ HTTP/1.1" 200 14854
+INFO 2025-08-14 19:31:18,207 basehttp "GET /movie/980477/similar/ HTTP/1.1" 200 16667
+INFO 2025-08-14 19:31:28,709 basehttp "GET /profile/ HTTP/1.1" 200 9781
+INFO 2025-08-14 19:31:34,861 models Cache miss for user 6 watchlist
+INFO 2025-08-14 19:31:34,864 models Retrieved 1 items from MongoDB for user 6
+INFO 2025-08-14 19:31:34,868 views Retrieved 1 watchlist entries for user 6
+INFO 2025-08-14 19:31:34,870 views User 6 has 1 movies in watchlist
+INFO 2025-08-14 19:31:36,130 basehttp "GET /watchlist/ HTTP/1.1" 200 13260
+INFO 2025-08-14 19:31:38,962 views Retrieved 5 recommendations from cache for user 6
+INFO 2025-08-14 19:31:38,975 basehttp "GET /recommendations/ HTTP/1.1" 200 8710
+INFO 2025-08-14 19:31:43,657 views Retrieved 20 home cast movies from cache for user 6
+INFO 2025-08-14 19:31:43,677 basehttp "GET / HTTP/1.1" 200 22196
+INFO 2025-08-14 19:31:45,751 views Retrieved 5 recommendations from cache for user 6
+INFO 2025-08-14 19:31:45,761 basehttp "GET /recommendations/ HTTP/1.1" 200 8710
+INFO 2025-08-14 19:31:49,973 views Retrieved 20 home cast movies from cache for user 6
+INFO 2025-08-14 19:31:49,987 basehttp "GET / HTTP/1.1" 200 22196
+INFO 2025-08-14 19:31:57,666 views Retrieved 5 recommendations from cache for user 6
+INFO 2025-08-14 19:31:57,674 basehttp "GET /recommendations/ HTTP/1.1" 200 8710
+INFO 2025-08-14 19:32:00,162 basehttp "GET /profile/ HTTP/1.1" 200 9781
+INFO 2025-08-14 19:32:02,502 views Retrieved 5 recommendations from cache for user 6
+INFO 2025-08-14 19:32:02,510 basehttp "GET /recommendations/ HTTP/1.1" 200 8710
+INFO 2025-08-14 19:32:05,100 views Retrieved 20 home cast movies from cache for user 6
+INFO 2025-08-14 19:32:05,116 basehttp "GET / HTTP/1.1" 200 22196
+INFO 2025-08-14 19:32:49,546 views Retrieved 5 recommendations from cache for user 6
+INFO 2025-08-14 19:32:49,556 basehttp "GET /recommendations/ HTTP/1.1" 200 8710
+INFO 2025-08-14 19:32:51,905 views Retrieved 5 recommendations from cache for user 6
+INFO 2025-08-14 19:32:51,911 basehttp "GET /recommendations/ HTTP/1.1" 200 8710
+INFO 2025-08-14 19:32:53,088 models Cache hit for user 6 watchlist
+INFO 2025-08-14 19:32:53,089 views Retrieved 1 watchlist entries for user 6
+INFO 2025-08-14 19:32:53,090 views User 6 has 1 movies in watchlist
+INFO 2025-08-14 19:32:53,097 basehttp "GET /watchlist/ HTTP/1.1" 200 13260
+INFO 2025-08-14 19:32:55,002 views Retrieved 20 home cast movies from cache for user 6
+INFO 2025-08-14 19:32:55,023 basehttp "GET / HTTP/1.1" 200 22196
+INFO 2025-08-14 19:33:00,153 movie_data Found official trailer for movie 1160956: kb1C19HGBu8
+INFO 2025-08-14 19:33:00,176 basehttp "GET /movie/1160956/ HTTP/1.1" 200 28621
+INFO 2025-08-14 19:33:08,265 basehttp "GET /movie/1160956/similar/ HTTP/1.1" 200 16595
+INFO 2025-08-14 19:33:25,394 basehttp "GET /movie/1160956/ HTTP/1.1" 200 28621

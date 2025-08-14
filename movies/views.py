@@ -655,7 +655,8 @@ def recommendations(request):
         if recommendations is None:
             # Get user's viewed movies and watchlist
             from .mongodb_client import viewed_movies_collection, watchlists_collection
-            from .movie_data import get_movie, get_actor_movies, get_popular_movies
+            from .movie_data import get_popular_movies
+            from .recommender import get_cosine_similarity_recommendations
             
             # Get viewed movie IDs
             viewed_movies = viewed_movies_collection.find({'user_id': request.user.id})
@@ -674,57 +675,21 @@ def recommendations(request):
                 message = "Explore some movies to get personalized recommendations!"
                 recommendation_type = "popular"
             else:
-                # Get first cast members from these movies
-                first_cast_members = []
-                for movie_id in all_user_movie_ids:
-                    movie = get_movie(movie_id)
-                    if not movie or not movie.get('first_cast'):
-                        continue
-                        
-                    first_cast = movie['first_cast']
-                    first_cast_members.append({
-                        'actor_id': first_cast['id'],
-                        'name': first_cast['name'],
-                        'source_movie_id': movie_id,
-                        'source_movie_title': movie['title']
-                    })
+                # Get recommendations using cosine similarity based on user's movie history
+                recommendations = get_cosine_similarity_recommendations(all_user_movie_ids, num_recommendations=20)
                 
-                # Get movies from these cast members
-                cast_movies = []
-                processed_movie_ids = set(all_user_movie_ids)  # Don't show movies user already interacted with
-                
-                for cast_member in first_cast_members:
-                    actor_movies = get_actor_movies(cast_member['actor_id'])
-                    
-                    # Filter out movies the user has already interacted with and unreleased movies
-                    new_movies = [
-                        movie for movie in actor_movies 
-                        if movie['id'] not in processed_movie_ids
-                        and movie.get('release_date', '') <= current_date  # Filter unreleased movies
-                    ]
-                    
-                    # Add to our list and tracking set
-                    for movie in new_movies:
-                        if movie['id'] not in processed_movie_ids:
-                            # Add source information to the movie
-                            movie['recommended_because'] = {
-                                'actor_name': cast_member['name'],
-                                'source_movie': cast_member['source_movie_title']
-                            }
-                            cast_movies.append(movie)
-                            processed_movie_ids.add(movie['id'])
-                
-                # Sort by release date (newest first)
-                cast_movies.sort(key=lambda x: x.get('release_date', ''), reverse=True)
-                
-                # Limit to 20 movies
-                recommendations = cast_movies[:20]
+                # Filter out unreleased movies
+                recommendations = [
+                    movie for movie in recommendations 
+                    if movie.get('release_date', '') <= current_date
+                ]
                 
                 # If we don't have enough movies, supplement with popular movies
                 if len(recommendations) < 20:
                     popular_movies = get_popular_movies(limit=20 - len(recommendations))
                     
                     # Filter out movies the user has already interacted with or that are already in recommendations
+                    processed_movie_ids = set(all_user_movie_ids + [m['id'] for m in recommendations])
                     popular_movies = [
                         movie for movie in popular_movies 
                         if movie['id'] not in processed_movie_ids
@@ -733,7 +698,7 @@ def recommendations(request):
                     recommendations.extend(popular_movies)
                     recommendations = recommendations[:20]  # Ensure we have at most 20 movies
                 
-                message = "Latest movies from actors in your favorite films"
+                message = "Movies similar to your favorites based on genre similarity"
                 recommendation_type = "personalized"
             
             # Cache the recommendations for 1 hour
@@ -742,7 +707,7 @@ def recommendations(request):
             logger.info(f"Generated {len(recommendations)} recommendations for user {request.user.id}")
         else:
             logger.info(f"Retrieved {len(recommendations)} recommendations from cache for user {request.user.id}")
-            message = "Latest movies from actors in your favorite films"
+            message = "Movies similar to your favorites."
             recommendation_type = "personalized"
         
         return render(request, 'recommendations.html', {
@@ -816,3 +781,28 @@ def custom_logout(request):
 
 def landing(request):
     return render(request, 'landing.html')
+
+def similar_movies(request, movie_id):
+    """Show similar movies for a specific movie using cosine similarity"""
+    try:
+        from .movie_data import get_movie
+        from .recommender import get_similar_movies_for_movie
+        
+        # Get the original movie details
+        movie = get_movie(movie_id)
+        if not movie:
+            messages.warning(request, "Movie not found.")
+            return redirect('home')
+        
+        # Get similar movies using cosine similarity
+        similar_movies_list = get_similar_movies_for_movie(movie_id, num_recommendations=12)
+        
+        return render(request, 'similar_movies.html', {
+            'original_movie': movie,
+            'similar_movies': similar_movies_list
+        })
+        
+    except Exception as e:
+        logger.error(f"Error getting similar movies for movie {movie_id}: {e}")
+        messages.error(request, "An error occurred while finding similar movies. Please try again later.")
+        return redirect('movie_detail', movie_id=movie_id)

@@ -72,14 +72,14 @@
             <div class="movie-actions">
                 {% if user.is_authenticated %}
                     {% if in_watchlist %}
-                    <form action="{% url 'remove_from_watchlist' movie.id %}" method="post">
+                    <form action="{% url 'remove_from_watchlist' movie.id %}" method="post" style="display: inline-block; margin-right: 10px;">
                         {% csrf_token %}
                         <button type="submit" class="btn btn-danger">
                             <i class="fas fa-bookmark me-2"></i>Remove from Watchlist
                         </button>
                     </form>
                     {% else %}
-                    <form action="{% url 'add_to_watchlist' movie.id %}" method="post">
+                    <form action="{% url 'add_to_watchlist' movie.id %}" method="post" style="display: inline-block; margin-right: 10px;">
                         {% csrf_token %}
                         <button type="submit" class="btn btn-primary">
                             <i class="far fa-bookmark me-2"></i>Add to Watchlist
@@ -87,6 +87,9 @@
                     </form>
                     {% endif %}
                 {% endif %}
+                <a href="{% url 'similar_movies' movie.id %}" class="btn btn-success">
+                    <i class="fas fa-search me-2"></i>Find Similar Movies
+                </a>
             </div>
             
             <!-- Movie tagline -->
