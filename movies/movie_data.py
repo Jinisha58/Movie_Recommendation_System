@@ -10,7 +10,8 @@ try:
     from urllib3.util.retry import Retry
 except ImportError:
     # For older versions of requests
-    from requests.packages.urllib3.util.retry import Retry
+    #from requests.packages.urllib3.util.retry import Retry
+    from urllib3.util.retry import Retry
 from django.conf import settings
 from django.core.cache import cache
 

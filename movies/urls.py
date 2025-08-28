@@ -4,7 +4,8 @@ from . import views
 urlpatterns = [
     path('', views.home, name='home'),
     path('movie/<int:movie_id>/', views.movie_detail, name='movie_detail'),
-    path('movie/<int:movie_id>/similar/', views.similar_movies, name='similar_movies'),
+    # removed similar_movies route (unused)
+    path('movie/<int:movie_id>/rate/', views.rate_movie, name='rate_movie'),
     path('search/', views.search, name='search'),
     path('filter/', views.movie_filter, name='movie_filter'),
     path('filter/ajax/', views.movie_filter_ajax, name='movie_filter_ajax'),
@@ -14,4 +15,5 @@ urlpatterns = [
     path('recommendations/', views.recommendations, name='recommendations'),
     path('actor/<int:actor_id>/', views.actor_movies, name='actor_movies'),
     path('profile/', views.profile, name='profile'),
+    path('my-ratings/', views.my_ratings, name='my_ratings'),
 ]

@@ -23,11 +23,13 @@ try:
     watchlists_collection = db.get_collection('watchlists')
     viewed_movies_collection = db.get_collection('viewed_movies')
     search_history_collection = db.get_collection('search_history')
+    ratings_collection = db.get_collection('ratings')
     
     # Create indexes for better performance
     watchlists_collection.create_index([('user_id', 1), ('movie_id', 1)], unique=True)
     viewed_movies_collection.create_index([('user_id', 1), ('movie_id', 1)], unique=True)
     search_history_collection.create_index([('user_id', 1), ('timestamp', -1)])
+    ratings_collection.create_index([('user_id', 1), ('movie_id', 1)], unique=True)
     
     logger.info("MongoDB connection established successfully")
 except Exception as e:
@@ -65,6 +67,7 @@ except Exception as e:
     watchlists_collection = FallbackCollection('watchlists')
     viewed_movies_collection = FallbackCollection('viewed_movies')
     search_history_collection = FallbackCollection('search_history')
+    ratings_collection = FallbackCollection('ratings')
 
 
 

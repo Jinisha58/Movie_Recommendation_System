@@ -90,6 +90,10 @@
                 <div class="stat-number">{{ watchlist_count }}</div>
                 <div class="stat-label">Movies in Watchlist</div>
             </div>
+            <div class="stat-box">
+                <div class="stat-number">{{ ratings_count }}</div>
+                <div class="stat-label">Movies Rated</div>
+            </div>
         </div>
     </div>
 </div>
@@ -131,8 +135,10 @@
     
     <div class="mt-4">
         <a href="{% url 'watchlist' %}" class="btn btn-primary">View Watchlist</a>
-        <a href="{% url 'recommendations' %}" class="btn btn-outline-primary text-white bg-info border-info ms-2">Get Recommendations</a>
+        <a href="{% url 'my_ratings' %}" class="btn btn-primary ms-2">My Ratings</a>
     </div>
+
+    
 </div>
 {% endblock %}
 

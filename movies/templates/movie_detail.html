@@ -59,11 +59,11 @@
                 {% endif %}
             </div>
             
-            <!-- Movie genres -->
+            <!-- Movie genres (list of strings) -->
             {% if movie.genres %}
             <div class="movie-genres">
                 {% for genre in movie.genres %}
-                <span class="genre-tag">{{ genre.name }}</span>
+                <span class="genre-tag">{{ genre }}</span>
                 {% endfor %}
             </div>
             {% endif %}
@@ -87,10 +87,57 @@
                     </form>
                     {% endif %}
                 {% endif %}
-                <a href="{% url 'similar_movies' movie.id %}" class="btn btn-success">
-                    <i class="fas fa-search me-2"></i>Find Similar Movies
-                </a>
+                
             </div>
+
+            {% if user.is_authenticated %}
+            <div class="mt-3">
+                <form id="rating-form" action="{% url 'rate_movie' movie.id %}" method="post">
+                    {% csrf_token %}
+                    <div class="d-flex align-items-center">
+                        <div id="star-container" class="me-2">
+                            <span class="star" data-value="1">&#9733;</span>
+                            <span class="star" data-value="2">&#9733;</span>
+                            <span class="star" data-value="3">&#9733;</span>
+                            <span class="star" data-value="4">&#9733;</span>
+                            <span class="star" data-value="5">&#9733;</span>
+                        </div>
+                        <input type="hidden" name="rating" id="rating-input" value="{{ user_rating|default:0 }}">
+                        <button type="submit" class="btn btn-warning btn-sm">Save Rating</button>
+                        {% if user_rating %}
+                        <span class="ms-2">Your rating: {{ user_rating }}/5</span>
+                        {% endif %}
+                    </div>
+                </form>
+            </div>
+            <style>
+                .star { cursor: pointer; font-size: 1.4rem; color: #ccc; }
+                .star.active, .star.hover { color: #ffc107; }
+            </style>
+            <script>
+                (function(){
+                    const stars = document.querySelectorAll('#star-container .star');
+                    const input = document.getElementById('rating-input');
+                    const current = parseInt(input.value || '0');
+                    function paint(n){
+                        stars.forEach((s,i)=>{ s.classList.toggle('active', i < n); });
+                    }
+                    if(current>0) paint(current);
+                    stars.forEach((star)=>{
+                        star.addEventListener('mouseover', ()=>{
+                            paint(parseInt(star.dataset.value));
+                        });
+                        star.addEventListener('mouseout', ()=>{
+                            paint(parseInt(input.value||'0'));
+                        });
+                        star.addEventListener('click', ()=>{
+                            input.value = star.dataset.value;
+                            paint(parseInt(input.value));
+                        });
+                    });
+                })();
+            </script>
+            {% endif %}
             
             <!-- Movie tagline -->
             {% if movie.tagline %}

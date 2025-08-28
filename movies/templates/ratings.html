@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load humanize %}
+
+{% block title %}My Ratings - MovieHub{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+<style>
+    .section-title { margin: 2rem 0 1rem; border-bottom: 1px solid #dee2e6; padding-bottom: 0.5rem; }
+    .recent-view { display: flex; margin-bottom: 1rem; background-color: #f8f9fa; border-radius: 8px; overflow: hidden; }
+    .recent-poster { width: 80px; height: 120px; }
+    .recent-poster img { width: 100%; height: 100%; object-fit: cover; }
+    .recent-info { padding: 1rem; flex: 1; }
+    .recent-meta { font-size: 0.9rem; color: #6c757d; margin-top: 0.5rem; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h1>My Ratings</h1>
+      
+    </div>
+
+    {% if rated_movies %}
+    <h2 class="section-title">Your Ratings</h2>
+    <div class="recent-movies">
+        {% for movie in rated_movies %}
+        <div class="recent-view">
+            <div class="recent-poster">
+                {% if movie.poster_url %}
+                <img src="{{ movie.poster_url }}" alt="{{ movie.title }}">
+                {% else %}
+                <div class="bg-secondary d-flex align-items-center justify-content-center h-100">
+                    <i class="fas fa-film text-white"></i>
+                </div>
+                {% endif %}
+            </div>
+            <div class="recent-info">
+                <h4><a href="{% url 'movie_detail' movie.id %}">{{ movie.title }}</a></h4>
+                <div class="recent-meta">
+                    <span>{{ movie.release_date|slice:":4" }}</span>
+                    <span class="ms-2">Your rating:
+                        <span class="text-warning">
+                            {% for i in "12345" %}
+                                {% if forloop.counter <= movie.user_rating %}
+                                    &#9733;
+                                {% else %}
+                                    <span style="color:#ccc">&#9733;</span>
+                                {% endif %}
+                            {% endfor %}
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="alert alert-info">You haven't rated any movies yet.</div>
+    {% endif %}
+
+    {% if ratings_recommendations %}
+    <h2 class="section-title">Recommended For You</h2>
+    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3">
+        {% for m in ratings_recommendations %}
+        <div class="col">
+            <div class="card h-100">
+                <a href="{% url 'movie_detail' m.id %}">
+                    {% if m.poster_url %}
+                    <img src="{{ m.poster_url }}" class="card-img-top" alt="{{ m.title }}">
+                    {% endif %}
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title" style="font-size: 1rem;">{{ m.title }}</h5>
+                    <p class="card-text mb-1"><small>{{ m.release_date|slice:":4" }}</small></p>
+                    <p class="card-text mb-0"><small>Similarity: <strong>{{ m.similarity_score }}</strong></small></p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+

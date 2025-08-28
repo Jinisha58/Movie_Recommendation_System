@@ -63,10 +63,82 @@
         {% endif %}
     </div>
     
-    <!-- Movies Section -->
+    <!-- Trending Movies Section -->
+    {% if trending_movies %}
     <div class="movie-section">
         <div class="section-header">
-            <h2>{{ page_title }}</h2>
+            <h2>Trending Movies</h2>
+        </div>
+        <div class="movie-grid">
+            {% for movie in trending_movies %}
+            <div class="movie-card">
+                <a href="{% url 'movie_detail' movie.id %}">
+                    {% if movie.poster_url %}
+                    <div class="movie-poster">
+                        <img src="{{ movie.poster_url }}" alt="{{ movie.title }}" onerror="this.onerror=null; this.src='https://via.placeholder.com/300x450.png?text={{ movie.title|urlencode|truncatechars:20 }}';">
+                    </div>
+                    {% else %}
+                    <div class="movie-poster movie-poster-placeholder">
+                        <div class="poster-placeholder-content">
+                            <i class="fas fa-film fa-3x"></i>
+                            <p>{{ movie.title|truncatechars:20 }}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+                </a>
+                <div class="movie-info">
+                    <h3 class="movie-title">{{ movie.title|truncatechars:20 }}</h3>
+                    <div class="movie-meta">
+                        <span class="release-year">{{ movie.release_date|slice:":4"|default:"N/A" }}</span>
+                        <span class="rating"><i class="fas fa-star"></i> {{ movie.vote_average|floatformat:1 }}</span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Featured For You Section -->
+    {% if featured_for_you %}
+    <div class="movie-section mt-5">
+        <div class="section-header">
+            <h2>Featured For You</h2>
+        </div>
+        <div class="movie-grid">
+            {% for movie in featured_for_you %}
+            <div class="movie-card">
+                <a href="{% url 'movie_detail' movie.id %}">
+                    {% if movie.poster_url %}
+                    <div class="movie-poster">
+                        <img src="{{ movie.poster_url }}" alt="{{ movie.title }}" onerror="this.onerror=null; this.src='https://via.placeholder.com/300x450.png?text={{ movie.title|urlencode|truncatechars:20 }}';">
+                    </div>
+                    {% else %}
+                    <div class="movie-poster movie-poster-placeholder">
+                        <div class="poster-placeholder-content">
+                            <i class="fas fa-film fa-3x"></i>
+                            <p>{{ movie.title|truncatechars:20 }}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+                </a>
+                <div class="movie-info">
+                    <h3 class="movie-title">{{ movie.title|truncatechars:20 }}</h3>
+                    <div class="movie-meta">
+                        <span class="release-year">{{ movie.release_date|slice:":4"|default:"N/A" }}</span>
+                        <span class="rating"><i class="fas fa-star"></i> {{ movie.vote_average|floatformat:1 }}</span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Featured Movies Section -->
+    <div class="movie-section">
+        <div class="section-header">
+            <h2>Featured Movies</h2>
         </div>
         <div class="movie-grid">
             {% for movie in movies %}
@@ -96,6 +168,8 @@
             {% endfor %}
         </div>
     </div>
+
+    
 </div>
 {% endblock %}
 

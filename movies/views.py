@@ -10,7 +10,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 # Import movie data functions
-from .movie_data import get_movie, search_movies, get_popular_movies
+from .movie_data import get_movie, search_movies, get_popular_movies, get_trending_movies
 
 def home(request):
     """Home page view showing personalized or popular movies"""
@@ -19,6 +19,12 @@ def home(request):
         import logging
         logger = logging.getLogger(__name__)
         
+        # Fetch trending movies (top 10)
+        try:
+            trending_movies = get_trending_movies(time_window='week', page=1)[:10]
+        except Exception:
+            trending_movies = []
+
         if request.user.is_authenticated:
             # Cache recommendations for 24 hours (1 day)
             cache_key = f"user_home_cast_movies_{request.user.id}"
@@ -108,22 +114,51 @@ def home(request):
                     movies = get_popular_movies(limit=20)
             else:
                 logger.info(f"Retrieved {len(movies)} home cast movies from cache for user {request.user.id}")
+            # Personalized featured for user
+            try:
+                from .recommender import get_featured_for_user
+                featured_for_you = get_featured_for_user(request.user.id, limit=12)
+            except Exception:
+                featured_for_you = []
         else:
             from .movie_data import get_popular_movies
             movies = get_popular_movies(limit=20)
+            featured_for_you = []
         
+        # Global featured aggregation
+        try:
+            from .recommender import get_global_featured
+            featured_movies = get_global_featured(limit=20)
+        except Exception:
+            featured_movies = movies
+
         return render(request, 'home.html', {
-            'movies': movies,
-            'page_title': 'Latest Movies from Your Favorite Actors' if request.user.is_authenticated else 'Popular Movies'
+            'movies': featured_movies,
+            'trending_movies': trending_movies,
+            'featured_for_you': featured_for_you,
+            'page_title': 'Featured Movies'
         })
     except Exception as e:
         logger.error(f"Error in home view: {e}")
         messages.error(request, "An error occurred while loading the home page. Please try again later.")
         from .movie_data import get_popular_movies
         movies = get_popular_movies(limit=20)
+        # Try trending for error case too
+        try:
+            trending_movies = get_trending_movies(time_window='week', page=1)[:10]
+        except Exception:
+            trending_movies = []
+        # Global featured fallback
+        try:
+            from .recommender import get_global_featured
+            featured_movies = get_global_featured(limit=20)
+        except Exception:
+            featured_movies = movies
         return render(request, 'home.html', {
-            'movies': movies,
-            'page_title': 'Popular Movies'
+            'movies': featured_movies,
+            'trending_movies': trending_movies,
+            'featured_for_you': [],
+            'page_title': 'Featured Movies'
         })
 
 def movie_detail(request, movie_id):
@@ -173,9 +208,21 @@ def movie_detail(request, movie_id):
                 upsert=True
             )
         
+        # Get user's existing rating for this movie
+        user_rating = None
+        if request.user.is_authenticated:
+            try:
+                from .mongodb_client import ratings_collection
+                rating_doc = ratings_collection.find_one({'user_id': request.user.id, 'movie_id': int(movie_id)})
+                if rating_doc:
+                    user_rating = rating_doc.get('rating')
+            except Exception:
+                user_rating = None
+
         return render(request, 'movie_detail.html', {
             'movie': movie,
-            'first_cast_movies': first_cast_movies
+            'first_cast_movies': first_cast_movies,
+            'user_rating': user_rating
         })
     except Exception as e:
         logger.error(f"Error in movie_detail view for movie {movie_id}: {e}")
@@ -698,7 +745,7 @@ def recommendations(request):
                     recommendations.extend(popular_movies)
                     recommendations = recommendations[:20]  # Ensure we have at most 20 movies
                 
-                message = "Movies similar to your favorites based on genre similarity"
+                message = " "
                 recommendation_type = "personalized"
             
             # Cache the recommendations for 1 hour
@@ -707,7 +754,7 @@ def recommendations(request):
             logger.info(f"Generated {len(recommendations)} recommendations for user {request.user.id}")
         else:
             logger.info(f"Retrieved {len(recommendations)} recommendations from cache for user {request.user.id}")
-            message = "Movies similar to your favorites."
+            message = " "
             recommendation_type = "personalized"
         
         return render(request, 'recommendations.html', {
@@ -735,13 +782,26 @@ def profile(request):
     """User profile view"""
     try:
         # Get user's movie statistics
-        from .mongodb_client import viewed_movies_collection, watchlists_collection
+        from .mongodb_client import viewed_movies_collection, watchlists_collection, ratings_collection
+        from .recommender import get_recommendations_from_ratings
         
         # Count viewed movies
         viewed_count = viewed_movies_collection.count_documents({'user_id': request.user.id})
         
         # Count watchlist movies
         watchlist_count = watchlists_collection.count_documents({'user_id': request.user.id})
+        
+        # Count ratings
+        ratings_count = ratings_collection.count_documents({'user_id': request.user.id})
+        
+        # Get user ratings
+        user_ratings = list(ratings_collection.find({'user_id': request.user.id}).sort('updated_at', -1))
+        rated_movies = []
+        for r in user_ratings:
+            m = get_movie(r['movie_id'])
+            if m:
+                m['user_rating'] = r.get('rating')
+                rated_movies.append(m)
         
         # Get recently viewed movies
         recent_views = list(viewed_movies_collection.find(
@@ -755,11 +815,17 @@ def profile(request):
                 movie['last_viewed'] = view.get('last_viewed')
                 recent_movies.append(movie)
         
+        # Ratings-based recommendations
+        ratings_recs = get_recommendations_from_ratings(request.user.id, min_similarity=0.5, limit=20)
+        
         context = {
             'user': request.user,
             'viewed_count': viewed_count,
             'watchlist_count': watchlist_count,
-            'recent_movies': recent_movies
+            'ratings_count': ratings_count,
+            'recent_movies': recent_movies,
+            'rated_movies': rated_movies,
+            'ratings_recommendations': ratings_recs
         }
         
         return render(request, 'profile.html', context)
@@ -782,27 +848,83 @@ def custom_logout(request):
 def landing(request):
     return render(request, 'landing.html')
 
-def similar_movies(request, movie_id):
-    """Show similar movies for a specific movie using cosine similarity"""
+# Removed: similar_movies view (no longer used)
+
+@login_required
+def my_ratings(request):
+    """Dedicated page to show user's ratings and recommendations below."""
     try:
-        from .movie_data import get_movie
-        from .recommender import get_similar_movies_for_movie
+        from .mongodb_client import ratings_collection
+        from .recommender import get_recommendations_from_ratings
         
-        # Get the original movie details
-        movie = get_movie(movie_id)
-        if not movie:
-            messages.warning(request, "Movie not found.")
-            return redirect('home')
+        user_ratings = list(ratings_collection.find({'user_id': request.user.id}).sort('updated_at', -1))
+        rated_movies = []
+        for r in user_ratings:
+            m = get_movie(r['movie_id'])
+            if m:
+                m['user_rating'] = r.get('rating')
+                rated_movies.append(m)
         
-        # Get similar movies using cosine similarity
-        similar_movies_list = get_similar_movies_for_movie(movie_id, num_recommendations=12)
+        ratings_recs = get_recommendations_from_ratings(request.user.id, min_similarity=0.5, limit=24)
         
-        return render(request, 'similar_movies.html', {
-            'original_movie': movie,
-            'similar_movies': similar_movies_list
+        return render(request, 'ratings.html', {
+            'rated_movies': rated_movies,
+            'ratings_recommendations': ratings_recs
         })
-        
     except Exception as e:
-        logger.error(f"Error getting similar movies for movie {movie_id}: {e}")
-        messages.error(request, "An error occurred while finding similar movies. Please try again later.")
+        logger.error(f"Error loading my_ratings for user {request.user.id}: {e}")
+        return render(request, 'ratings.html', {
+            'rated_movies': [],
+            'ratings_recommendations': []
+        })
+
+@login_required
+def rate_movie(request, movie_id):
+    """Create or update a user's rating for a movie (1-5). Returns JSON for AJAX or redirects back."""
+    try:
+        from .mongodb_client import ratings_collection
+        from django.views.decorators.http import require_POST
+    except Exception:
+        pass
+
+    if request.method != 'POST':
+        return JsonResponse({'success': False, 'message': 'Invalid method'}, status=405)
+
+    try:
+        rating = int(request.POST.get('rating', 0))
+    except ValueError:
+        rating = 0
+
+    if rating < 1 or rating > 5:
+        return JsonResponse({'success': False, 'message': 'Rating must be between 1 and 5'}, status=400)
+
+    try:
+        from .mongodb_client import ratings_collection
+        from datetime import datetime as dt
+        ratings_collection.update_one(
+            {'user_id': request.user.id, 'movie_id': int(movie_id)},
+            {'$set': {
+                'user_id': request.user.id,
+                'movie_id': int(movie_id),
+                'rating': rating,
+                'updated_at': dt.now()
+            }},
+            upsert=True
+        )
+        # Invalidate any caches if needed later
+
+        # AJAX?
+        if request.headers.get('X-Requested-With') == 'XMLHttpRequest' or request.content_type == 'application/json':
+            return JsonResponse({'success': True, 'message': 'Rating saved', 'rating': rating})
+
+        messages.success(request, 'Your rating has been saved.')
+        referer = request.META.get('HTTP_REFERER')
+        if referer:
+            return redirect(referer)
+        return redirect('movie_detail', movie_id=movie_id)
+    except Exception as e:
+        logger.error(f"Error saving rating for user {request.user.id} movie {movie_id}: {e}")
+        if request.headers.get('X-Requested-With') == 'XMLHttpRequest' or request.content_type == 'application/json':
+            return JsonResponse({'success': False, 'message': 'Error saving rating'}, status=500)
+        messages.error(request, 'Could not save your rating. Please try again.')
         return redirect('movie_detail', movie_id=movie_id)
