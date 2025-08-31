@@ -565,21 +565,7 @@ def actor_movies(request, actor_id):
         messages.error(request, "An error occurred while loading actor information. Please try again later.")
         return redirect('home')
 
-# The function below should be removed or commented out
-# def trending(request):
-#     """Show trending movies"""
-#     try:
-#         from .movie_data import get_trending_movies
-#         trending_movies = get_trending_movies()
-#         
-#         return render(request, 'trending.html', {
-#             'movies': trending_movies,
-#             'title': 'Trending Movies'
-#         })
-#     except Exception as e:
-#         logger.error(f"Error in trending view: {e}")
-#         messages.error(request, "An error occurred while loading trending movies. Please try again later.")
-#         return render(request, 'trending.html', {'movies': []})
+
 
 import requests
 from django.shortcuts import render
@@ -848,35 +834,85 @@ def custom_logout(request):
 def landing(request):
     return render(request, 'landing.html')
 
-# Removed: similar_movies view (no longer used)
 
 @login_required
 def my_ratings(request):
-    """Dedicated page to show user's ratings and recommendations below."""
+    """Dedicated page to show user's ratings and item-based collaborative filtering recommendations."""
     try:
         from .mongodb_client import ratings_collection
-        from .recommender import get_recommendations_from_ratings
-        
-        user_ratings = list(ratings_collection.find({'user_id': request.user.id}).sort('updated_at', -1))
+        from .movie_data import get_movie
+        from math import sqrt
+
+        # Fetch all ratings from the database
+        all_ratings = list(ratings_collection.find({}))
+        user_ratings_dict = {}  # user_id -> {movie_id: rating}
+        for r in all_ratings:
+            uid = r['user_id']
+            mid = r['movie_id']
+            rating = r.get('rating', 0)
+            user_ratings_dict.setdefault(uid, {})[mid] = rating
+
+        # Get current user's ratings
+        user_ratings = user_ratings_dict.get(request.user.id, {})
         rated_movies = []
-        for r in user_ratings:
-            m = get_movie(r['movie_id'])
+        for mid, rating in user_ratings.items():
+            m = get_movie(mid)
             if m:
-                m['user_rating'] = r.get('rating')
+                m['user_rating'] = rating
                 rated_movies.append(m)
-        
-        ratings_recs = get_recommendations_from_ratings(request.user.id, min_similarity=0.5, limit=24)
-        
+
+        # Transpose ratings: movie_id -> {user_id: rating}
+        movie_ratings = {}
+        for uid, movies in user_ratings_dict.items():
+            for mid, rating in movies.items():
+                movie_ratings.setdefault(mid, {})[uid] = rating
+
+        # Compute similarity between movies using cosine similarity
+        movie_sim = {}  # movie_id -> {movie_id: similarity}
+        movie_ids = list(movie_ratings.keys())
+
+        for i in range(len(movie_ids)):
+            m1 = movie_ids[i]
+            movie_sim.setdefault(m1, {})
+            for j in range(i + 1, len(movie_ids)):
+                m2 = movie_ids[j]
+                users_in_common = set(movie_ratings[m1].keys()) & set(movie_ratings[m2].keys())
+                if not users_in_common:
+                    continue
+                num = sum(movie_ratings[m1][u] * movie_ratings[m2][u] for u in users_in_common)
+                denom = sqrt(sum(movie_ratings[m1][u]**2 for u in users_in_common)) * \
+                        sqrt(sum(movie_ratings[m2][u]**2 for u in users_in_common))
+                if denom > 0:
+                    sim = num / denom
+                    movie_sim[m1][m2] = sim
+                    movie_sim.setdefault(m2, {})[m1] = sim
+
+        # Generate recommendations for the user
+        scores = {}
+        for mid, rating in user_ratings.items():
+            if rating < 4:  # only consider highly rated movies
+                continue
+            for similar_mid, sim in movie_sim.get(mid, {}).items():
+                if similar_mid in user_ratings:  # skip already rated movies
+                    continue
+                scores[similar_mid] = scores.get(similar_mid, 0) + sim * rating
+
+        # Sort recommended movies by score
+        recommended_ids = sorted(scores, key=lambda x: scores[x], reverse=True)[:24]
+        recommended_movies = [get_movie(mid) for mid in recommended_ids if get_movie(mid)]
+
         return render(request, 'ratings.html', {
             'rated_movies': rated_movies,
-            'ratings_recommendations': ratings_recs
+            'ratings_recommendations': recommended_movies
         })
+
     except Exception as e:
         logger.error(f"Error loading my_ratings for user {request.user.id}: {e}")
         return render(request, 'ratings.html', {
             'rated_movies': [],
             'ratings_recommendations': []
         })
+
 
 @login_required
 def rate_movie(request, movie_id):
