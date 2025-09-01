@@ -19738,3 +19738,231 @@ INFO 2025-08-31 17:23:13,649 basehttp "GET /search/?q=&year=1959&genre=&language
 INFO 2025-08-31 17:23:43,042 basehttp "GET /profile/ HTTP/1.1" 200 9724
 INFO 2025-08-31 17:23:46,711 views Search with filters returned 20 results
 INFO 2025-08-31 17:23:46,725 basehttp "GET /search/? HTTP/1.1" 200 17659
+INFO 2025-08-31 17:27:13,564 views Search with filters returned 20 results
+INFO 2025-08-31 17:27:13,602 basehttp "GET /search/?q= HTTP/1.1" 200 17659
+INFO 2025-08-31 17:27:17,885 views Retrieved 20 home cast movies from cache for user 6
+INFO 2025-08-31 17:27:23,568 basehttp "GET / HTTP/1.1" 200 40373
+INFO 2025-08-31 17:28:22,889 basehttp "GET /profile/ HTTP/1.1" 200 9760
+INFO 2025-08-31 17:28:26,601 basehttp "GET /my-ratings/ HTTP/1.1" 200 18321
+WARNING 2025-08-31 17:28:26,696 basehttp "GET /static/css/ratings.css HTTP/1.1" 404 1859
+ERROR 2025-08-31 17:28:47,706 recommender Error getting movie 1235451: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+INFO 2025-08-31 17:28:57,506 basehttp "GET /profile/ HTTP/1.1" 200 9724
+INFO 2025-08-31 17:29:01,920 basehttp "GET /my-ratings/ HTTP/1.1" 200 29008
+WARNING 2025-08-31 17:29:01,982 basehttp "GET /static/css/ratings.css HTTP/1.1" 404 1859
+INFO 2025-08-31 17:29:19,818 basehttp "GET /profile/ HTTP/1.1" 200 9724
+INFO 2025-08-31 17:29:26,279 basehttp "GET /profile/ HTTP/1.1" 200 9760
+INFO 2025-08-31 17:29:30,069 basehttp "POST /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-31 17:29:31,678 basehttp "GET / HTTP/1.1" 200 29670
+INFO 2025-08-31 17:29:33,506 basehttp "GET /accounts/login/ HTTP/1.1" 200 4568
+INFO 2025-08-31 17:29:39,996 basehttp "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-31 17:29:40,074 basehttp "GET /profile/ HTTP/1.1" 200 9885
+INFO 2025-08-31 17:29:48,050 basehttp "GET /movie/803796/ HTTP/1.1" 200 23780
+INFO 2025-08-31 17:29:51,505 basehttp "POST /movie/803796/rate/ HTTP/1.1" 302 0
+INFO 2025-08-31 17:29:51,548 basehttp "GET /movie/803796/ HTTP/1.1" 200 24182
+INFO 2025-08-31 17:29:58,165 basehttp "GET /my-ratings/ HTTP/1.1" 200 29008
+WARNING 2025-08-31 17:29:58,212 basehttp "GET /static/css/ratings.css HTTP/1.1" 404 1859
+INFO 2025-08-31 17:30:09,784 basehttp "GET /my-ratings/ HTTP/1.1" 200 29008
+WARNING 2025-08-31 17:30:09,858 basehttp "GET /static/css/ratings.css HTTP/1.1" 404 1859
+INFO 2025-08-31 17:30:23,939 basehttp "GET /my-ratings/ HTTP/1.1" 200 15722
+WARNING 2025-08-31 17:30:24,010 basehttp "GET /static/css/ratings.css HTTP/1.1" 404 1859
+INFO 2025-08-31 17:30:51,582 basehttp "GET /profile/ HTTP/1.1" 200 9876
+INFO 2025-08-31 17:30:54,233 basehttp "GET /my-ratings/ HTTP/1.1" 200 15722
+WARNING 2025-08-31 17:30:54,308 basehttp "GET /static/css/ratings.css HTTP/1.1" 404 1859
+INFO 2025-08-31 17:31:03,786 basehttp - Broken pipe from ('127.0.0.1', 52294)
+INFO 2025-08-31 17:33:08,583 basehttp "GET /profile/ HTTP/1.1" 200 9878
+INFO 2025-08-31 17:33:13,588 basehttp "POST /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-08-31 17:33:14,873 basehttp "GET / HTTP/1.1" 200 29670
+INFO 2025-08-31 17:33:16,544 basehttp "GET /accounts/login/ HTTP/1.1" 200 4568
+INFO 2025-08-31 17:33:21,706 basehttp "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-08-31 17:33:25,621 basehttp "GET /profile/ HTTP/1.1" 200 9760
+INFO 2025-08-31 17:33:32,113 basehttp "GET /my-ratings/ HTTP/1.1" 200 18321
+WARNING 2025-08-31 17:33:32,159 basehttp "GET /static/css/ratings.css HTTP/1.1" 404 1859
+INFO 2025-08-31 17:37:00,458 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-31 17:37:02,807 autoreload Watching for file changes with StatReloader
+INFO 2025-08-31 17:37:08,274 mongodb_client MongoDB connection established successfully
+INFO 2025-08-31 17:37:09,741 movie_data No videos in main response for movie 1325332, fetching videos separately
+INFO 2025-08-31 17:37:10,543 movie_data No videos in main response for movie 1287324, fetching videos separately
+INFO 2025-08-31 17:37:11,463 movie_data Found official trailer for movie 1389158: lVvMbXiJjko
+INFO 2025-08-31 17:37:12,012 movie_data Found official trailer for movie 1148172: i4uHAM1BF6M
+INFO 2025-08-31 17:37:12,693 movie_data Found official trailer for movie 1022787: yH5zbV7eweM
+INFO 2025-08-31 17:37:13,206 movie_data Found official trailer for movie 794960: ay7QymPRTco
+INFO 2025-08-31 17:37:13,832 movie_data No videos in main response for movie 271200, fetching videos separately
+INFO 2025-08-31 17:37:14,842 movie_data Found official trailer for movie 755898: d9erkpdh5o0
+INFO 2025-08-31 17:37:15,148 movie_data No videos in main response for movie 1406607, fetching videos separately
+INFO 2025-08-31 17:37:16,153 movie_data No videos in main response for movie 1522657, fetching videos separately
+INFO 2025-08-31 17:37:17,194 movie_data No videos in main response for movie 1519448, fetching videos separately
+INFO 2025-08-31 17:37:18,252 movie_data No videos in main response for movie 1235451, fetching videos separately
+INFO 2025-08-31 17:37:19,542 movie_data Found official trailer for movie 1175942: HvLHYox_Vq8
+INFO 2025-08-31 17:37:20,066 movie_data Found trailer for movie 1506456: 0SbftOXQE_I
+INFO 2025-08-31 17:37:20,392 movie_data Found official trailer for movie 803796: AzCAwdp1uIQ
+INFO 2025-08-31 17:37:20,984 movie_data Found official trailer for movie 939819: cYph95bLnGQ
+INFO 2025-08-31 17:37:21,506 movie_data Found official trailer for movie 952127: dCOubUPaCeQ
+INFO 2025-08-31 17:37:22,006 movie_data Found teaser for movie 889876: 5769CEZsh9A
+INFO 2025-08-31 17:37:22,522 movie_data Found official trailer for movie 446893: 08AExF6dETA
+INFO 2025-08-31 17:37:23,030 movie_data Found official trailer for movie 980477: ETlOSBR92Fs
+INFO 2025-08-31 17:37:23,093 basehttp "GET /my-ratings/ HTTP/1.1" 200 29008
+WARNING 2025-08-31 17:37:23,163 basehttp "GET /static/css/ratings.css HTTP/1.1" 404 1859
+INFO 2025-08-31 17:37:23,408 basehttp "GET /my-ratings/ HTTP/1.1" 200 16351
+WARNING 2025-08-31 17:37:23,453 basehttp "GET /static/css/ratings.css HTTP/1.1" 404 1859
+INFO 2025-08-31 17:37:24,094 basehttp "GET /my-ratings/ HTTP/1.1" 200 16351
+WARNING 2025-08-31 17:37:24,186 basehttp "GET /static/css/ratings.css HTTP/1.1" 404 1859
+INFO 2025-08-31 17:37:24,486 basehttp "GET /my-ratings/ HTTP/1.1" 200 16351
+WARNING 2025-08-31 17:37:24,552 basehttp "GET /static/css/ratings.css HTTP/1.1" 404 1859
+INFO 2025-08-31 17:40:40,611 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-31 17:40:42,077 autoreload Watching for file changes with StatReloader
+INFO 2025-08-31 17:40:47,292 mongodb_client MongoDB connection established successfully
+INFO 2025-08-31 17:40:48,777 movie_data Found official trailer for movie 1175942: HvLHYox_Vq8
+INFO 2025-08-31 17:40:48,778 movie_data Found official trailer for movie 1175942: HvLHYox_Vq8
+INFO 2025-08-31 17:40:49,681 movie_data Found official trailer for movie 446893: 08AExF6dETA
+INFO 2025-08-31 17:40:49,686 movie_data Found official trailer for movie 446893: 08AExF6dETA
+INFO 2025-08-31 17:40:50,089 movie_data Found official trailer for movie 980477: ETlOSBR92Fs
+INFO 2025-08-31 17:40:50,092 movie_data Found official trailer for movie 980477: ETlOSBR92Fs
+INFO 2025-08-31 17:40:50,596 movie_data No videos in main response for movie 1325332, fetching videos separately
+INFO 2025-08-31 17:40:50,597 movie_data No videos in main response for movie 1325332, fetching videos separately
+INFO 2025-08-31 17:40:51,317 movie_data No videos in main response for movie 1287324, fetching videos separately
+INFO 2025-08-31 17:40:51,418 movie_data No videos in main response for movie 1287324, fetching videos separately
+INFO 2025-08-31 17:40:52,248 movie_data Found official trailer for movie 1389158: lVvMbXiJjko
+INFO 2025-08-31 17:40:52,250 movie_data Found official trailer for movie 1389158: lVvMbXiJjko
+INFO 2025-08-31 17:40:52,755 movie_data Found official trailer for movie 1148172: i4uHAM1BF6M
+INFO 2025-08-31 17:40:52,863 movie_data Found official trailer for movie 1148172: i4uHAM1BF6M
+INFO 2025-08-31 17:40:53,176 movie_data Found official trailer for movie 1022787: yH5zbV7eweM
+INFO 2025-08-31 17:40:53,422 movie_data Found official trailer for movie 1022787: yH5zbV7eweM
+INFO 2025-08-31 17:40:53,684 movie_data Found official trailer for movie 794960: ay7QymPRTco
+INFO 2025-08-31 17:40:53,946 movie_data Found official trailer for movie 794960: ay7QymPRTco
+INFO 2025-08-31 17:40:54,150 movie_data No videos in main response for movie 271200, fetching videos separately
+INFO 2025-08-31 17:40:54,386 movie_data No videos in main response for movie 271200, fetching videos separately
+INFO 2025-08-31 17:40:55,096 movie_data Found official trailer for movie 755898: d9erkpdh5o0
+INFO 2025-08-31 17:40:55,324 movie_data Found official trailer for movie 755898: d9erkpdh5o0
+INFO 2025-08-31 17:40:55,595 movie_data No videos in main response for movie 1406607, fetching videos separately
+INFO 2025-08-31 17:40:55,820 movie_data No videos in main response for movie 1406607, fetching videos separately
+INFO 2025-08-31 17:40:56,649 movie_data No videos in main response for movie 1522657, fetching videos separately
+INFO 2025-08-31 17:40:56,912 movie_data No videos in main response for movie 1522657, fetching videos separately
+INFO 2025-08-31 17:40:57,638 movie_data No videos in main response for movie 1519448, fetching videos separately
+INFO 2025-08-31 17:40:58,110 movie_data No videos in main response for movie 1519448, fetching videos separately
+INFO 2025-08-31 17:40:58,381 movie_data No videos in main response for movie 1235451, fetching videos separately
+INFO 2025-08-31 17:40:58,584 movie_data No videos in main response for movie 1235451, fetching videos separately
+INFO 2025-08-31 17:40:59,382 movie_data Found trailer for movie 1506456: 0SbftOXQE_I
+INFO 2025-08-31 17:40:59,512 movie_data Found trailer for movie 1506456: 0SbftOXQE_I
+INFO 2025-08-31 17:40:59,735 movie_data Found official trailer for movie 803796: AzCAwdp1uIQ
+INFO 2025-08-31 17:40:59,923 movie_data Found official trailer for movie 803796: AzCAwdp1uIQ
+INFO 2025-08-31 17:41:00,225 movie_data Found official trailer for movie 939819: cYph95bLnGQ
+INFO 2025-08-31 17:41:00,227 movie_data Found official trailer for movie 939819: cYph95bLnGQ
+INFO 2025-08-31 17:41:00,626 movie_data Found official trailer for movie 952127: dCOubUPaCeQ
+INFO 2025-08-31 17:41:00,772 movie_data Found official trailer for movie 952127: dCOubUPaCeQ
+INFO 2025-08-31 17:41:01,145 movie_data Found teaser for movie 889876: 5769CEZsh9A
+INFO 2025-08-31 17:41:01,147 movie_data Found teaser for movie 889876: 5769CEZsh9A
+INFO 2025-08-31 17:41:01,247 basehttp - Broken pipe from ('127.0.0.1', 52719)
+INFO 2025-08-31 17:41:01,247 basehttp "GET /my-ratings/ HTTP/1.1" 200 16296
+INFO 2025-08-31 17:41:16,627 basehttp "GET /my-ratings/ HTTP/1.1" 200 28953
+INFO 2025-08-31 17:41:16,928 basehttp "GET /my-ratings/ HTTP/1.1" 200 28953
+INFO 2025-08-31 17:41:26,675 basehttp "GET /my-ratings/ HTTP/1.1" 200 16296
+INFO 2025-08-31 17:41:27,029 basehttp "GET /my-ratings/ HTTP/1.1" 200 16296
+INFO 2025-08-31 17:54:32,423 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-31 17:54:33,873 autoreload Watching for file changes with StatReloader
+INFO 2025-08-31 17:54:41,797 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-31 17:54:42,856 autoreload Watching for file changes with StatReloader
+INFO 2025-08-31 17:54:44,935 mongodb_client MongoDB connection established successfully
+INFO 2025-08-31 17:54:49,978 movie_data No videos in main response for movie 1325332, fetching videos separately
+INFO 2025-08-31 17:54:51,101 movie_data No videos in main response for movie 1287324, fetching videos separately
+INFO 2025-08-31 17:54:51,952 movie_data Found official trailer for movie 1389158: lVvMbXiJjko
+INFO 2025-08-31 17:54:52,330 movie_data Found official trailer for movie 1148172: i4uHAM1BF6M
+INFO 2025-08-31 17:54:52,702 movie_data Found official trailer for movie 1022787: yH5zbV7eweM
+INFO 2025-08-31 17:54:53,149 movie_data Found official trailer for movie 794960: ay7QymPRTco
+INFO 2025-08-31 17:54:53,480 movie_data No videos in main response for movie 271200, fetching videos separately
+INFO 2025-08-31 17:54:54,380 movie_data Found official trailer for movie 755898: d9erkpdh5o0
+INFO 2025-08-31 17:54:54,889 movie_data No videos in main response for movie 1406607, fetching videos separately
+INFO 2025-08-31 17:54:55,811 movie_data No videos in main response for movie 1522657, fetching videos separately
+INFO 2025-08-31 17:54:56,570 movie_data No videos in main response for movie 1519448, fetching videos separately
+INFO 2025-08-31 17:54:57,344 movie_data No videos in main response for movie 1235451, fetching videos separately
+INFO 2025-08-31 17:54:58,179 movie_data Found official trailer for movie 1175942: HvLHYox_Vq8
+INFO 2025-08-31 17:54:58,676 movie_data Found trailer for movie 1506456: 0SbftOXQE_I
+INFO 2025-08-31 17:54:59,087 movie_data Found official trailer for movie 803796: AzCAwdp1uIQ
+INFO 2025-08-31 17:54:59,494 movie_data Found official trailer for movie 939819: cYph95bLnGQ
+INFO 2025-08-31 17:55:00,017 movie_data Found official trailer for movie 952127: dCOubUPaCeQ
+INFO 2025-08-31 17:55:00,473 movie_data Found teaser for movie 889876: 5769CEZsh9A
+INFO 2025-08-31 17:55:00,932 movie_data Found official trailer for movie 446893: 08AExF6dETA
+INFO 2025-08-31 17:55:01,358 movie_data Found official trailer for movie 980477: ETlOSBR92Fs
+INFO 2025-08-31 17:55:01,418 basehttp "GET /my-ratings/ HTTP/1.1" 200 28953
+INFO 2025-08-31 17:55:01,565 movie_data Found official trailer for movie 980477: ETlOSBR92Fs
+INFO 2025-08-31 17:55:01,629 basehttp "GET /my-ratings/ HTTP/1.1" 200 14532
+INFO 2025-08-31 17:59:29,022 autoreload C:\Movie_Recommendation_System-main\movies\views.py changed, reloading.
+INFO 2025-08-31 17:59:30,382 autoreload Watching for file changes with StatReloader
+INFO 2025-08-31 17:59:37,923 mongodb_client MongoDB connection established successfully
+INFO 2025-08-31 17:59:39,669 movie_data Found official trailer for movie 1175942: HvLHYox_Vq8
+INFO 2025-08-31 17:59:40,020 movie_data Found official trailer for movie 446893: 08AExF6dETA
+INFO 2025-08-31 17:59:40,385 movie_data Found official trailer for movie 980477: ETlOSBR92Fs
+INFO 2025-08-31 17:59:40,862 movie_data No videos in main response for movie 1325332, fetching videos separately
+INFO 2025-08-31 17:59:41,679 movie_data No videos in main response for movie 1287324, fetching videos separately
+INFO 2025-08-31 17:59:42,629 movie_data Found official trailer for movie 1389158: lVvMbXiJjko
+INFO 2025-08-31 17:59:42,979 movie_data Found official trailer for movie 1148172: i4uHAM1BF6M
+INFO 2025-08-31 17:59:43,451 movie_data Found official trailer for movie 1022787: yH5zbV7eweM
+INFO 2025-08-31 17:59:44,069 movie_data Found official trailer for movie 755898: d9erkpdh5o0
+INFO 2025-08-31 17:59:44,476 movie_data No videos in main response for movie 1406607, fetching videos separately
+INFO 2025-08-31 17:59:45,497 movie_data No videos in main response for movie 1522657, fetching videos separately
+INFO 2025-08-31 17:59:46,314 movie_data No videos in main response for movie 1519448, fetching videos separately
+INFO 2025-08-31 17:59:47,135 movie_data No videos in main response for movie 1235451, fetching videos separately
+INFO 2025-08-31 17:59:48,064 movie_data Found official trailer for movie 803796: AzCAwdp1uIQ
+INFO 2025-08-31 17:59:48,369 movie_data Found official trailer for movie 939819: cYph95bLnGQ
+INFO 2025-08-31 17:59:48,876 movie_data Found official trailer for movie 952127: dCOubUPaCeQ
+INFO 2025-08-31 17:59:49,393 movie_data Found teaser for movie 889876: 5769CEZsh9A
+INFO 2025-08-31 17:59:49,454 basehttp "GET /my-ratings/ HTTP/1.1" 200 14532
+INFO 2025-08-31 18:00:10,675 basehttp "GET /my-ratings/ HTTP/1.1" 200 14532
+INFO 2025-08-31 18:00:10,909 basehttp "GET /my-ratings/ HTTP/1.1" 200 14532
+INFO 2025-08-31 18:00:11,302 basehttp "GET /my-ratings/ HTTP/1.1" 200 14532
+INFO 2025-08-31 18:00:34,479 basehttp "GET /movie/980477/ HTTP/1.1" 200 17024
+WARNING 2025-08-31 18:00:38,486 log Not Found: /favicon.ico
+WARNING 2025-08-31 18:00:38,488 basehttp "GET /favicon.ico HTTP/1.1" 404 6129
+INFO 2025-08-31 18:00:47,885 basehttp "GET /movie/980477/ HTTP/1.1" 200 16932
+INFO 2025-08-31 18:02:29,758 movie_data Found official trailer for movie 615453: 0S7_LgTiHnA
+INFO 2025-08-31 18:02:29,773 basehttp "GET /movie/615453/ HTTP/1.1" 200 16708
+INFO 2025-08-31 18:02:40,818 movie_data Found official trailer for movie 985602: tdhh-2iW_n8
+INFO 2025-08-31 18:02:41,246 movie_data Found official trailer for movie 1234821: 2ZhB-YO5Tnk
+INFO 2025-08-31 18:02:41,633 movie_data No videos in main response for movie 575510, fetching videos separately
+INFO 2025-08-31 18:02:42,755 movie_data Found trailer for movie 1506456: 0SbftOXQE_I
+INFO 2025-08-31 18:02:43,168 movie_data No videos in main response for movie 1483549, fetching videos separately
+INFO 2025-08-31 18:02:44,107 movie_data Found official trailer for movie 38575: XY8amUImEu0
+INFO 2025-08-31 18:02:44,614 movie_data Found official trailer for movie 1311031: 5EqVDyqhMko
+INFO 2025-08-31 18:02:45,117 movie_data Found official trailer for movie 27205: JE9z-gy4De4
+INFO 2025-08-31 18:02:45,742 movie_data Found official trailer for movie 552524: VWqJifMMgZE
+INFO 2025-08-31 18:02:46,235 movie_data Found trailer for movie 353998: 4YKrFytA4Zg
+INFO 2025-08-31 18:02:46,569 movie_data Found official trailer for movie 1371727: RiRiTEhiyP4
+INFO 2025-08-31 18:02:47,067 movie_data Found official trailer for movie 794960: ay7QymPRTco
+INFO 2025-08-31 18:02:47,566 movie_data Found official trailer for movie 1155281: GR1LszelGoU
+INFO 2025-08-31 18:02:48,022 movie_data No videos in main response for movie 1519438, fetching videos separately
+INFO 2025-08-31 18:02:49,002 movie_data Found official trailer for movie 599379: Elf0RFBhr8I
+INFO 2025-08-31 18:02:49,410 movie_data Found official trailer for movie 870358: _GSMmXz0bHA
+INFO 2025-08-31 18:02:49,824 movie_data Found official trailer for movie 1087192: OWEq2Pf8qpk
+INFO 2025-08-31 18:02:50,438 movie_data No videos in main response for movie 1494489, fetching videos separately
+INFO 2025-08-31 18:02:51,252 movie_data No videos in main response for movie 271200, fetching videos separately
+INFO 2025-08-31 18:02:52,026 movie_data Found official trailer for movie 1071585: 1FeiTZMtwLA
+INFO 2025-08-31 18:02:52,412 movie_data Found official trailer for movie 1061474: nZTgJy8ym34
+INFO 2025-08-31 18:02:52,892 movie_data No videos in main response for movie 1519456, fetching videos separately
+INFO 2025-08-31 18:02:53,914 movie_data Found official trailer for movie 1151334: qH6SqkWS9WA
+INFO 2025-08-31 18:02:54,330 movie_data No videos in main response for movie 1505898, fetching videos separately
+INFO 2025-08-31 18:02:55,356 movie_data Found official trailer for movie 1429739: f0tzvgOpAlc
+INFO 2025-08-31 18:02:55,860 movie_data Found official trailer for movie 1333100: 3xNH23QkNpk
+INFO 2025-08-31 18:02:56,274 movie_data Found official trailer for movie 1195631: dex9bWjroao
+INFO 2025-08-31 18:02:56,807 movie_data Found official trailer for movie 426615: 4MfG80SID6I
+INFO 2025-08-31 18:03:11,446 views Generated 20 home cast movies for user 8
+INFO 2025-08-31 18:03:11,995 movie_data Found official trailer for movie 1042834: w860o1CceTk
+INFO 2025-08-31 18:03:12,551 movie_data Found official trailer for movie 1011477: LhRXf-yEQqA
+INFO 2025-08-31 18:03:12,957 movie_data Found trailer for movie 1138325: EOzsfLeLY0Y
+INFO 2025-08-31 18:03:13,369 movie_data Found official trailer for movie 1472668: LaEjB78QLSE
+INFO 2025-08-31 18:03:13,792 movie_data Found official trailer for movie 575265: G1VBfMCZVkw
+INFO 2025-08-31 18:03:14,294 movie_data No videos in main response for movie 46122, fetching videos separately
+INFO 2025-08-31 18:03:15,112 movie_data No videos in main response for movie 1360427, fetching videos separately
+INFO 2025-08-31 18:03:16,034 movie_data Found official trailer for movie 447404: S_uE8kX0CkY
+INFO 2025-08-31 18:03:16,441 movie_data No videos in main response for movie 1486770, fetching videos separately
+INFO 2025-08-31 18:03:17,289 movie_data No videos in main response for movie 221495, fetching videos separately
+INFO 2025-08-31 18:03:18,191 movie_data Found official trailer for movie 911430: ge_ABjtYx88
+INFO 2025-08-31 18:03:18,797 movie_data Found official trailer for movie 1097311: KQiZ5zMhliw
+INFO 2025-08-31 18:03:19,208 movie_data No videos in main response for movie 810336, fetching videos separately
+INFO 2025-08-31 18:03:20,028 movie_data Found official trailer for movie 541671: b9Rr9ygb-ac
+INFO 2025-08-31 18:03:20,535 movie_data No videos in main response for movie 1386216, fetching videos separately
+INFO 2025-08-31 18:03:21,399 movie_data Found official trailer for movie 939243: LH1J1EbqCaI
+INFO 2025-08-31 18:03:21,774 movie_data Found official trailer for movie 993784: NIm_DkLGAk4
+INFO 2025-08-31 18:03:22,232 movie_data Found official trailer for movie 1160956: kb1C19HGBu8
+INFO 2025-08-31 18:03:29,181 views Generated 20 home cast movies for user 6
+INFO 2025-08-31 18:03:35,638 basehttp "GET / HTTP/1.1" 200 40318
+INFO 2025-08-31 18:03:35,679 basehttp "GET / HTTP/1.1" 200 40237
+INFO 2025-09-01 09:13:35,093 autoreload Watching for file changes with StatReloader

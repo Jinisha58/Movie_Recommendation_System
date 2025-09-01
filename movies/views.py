@@ -888,18 +888,39 @@ def my_ratings(request):
                     movie_sim.setdefault(m2, {})[m1] = sim
 
         # Generate recommendations for the user
-        scores = {}
-        for mid, rating in user_ratings.items():
-            if rating < 4:  # only consider highly rated movies
-                continue
-            for similar_mid, sim in movie_sim.get(mid, {}).items():
-                if similar_mid in user_ratings:  # skip already rated movies
-                    continue
-                scores[similar_mid] = scores.get(similar_mid, 0) + sim * rating
+            scores = {}
 
-        # Sort recommended movies by score
-        recommended_ids = sorted(scores, key=lambda x: scores[x], reverse=True)[:24]
-        recommended_movies = [get_movie(mid) for mid in recommended_ids if get_movie(mid)]
+            for mid, rating in user_ratings.items():
+                if rating < 4:
+                    continue  # only consider movies the current user rated 4 or 5
+
+                for similar_mid, sim in movie_sim.get(mid, {}).items():
+                    if similar_mid in user_ratings:
+                        continue  # skip movies already rated by the current user
+
+                    # Only consider movies that have a high average rating in the system
+                    similar_ratings = movie_ratings.get(similar_mid, {}).values()
+                    if not any(r >= 4 for r in similar_ratings):
+                        continue
+
+                    avg_rating = sum(similar_ratings) / len(similar_ratings)
+                    if avg_rating < 4:
+                        continue  # skip if the system average rating is less than 4
+
+                    # Add to score
+                    scores[similar_mid] = scores.get(similar_mid, 0) + sim * rating
+
+            # Sort recommended movies by score
+            recommended_ids = sorted(scores, key=lambda x: scores[x], reverse=True)[:24]
+            recommended_movies = [get_movie(mid) for mid in recommended_ids if get_movie(mid)]
+
+
+        # Filter recommended movies to only include those with TMDB rating >= 4
+        recommended_movies = [
+            movie for movie in recommended_movies 
+            if movie.get('vote_average', 0) >= 4
+        ]
+
 
         return render(request, 'ratings.html', {
             'rated_movies': rated_movies,
