@@ -19966,3 +19966,471 @@ INFO 2025-08-31 18:03:29,181 views Generated 20 home cast movies for user 6
 INFO 2025-08-31 18:03:35,638 basehttp "GET / HTTP/1.1" 200 40318
 INFO 2025-08-31 18:03:35,679 basehttp "GET / HTTP/1.1" 200 40237
 INFO 2025-09-01 09:13:35,093 autoreload Watching for file changes with StatReloader
+INFO 2025-09-04 23:12:38,796 autoreload Watching for file changes with StatReloader
+INFO 2025-09-04 23:13:23,332 autoreload C:\Movie_Recommendation_System-main\movie_recommender\urls.py changed, reloading.
+INFO 2025-09-04 23:13:25,683 autoreload Watching for file changes with StatReloader
+INFO 2025-09-04 23:14:11,941 mongodb_client MongoDB connection established successfully
+INFO 2025-09-04 23:14:12,444 basehttp "GET / HTTP/1.1" 200 29780
+INFO 2025-09-04 23:14:12,800 basehttp "GET /static/css/base.css HTTP/1.1" 200 8193
+INFO 2025-09-04 23:14:12,810 basehttp "GET /static/css/home.css HTTP/1.1" 200 7251
+WARNING 2025-09-04 23:14:13,716 log Not Found: /favicon.ico
+WARNING 2025-09-04 23:14:13,719 basehttp "GET /favicon.ico HTTP/1.1" 404 6907
+INFO 2025-09-04 23:14:35,910 basehttp "GET /accounts/login/ HTTP/1.1" 200 4568
+INFO 2025-09-04 23:14:39,507 basehttp "POST /accounts/login/ HTTP/1.1" 302 0
+WARNING 2025-09-04 23:15:31,250 log Forbidden (CSRF token from POST incorrect.): /accounts/login/
+WARNING 2025-09-04 23:15:31,253 basehttp "POST /accounts/login/ HTTP/1.1" 403 2503
+WARNING 2025-09-04 23:15:47,945 log Forbidden (CSRF token from POST incorrect.): /accounts/login/
+WARNING 2025-09-04 23:15:47,947 basehttp "POST /accounts/login/ HTTP/1.1" 403 2503
+INFO 2025-09-04 23:15:55,089 basehttp "GET /accounts/login/ HTTP/1.1" 200 5036
+INFO 2025-09-04 23:15:57,852 basehttp - Broken pipe from ('127.0.0.1', 61683)
+INFO 2025-09-04 23:15:58,762 basehttp "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-09-04 23:16:40,396 basehttp "GET /profile/ HTTP/1.1" 200 9747
+INFO 2025-09-04 23:16:50,423 basehttp "GET /my-ratings/ HTTP/1.1" 200 29580
+INFO 2025-09-04 23:17:35,588 movie_views Generated 20 home cast movies for user 8
+INFO 2025-09-04 23:17:56,433 basehttp "GET / HTTP/1.1" 200 40413
+INFO 2025-09-04 23:32:44,897 user_service Cache miss for user 8 watchlist
+INFO 2025-09-04 23:32:44,900 user_service Retrieved 7 items from MongoDB for user 8
+INFO 2025-09-04 23:32:44,900 user_views Retrieved 7 watchlist entries for user 8
+INFO 2025-09-04 23:32:44,901 user_views User 8 has 7 movies in watchlist
+INFO 2025-09-04 23:32:44,912 basehttp "GET /watchlist/ HTTP/1.1" 200 15158
+INFO 2025-09-04 23:32:44,933 basehttp "GET /static/css/watchlist.css HTTP/1.1" 200 3098
+INFO 2025-09-04 23:33:07,310 user_views Generated 12 recommendations for user 8
+INFO 2025-09-04 23:33:07,354 basehttp "GET /recommendations/ HTTP/1.1" 200 14299
+INFO 2025-09-04 23:37:51,303 basehttp - Broken pipe from ('127.0.0.1', 62333)
+INFO 2025-09-04 23:37:53,375 basehttp "GET /profile/ HTTP/1.1" 200 9747
+WARNING 2025-09-04 23:46:46,857 log Not Found: /favicon.ico
+WARNING 2025-09-04 23:46:46,860 basehttp "GET /favicon.ico HTTP/1.1" 404 6907
+INFO 2025-09-07 18:11:55,671 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 18:17:02,630 mongodb_client MongoDB connection established successfully
+INFO 2025-09-07 18:17:58,235 movie_views Generated 20 home cast movies for user 8
+INFO 2025-09-07 18:18:23,377 basehttp "GET / HTTP/1.1" 200 40547
+WARNING 2025-09-07 18:18:24,947 log Not Found: /favicon.ico
+WARNING 2025-09-07 18:18:24,951 basehttp "GET /favicon.ico HTTP/1.1" 404 6907
+INFO 2025-09-07 18:19:48,065 movie_views Retrieved 20 home cast movies from cache for user 8
+INFO 2025-09-07 18:20:04,821 basehttp "GET /movie/617126/ HTTP/1.1" 200 31034
+INFO 2025-09-07 18:20:05,073 basehttp "GET /static/css/movie_details.css HTTP/1.1" 200 14621
+INFO 2025-09-07 18:20:14,073 basehttp - Broken pipe from ('127.0.0.1', 59142)
+INFO 2025-09-07 18:20:22,060 basehttp "POST /movie/617126/rate/ HTTP/1.1" 302 0
+INFO 2025-09-07 18:20:22,121 basehttp "GET /movie/617126/ HTTP/1.1" 200 31436
+INFO 2025-09-07 18:21:03,108 basehttp "GET /profile/ HTTP/1.1" 200 9761
+INFO 2025-09-07 18:21:08,907 user_service Cache miss for user 8 watchlist
+INFO 2025-09-07 18:21:08,913 user_service Retrieved 7 items from MongoDB for user 8
+INFO 2025-09-07 18:21:08,914 user_views Retrieved 7 watchlist entries for user 8
+INFO 2025-09-07 18:21:08,917 user_views User 8 has 7 movies in watchlist
+INFO 2025-09-07 18:21:08,943 basehttp "GET /watchlist/ HTTP/1.1" 200 15158
+INFO 2025-09-07 18:30:28,595 autoreload C:\Movie_Recommendation_System-main\movies\services\user_service.py changed, reloading.
+INFO 2025-09-07 18:30:31,766 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 18:30:33,207 mongodb_client MongoDB connection established successfully
+INFO 2025-09-07 18:30:59,414 autoreload C:\Movie_Recommendation_System-main\movies\services\recommendation_service.py changed, reloading.
+INFO 2025-09-07 18:31:00,741 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 18:31:01,266 mongodb_client MongoDB connection established successfully
+INFO 2025-09-07 18:31:13,088 autoreload C:\Movie_Recommendation_System-main\movies\views\movie_views.py changed, reloading.
+INFO 2025-09-07 18:31:14,378 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 18:31:14,944 mongodb_client MongoDB connection established successfully
+INFO 2025-09-07 18:31:39,045 autoreload C:\Movie_Recommendation_System-main\movies\views\user_views.py changed, reloading.
+INFO 2025-09-07 18:31:40,988 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 18:31:41,673 mongodb_client MongoDB connection established successfully
+INFO 2025-09-07 18:31:46,229 autoreload C:\Movie_Recommendation_System-main\movies\repositories\ratings_repository.py changed, reloading.
+INFO 2025-09-07 18:31:48,225 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 18:31:49,349 mongodb_client MongoDB connection established successfully
+INFO 2025-09-07 18:31:53,366 autoreload C:\Movie_Recommendation_System-main\movies\views\movie_views.py changed, reloading.
+INFO 2025-09-07 18:31:54,943 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 18:31:55,672 mongodb_client MongoDB connection established successfully
+INFO 2025-09-07 18:33:08,377 autoreload C:\Movie_Recommendation_System-main\movies\services\recommendation_service.py changed, reloading.
+INFO 2025-09-07 18:33:09,594 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 18:33:10,173 mongodb_client MongoDB connection established successfully
+INFO 2025-09-07 18:33:44,269 autoreload C:\Movie_Recommendation_System-main\movies\services\recommendation_service.py changed, reloading.
+INFO 2025-09-07 18:33:46,349 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 18:33:47,069 mongodb_client MongoDB connection established successfully
+INFO 2025-09-07 18:34:05,563 autoreload C:\Movie_Recommendation_System-main\movies\services\recommendation_service.py changed, reloading.
+INFO 2025-09-07 18:34:06,747 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 18:34:07,453 mongodb_client MongoDB connection established successfully
+INFO 2025-09-07 18:38:11,353 autoreload C:\Movie_Recommendation_System-main\movies\services\recommendation_service.py changed, reloading.
+INFO 2025-09-07 18:38:13,002 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 18:38:50,609 autoreload C:\Movie_Recommendation_System-main\movies\urls.py changed, reloading.
+INFO 2025-09-07 18:38:52,072 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 18:39:01,853 autoreload C:\Movie_Recommendation_System-main\movies\urls.py changed, reloading.
+INFO 2025-09-07 18:39:02,944 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 18:39:24,986 mongodb_client MongoDB connection established successfully
+INFO 2025-09-07 18:39:24,990 user_service Cache miss for user 8 watchlist
+INFO 2025-09-07 18:39:24,992 user_service Retrieved 7 items from MongoDB for user 8
+INFO 2025-09-07 18:39:24,993 user_views Retrieved 7 watchlist entries for user 8
+INFO 2025-09-07 18:39:30,059 user_views User 8 has 7 movies in watchlist
+ERROR 2025-09-07 18:39:31,195 log Internal Server Error: /watchlist/
+Traceback (most recent call last):
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'search' not found. 'search' is not a valid view function or pattern name.
+INFO 2025-09-07 18:39:31,242 basehttp - Broken pipe from ('127.0.0.1', 57326)
+WARNING 2025-09-07 18:39:48,871 log Not Found: /favicon.ico
+WARNING 2025-09-07 18:39:48,873 basehttp "GET /favicon.ico HTTP/1.1" 404 6652
+INFO 2025-09-07 18:39:51,238 basehttp "GET /profile/ HTTP/1.1" 302 0
+WARNING 2025-09-07 18:39:51,255 log Not Found: /login/
+WARNING 2025-09-07 18:39:51,260 basehttp "GET /login/?next=/profile/ HTTP/1.1" 404 6652
+ERROR 2025-09-07 18:40:08,634 log Internal Server Error: /profile/
+Traceback (most recent call last):
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'search' not found. 'search' is not a valid view function or pattern name.
+ERROR 2025-09-07 18:40:08,641 basehttp "GET /profile/ HTTP/1.1" 500 205506
+ERROR 2025-09-07 18:40:29,684 log Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\userr\AppData\Roaming\Python\Python313\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'search' not found. 'search' is not a valid view function or pattern name.
+ERROR 2025-09-07 18:40:29,692 basehttp "GET / HTTP/1.1" 500 193758
+INFO 2025-09-07 18:41:59,801 autoreload C:\Movie_Recommendation_System-main\movies\views\movie_views.py changed, reloading.
+INFO 2025-09-07 18:42:02,145 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 18:42:07,265 autoreload C:\Movie_Recommendation_System-main\movies\urls.py changed, reloading.
+INFO 2025-09-07 18:42:09,028 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 18:42:45,900 mongodb_client MongoDB connection established successfully
+INFO 2025-09-07 18:42:54,835 basehttp "GET / HTTP/1.1" 200 29747
+INFO 2025-09-07 18:42:54,954 basehttp "GET /static/css/base.css HTTP/1.1" 304 0
+INFO 2025-09-07 18:42:54,971 basehttp "GET /static/css/home.css HTTP/1.1" 304 0
+INFO 2025-09-07 18:43:01,834 basehttp "GET /accounts/login/ HTTP/1.1" 200 4568
+INFO 2025-09-07 18:43:10,883 basehttp "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-09-07 18:43:25,657 basehttp "GET /profile/ HTTP/1.1" 200 9879
+INFO 2025-09-07 18:43:30,031 basehttp "GET /profile/ HTTP/1.1" 200 9761
+INFO 2025-09-07 18:45:09,653 basehttp "POST /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-09-07 18:45:09,961 basehttp "GET / HTTP/1.1" 200 29747
+INFO 2025-09-07 18:45:12,303 basehttp "GET /accounts/register/ HTTP/1.1" 200 5621
+INFO 2025-09-07 18:45:26,526 basehttp - Broken pipe from ('127.0.0.1', 61021)
+INFO 2025-09-07 18:45:32,778 basehttp "GET /accounts/login/ HTTP/1.1" 200 4568
+INFO 2025-09-07 18:45:36,128 basehttp "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-09-07 18:45:59,911 basehttp "GET /profile/ HTTP/1.1" 200 9761
+INFO 2025-09-07 18:47:05,210 autoreload C:\Movie_Recommendation_System-main\movies\repositories\watchlist_repository.py changed, reloading.
+INFO 2025-09-07 18:47:07,207 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 18:47:15,525 autoreload C:\Movie_Recommendation_System-main\movies\repositories\ratings_repository.py changed, reloading.
+INFO 2025-09-07 18:47:17,017 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 18:47:25,231 autoreload C:\Movie_Recommendation_System-main\movies\repositories\viewed_movies_repository.py changed, reloading.
+INFO 2025-09-07 18:47:27,249 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 18:47:35,572 autoreload C:\Movie_Recommendation_System-main\movies\repositories\search_history_repository.py changed, reloading.
+INFO 2025-09-07 18:47:36,660 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 18:47:42,612 autoreload C:\Movie_Recommendation_System-main\movies\services\user_service.py changed, reloading.
+INFO 2025-09-07 18:47:43,504 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 18:47:50,233 autoreload C:\Movie_Recommendation_System-main\movies\views\user_views.py changed, reloading.
+INFO 2025-09-07 18:47:51,546 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 18:47:57,742 autoreload C:\Movie_Recommendation_System-main\movies\urls.py changed, reloading.
+INFO 2025-09-07 18:47:59,304 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 18:48:12,537 autoreload C:\Movie_Recommendation_System-main\movies\views\user_views.py changed, reloading.
+INFO 2025-09-07 18:48:13,832 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 18:49:11,974 mongodb_client MongoDB connection established successfully
+INFO 2025-09-07 18:49:14,077 user_service Cache miss for user 8 watchlist
+INFO 2025-09-07 18:49:14,080 user_service Retrieved 7 items from MongoDB for user 8
+INFO 2025-09-07 18:49:18,855 user_service Cache miss for user 6 watchlist
+INFO 2025-09-07 18:49:18,866 user_service Retrieved 0 items from MongoDB for user 6
+INFO 2025-09-07 18:49:51,937 movie_views Generated 20 home cast movies for user 6
+INFO 2025-09-07 18:49:57,468 movie_views Generated 20 home cast movies for user 8
+INFO 2025-09-07 18:50:06,199 basehttp "GET / HTTP/1.1" 200 40410
+INFO 2025-09-07 18:50:23,438 basehttp "GET / HTTP/1.1" 200 40469
+INFO 2025-09-07 18:50:25,940 basehttp "GET /profile/ HTTP/1.1" 200 9879
+INFO 2025-09-07 18:50:27,999 basehttp "POST /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-09-07 18:50:28,130 basehttp "GET / HTTP/1.1" 200 29747
+INFO 2025-09-07 18:50:30,298 basehttp "GET /accounts/login/ HTTP/1.1" 200 4568
+INFO 2025-09-07 18:50:34,399 basehttp "POST /accounts/login/ HTTP/1.1" 302 0
+WARNING 2025-09-07 18:50:38,243 log Forbidden (CSRF token from POST incorrect.): /accounts/login/
+WARNING 2025-09-07 18:50:38,245 basehttp "POST /accounts/login/ HTTP/1.1" 403 2503
+INFO 2025-09-07 18:50:40,228 basehttp - Broken pipe from ('127.0.0.1', 50149)
+INFO 2025-09-07 18:50:43,294 basehttp "GET /accounts/login/ HTTP/1.1" 200 5035
+INFO 2025-09-07 18:50:47,872 basehttp "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-09-07 18:50:50,721 basehttp "GET /profile/ HTTP/1.1" 200 9879
+INFO 2025-09-07 18:51:08,490 basehttp "POST /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-09-07 18:51:08,660 basehttp "GET / HTTP/1.1" 200 29747
+INFO 2025-09-07 18:51:41,924 basehttp "GET /profile/ HTTP/1.1" 200 9761
+INFO 2025-09-07 18:51:45,943 basehttp "POST /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-09-07 18:51:46,112 basehttp "GET / HTTP/1.1" 200 29747
+INFO 2025-09-07 18:51:48,066 basehttp "GET /accounts/register/ HTTP/1.1" 200 5621
+INFO 2025-09-07 18:52:05,537 basehttp "POST /accounts/register/ HTTP/1.1" 200 5944
+INFO 2025-09-07 18:52:17,291 basehttp "POST /accounts/register/ HTTP/1.1" 200 5827
+INFO 2025-09-07 18:52:37,767 basehttp "POST /accounts/register/ HTTP/1.1" 200 5827
+INFO 2025-09-07 18:53:03,061 basehttp "POST /accounts/register/ HTTP/1.1" 302 0
+INFO 2025-09-07 18:53:03,080 basehttp "GET /accounts/login/ HTTP/1.1" 200 4900
+INFO 2025-09-07 18:53:09,666 basehttp "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-09-07 18:53:09,701 basehttp "GET /profile/ HTTP/1.1" 200 6323
+INFO 2025-09-07 18:53:16,089 user_service Cache miss for user 9 watchlist
+INFO 2025-09-07 18:53:16,093 user_service Retrieved 0 items from MongoDB for user 9
+INFO 2025-09-07 18:53:16,094 movie_views Generated 20 home cast movies for user 9
+INFO 2025-09-07 18:53:16,221 basehttp "GET / HTTP/1.1" 200 30298
+INFO 2025-09-07 18:53:23,071 user_service Cache hit for user 9 watchlist
+INFO 2025-09-07 18:53:23,071 user_views Retrieved 0 watchlist entries for user 9
+INFO 2025-09-07 18:53:23,072 user_views User 9 has 0 movies in watchlist
+INFO 2025-09-07 18:53:23,087 basehttp "GET /watchlist/ HTTP/1.1" 200 7694
+INFO 2025-09-07 18:53:25,649 user_views Retrieved 5 recommendations from cache for user 9
+INFO 2025-09-07 18:53:25,659 basehttp "GET /recommendations/ HTTP/1.1" 200 8388
+INFO 2025-09-07 18:53:29,652 basehttp "GET /profile/ HTTP/1.1" 200 6323
+INFO 2025-09-07 18:53:38,564 basehttp "GET /profile/ HTTP/1.1" 200 6323
+INFO 2025-09-07 18:53:43,693 basehttp "GET /profile/ HTTP/1.1" 200 6323
+INFO 2025-09-07 18:55:38,165 basehttp "GET /profile/ HTTP/1.1" 200 6740
+ERROR 2025-09-07 18:55:58,755 user_service Error deleting account for user 9: no such table: movies_watchlist
+INFO 2025-09-07 18:55:58,757 basehttp "POST /profile/delete/ HTTP/1.1" 302 0
+INFO 2025-09-07 18:55:58,810 basehttp "GET /profile/ HTTP/1.1" 200 7075
+INFO 2025-09-07 18:57:06,544 autoreload C:\Movie_Recommendation_System-main\movies\views\user_views.py changed, reloading.
+INFO 2025-09-07 18:57:09,160 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 18:57:21,650 autoreload C:\Movie_Recommendation_System-main\movies\views\user_views.py changed, reloading.
+INFO 2025-09-07 18:57:22,719 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 18:57:33,622 mongodb_client MongoDB connection established successfully
+INFO 2025-09-07 18:57:33,653 basehttp "GET /profile/ HTTP/1.1" 200 6823
+ERROR 2025-09-07 18:57:39,988 user_service Error deleting account for user 9: no such table: movies_watchlist
+INFO 2025-09-07 18:57:40,006 basehttp "POST /profile/delete/ HTTP/1.1" 302 0
+INFO 2025-09-07 18:57:42,963 basehttp "GET / HTTP/1.1" 200 30082
+INFO 2025-09-07 18:57:48,917 basehttp "GET /accounts/login/ HTTP/1.1" 200 4568
+INFO 2025-09-07 18:57:52,191 basehttp "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-09-07 18:57:52,236 basehttp "GET /profile/ HTTP/1.1" 200 6823
+INFO 2025-09-07 18:58:41,672 autoreload C:\Movie_Recommendation_System-main\movies\services\user_service.py changed, reloading.
+INFO 2025-09-07 18:58:43,602 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 18:59:00,289 autoreload C:\Movie_Recommendation_System-main\movies\views\user_views.py changed, reloading.
+INFO 2025-09-07 18:59:01,417 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 18:59:09,470 autoreload C:\Movie_Recommendation_System-main\movies\views\user_views.py changed, reloading.
+INFO 2025-09-07 18:59:10,400 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 18:59:38,713 mongodb_client MongoDB connection established successfully
+ERROR 2025-09-07 18:59:38,740 user_service Error deleting Django user 9: no such table: movies_watchlist
+INFO 2025-09-07 18:59:38,752 basehttp "POST /profile/delete/ HTTP/1.1" 302 0
+INFO 2025-09-07 18:59:38,872 basehttp "GET /profile/ HTTP/1.1" 200 7158
+ERROR 2025-09-07 18:59:48,497 user_service Error deleting Django user 9: no such table: movies_watchlist
+INFO 2025-09-07 18:59:48,503 basehttp "POST /profile/delete/ HTTP/1.1" 302 0
+INFO 2025-09-07 18:59:48,577 basehttp "GET /profile/ HTTP/1.1" 200 7158
+ERROR 2025-09-07 19:00:11,324 user_service Error deleting Django user 9: no such table: movies_watchlist
+INFO 2025-09-07 19:00:11,327 basehttp "POST /profile/delete/ HTTP/1.1" 302 0
+INFO 2025-09-07 19:00:11,366 basehttp "GET /profile/ HTTP/1.1" 200 7158
+INFO 2025-09-07 19:00:58,815 user_service Cache miss for user 9 watchlist
+INFO 2025-09-07 19:00:58,817 user_service Retrieved 0 items from MongoDB for user 9
+INFO 2025-09-07 19:00:58,818 user_views Retrieved 0 watchlist entries for user 9
+INFO 2025-09-07 19:00:58,818 user_views User 9 has 0 movies in watchlist
+INFO 2025-09-07 19:01:01,332 basehttp "GET /watchlist/ HTTP/1.1" 200 7694
+INFO 2025-09-07 19:01:03,773 autoreload C:\Movie_Recommendation_System-main\movies\services\user_service.py changed, reloading.
+INFO 2025-09-07 19:01:05,123 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 19:01:06,112 mongodb_client MongoDB connection established successfully
+INFO 2025-09-07 19:01:06,148 basehttp "GET /profile/ HTTP/1.1" 200 6823
+INFO 2025-09-07 19:01:08,853 basehttp "POST /accounts/logout/ HTTP/1.1" 302 0
+INFO 2025-09-07 19:01:10,388 autoreload C:\Movie_Recommendation_System-main\movies\services\user_service.py changed, reloading.
+INFO 2025-09-07 19:01:10,667 basehttp "GET / HTTP/1.1" 200 29747
+INFO 2025-09-07 19:01:15,972 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 19:01:45,704 mongodb_client MongoDB connection established successfully
+INFO 2025-09-07 19:01:45,709 basehttp "POST /profile/delete/ HTTP/1.1" 302 0
+WARNING 2025-09-07 19:01:45,721 log Not Found: /login/
+WARNING 2025-09-07 19:01:45,722 basehttp "GET /login/?next=/profile/delete/ HTTP/1.1" 404 7185
+INFO 2025-09-07 19:02:23,378 autoreload C:\Movie_Recommendation_System-main\movie_recommender\urls.py changed, reloading.
+INFO 2025-09-07 19:02:25,233 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 19:02:30,253 autoreload C:\Movie_Recommendation_System-main\movie_recommender\urls.py changed, reloading.
+INFO 2025-09-07 19:02:31,217 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 19:02:53,253 mongodb_client MongoDB connection established successfully
+INFO 2025-09-07 19:02:53,259 basehttp "POST /profile/delete/ HTTP/1.1" 302 0
+INFO 2025-09-07 19:02:53,395 basehttp "GET /login/?next=/profile/delete/ HTTP/1.1" 200 4568
+INFO 2025-09-07 19:02:57,298 basehttp "POST /login/?next=/profile/delete/ HTTP/1.1" 302 0
+WARNING 2025-09-07 19:02:57,324 log Method Not Allowed (GET): /profile/delete/
+WARNING 2025-09-07 19:02:57,333 basehttp "GET /profile/delete/ HTTP/1.1" 405 0
+INFO 2025-09-07 19:02:59,934 basehttp "GET /login/?next=/profile/delete/ HTTP/1.1" 200 5035
+INFO 2025-09-07 19:03:53,998 basehttp "POST /login/?next=/profile/delete/ HTTP/1.1" 302 0
+WARNING 2025-09-07 19:03:54,017 log Method Not Allowed (GET): /profile/delete/
+WARNING 2025-09-07 19:03:54,018 basehttp "GET /profile/delete/ HTTP/1.1" 405 0
+INFO 2025-09-07 19:03:57,630 basehttp "GET /login/?next=/profile/delete/ HTTP/1.1" 200 5036
+INFO 2025-09-07 19:04:00,902 basehttp "POST /login/?next=/profile/delete/ HTTP/1.1" 302 0
+WARNING 2025-09-07 19:04:00,918 log Method Not Allowed (GET): /profile/delete/
+WARNING 2025-09-07 19:04:00,919 basehttp "GET /profile/delete/ HTTP/1.1" 405 0
+INFO 2025-09-07 19:04:04,247 basehttp "GET /accounts/login/ HTTP/1.1" 200 5036
+INFO 2025-09-07 19:04:07,586 basehttp "POST /accounts/login/ HTTP/1.1" 302 0
+INFO 2025-09-07 19:04:15,736 basehttp "GET /login/?next=/profile/delete/ HTTP/1.1" 200 5036
+INFO 2025-09-07 19:04:21,802 basehttp "GET /login HTTP/1.1" 301 0
+INFO 2025-09-07 19:04:21,851 basehttp "GET /login/ HTTP/1.1" 200 5036
+INFO 2025-09-07 19:04:26,542 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2025-09-07 19:04:34,740 basehttp "GET /watchlist/ HTTP/1.1" 302 0
+INFO 2025-09-07 19:04:34,761 basehttp "GET /login/?next=/watchlist/ HTTP/1.1" 200 4568
+INFO 2025-09-07 19:04:40,785 basehttp "POST /login/?next=/watchlist/ HTTP/1.1" 302 0
+INFO 2025-09-07 19:04:40,808 user_service Cache miss for user 6 watchlist
+INFO 2025-09-07 19:04:40,814 user_service Retrieved 0 items from MongoDB for user 6
+INFO 2025-09-07 19:04:40,815 user_views Retrieved 0 watchlist entries for user 6
+INFO 2025-09-07 19:04:40,817 user_views User 6 has 0 movies in watchlist
+INFO 2025-09-07 19:04:42,676 basehttp "GET /watchlist/ HTTP/1.1" 200 7695
+INFO 2025-09-07 19:04:42,720 basehttp "GET /static/css/watchlist.css HTTP/1.1" 304 0
+INFO 2025-09-07 19:04:50,815 user_service Cache hit for user 6 watchlist
+INFO 2025-09-07 19:04:54,825 basehttp "GET /profile/ HTTP/1.1" 200 10261
+INFO 2025-09-07 19:05:05,038 basehttp "GET /profile/ HTTP/1.1" 200 10379
+INFO 2025-09-07 19:05:05,039 basehttp - Broken pipe from ('127.0.0.1', 63613)
+INFO 2025-09-07 19:05:06,448 user_service Cache miss for user 8 watchlist
+INFO 2025-09-07 19:05:06,454 user_service Retrieved 7 items from MongoDB for user 8
+INFO 2025-09-07 19:05:06,456 user_views Retrieved 7 watchlist entries for user 8
+INFO 2025-09-07 19:05:08,589 user_views User 8 has 7 movies in watchlist
+INFO 2025-09-07 19:05:08,598 basehttp "GET /watchlist/ HTTP/1.1" 200 15158
+INFO 2025-09-07 19:05:15,800 basehttp "GET /profile/ HTTP/1.1" 200 10261
+INFO 2025-09-07 19:05:20,731 movie_views Generated 20 home cast movies for user 6
+INFO 2025-09-07 19:05:29,139 basehttp - Broken pipe from ('127.0.0.1', 63597)
+INFO 2025-09-07 19:06:46,391 autoreload C:\Movie_Recommendation_System-main\movies\repositories\ratings_repository.py changed, reloading.
+INFO 2025-09-07 19:06:48,584 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 19:07:00,873 autoreload C:\Movie_Recommendation_System-main\movies\services\user_service.py changed, reloading.
+INFO 2025-09-07 19:07:02,591 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 19:07:13,915 autoreload C:\Movie_Recommendation_System-main\movies\views\user_views.py changed, reloading.
+INFO 2025-09-07 19:07:15,358 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 19:07:23,419 autoreload C:\Movie_Recommendation_System-main\movies\views\user_views.py changed, reloading.
+INFO 2025-09-07 19:07:25,070 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 19:07:37,657 autoreload C:\Movie_Recommendation_System-main\movies\views\user_views.py changed, reloading.
+INFO 2025-09-07 19:07:39,208 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 19:07:47,545 autoreload C:\Movie_Recommendation_System-main\movies\urls.py changed, reloading.
+INFO 2025-09-07 19:07:49,213 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 19:08:09,781 autoreload C:\Movie_Recommendation_System-main\movies\services\user_service.py changed, reloading.
+INFO 2025-09-07 19:08:11,039 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 19:10:46,885 mongodb_client MongoDB connection established successfully
+INFO 2025-09-07 19:11:03,670 basehttp "GET /my-ratings/ HTTP/1.1" 200 40688
+INFO 2025-09-07 19:11:19,750 basehttp "GET /my-ratings/ HTTP/1.1" 200 40688
+INFO 2025-09-07 19:11:20,038 basehttp "GET /my-ratings/ HTTP/1.1" 200 40688
+INFO 2025-09-07 19:11:20,265 basehttp "GET /my-ratings/ HTTP/1.1" 200 40688
+INFO 2025-09-07 19:11:20,572 basehttp "GET /my-ratings/ HTTP/1.1" 200 40688
+INFO 2025-09-07 19:11:36,664 basehttp "GET /profile/ HTTP/1.1" 200 10261
+INFO 2025-09-07 19:13:47,667 basehttp "GET /my-ratings/ HTTP/1.1" 200 40700
+INFO 2025-09-07 19:14:18,777 basehttp "POST /my-ratings/delete/1235451/ HTTP/1.1" 302 0
+INFO 2025-09-07 19:14:18,874 basehttp "GET /my-ratings/ HTTP/1.1" 200 39190
+INFO 2025-09-07 19:14:26,975 user_service Cache miss for user 8 watchlist
+INFO 2025-09-07 19:14:26,980 user_service Retrieved 7 items from MongoDB for user 8
+INFO 2025-09-07 19:14:26,981 user_views Retrieved 7 watchlist entries for user 8
+INFO 2025-09-07 19:14:31,537 user_views User 8 has 7 movies in watchlist
+INFO 2025-09-07 19:14:31,551 basehttp "GET /watchlist/ HTTP/1.1" 200 15158
+INFO 2025-09-07 19:18:47,319 basehttp "GET /my-ratings/ HTTP/1.1" 200 37922
+INFO 2025-09-07 19:25:24,673 basehttp "POST /my-ratings/delete/755898/ HTTP/1.1" 302 0
+INFO 2025-09-07 19:25:24,717 basehttp "GET /my-ratings/ HTTP/1.1" 200 36482
+INFO 2025-09-07 19:25:38,219 basehttp "GET /my-ratings/ HTTP/1.1" 200 36184
+INFO 2025-09-07 19:25:44,196 user_service Cache hit for user 8 watchlist
+INFO 2025-09-07 19:25:49,710 user_service Cache hit for user 8 watchlist
+INFO 2025-09-07 19:26:17,174 user_views Generated 12 recommendations for user 8
+INFO 2025-09-07 19:26:17,192 basehttp - Broken pipe from ('127.0.0.1', 51015)
+INFO 2025-09-07 19:26:18,088 user_views Generated 12 recommendations for user 8
+INFO 2025-09-07 19:26:18,098 basehttp "GET /recommendations/ HTTP/1.1" 200 14344
+INFO 2025-09-07 19:34:22,871 user_service Cache hit for user 8 watchlist
+INFO 2025-09-07 19:34:22,873 user_views Retrieved 7 watchlist entries for user 8
+INFO 2025-09-07 19:34:22,878 user_views User 8 has 7 movies in watchlist
+INFO 2025-09-07 19:34:22,909 basehttp "GET /watchlist/ HTTP/1.1" 200 15158
+INFO 2025-09-07 19:34:25,397 user_views Retrieved 12 recommendations from cache for user 8
+INFO 2025-09-07 19:34:25,412 basehttp "GET /recommendations/ HTTP/1.1" 200 14344
+INFO 2025-09-07 19:34:32,885 user_service Cache hit for user 8 watchlist
+INFO 2025-09-07 19:35:13,386 movie_views Generated 20 home cast movies for user 8
+INFO 2025-09-07 19:35:15,275 basehttp "GET /profile/ HTTP/1.1" 200 10258
+INFO 2025-09-07 19:35:42,585 user_service Cache hit for user 8 watchlist
+INFO 2025-09-07 19:35:42,586 user_views Retrieved 7 watchlist entries for user 8
+INFO 2025-09-07 19:35:42,587 user_views User 8 has 7 movies in watchlist
+INFO 2025-09-07 19:35:42,598 basehttp "GET /watchlist/ HTTP/1.1" 200 15158
+INFO 2025-09-07 19:35:44,851 basehttp "GET / HTTP/1.1" 200 40446
+INFO 2025-09-07 19:35:45,507 movie_views Retrieved 20 home cast movies from cache for user 8
+INFO 2025-09-07 19:36:26,953 autoreload C:\Movie_Recommendation_System-main\movies\urls.py changed, reloading.
+INFO 2025-09-07 19:36:27,449 basehttp "GET / HTTP/1.1" 200 40446
+INFO 2025-09-07 19:36:34,450 autoreload Watching for file changes with StatReloader

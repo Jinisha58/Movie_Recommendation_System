@@ -1,19 +1,29 @@
 from django.urls import path
-from . import views
+from .views.movie_views import HomeView, MovieDetailView, MovieSearchView, MovieFilterAjaxView, ActorMoviesView, SearchView
+from .views.user_views import (
+    WatchlistView, AddToWatchlistView, RemoveFromWatchlistView,
+    RecommendationsView, ProfileView, MyRatingsView, RateMovieView,
+    RegisterView, CustomLogoutView, LandingView, DeleteAccountView, DeleteRatingView
+)
 
 urlpatterns = [
-    path('', views.home, name='home'),
-    path('movie/<int:movie_id>/', views.movie_detail, name='movie_detail'),
-    # removed similar_movies route (unused)
-    path('movie/<int:movie_id>/rate/', views.rate_movie, name='rate_movie'),
-    path('search/', views.search, name='search'),
-    path('filter/', views.movie_filter, name='movie_filter'),
-    path('filter/ajax/', views.movie_filter_ajax, name='movie_filter_ajax'),
-    path('watchlist/', views.watchlist, name='watchlist'),
-    path('add-to-watchlist/<int:movie_id>/', views.add_to_watchlist, name='add_to_watchlist'),
-    path('remove-from-watchlist/<int:movie_id>/', views.remove_from_watchlist, name='remove_from_watchlist'),
-    path('recommendations/', views.recommendations, name='recommendations'),
-    path('actor/<int:actor_id>/', views.actor_movies, name='actor_movies'),
-    path('profile/', views.profile, name='profile'),
-    path('my-ratings/', views.my_ratings, name='my_ratings'),
+    
+    path('', HomeView.as_view(), name='home'),
+    path('movie/<int:movie_id>/', MovieDetailView.as_view(), name='movie_detail'),
+    path('movie/<int:movie_id>/rate/', RateMovieView.as_view(), name='rate_movie'),
+    path('search/', SearchView.as_view(), name='search'),
+    path('filter/', MovieSearchView.as_view(), name='movie_filter'),
+    path('filter/ajax/', MovieFilterAjaxView.as_view(), name='movie_filter_ajax'),
+    path('watchlist/', WatchlistView.as_view(), name='watchlist'),
+    path('add-to-watchlist/<int:movie_id>/', AddToWatchlistView.as_view(), name='add_to_watchlist'),
+    path('remove-from-watchlist/<int:movie_id>/', RemoveFromWatchlistView.as_view(), name='remove_from_watchlist'),
+    path('recommendations/', RecommendationsView.as_view(), name='recommendations'),
+    path('actor/<int:actor_id>/', ActorMoviesView.as_view(), name='actor_movies'),
+    path('profile/', ProfileView.as_view(), name='profile'),
+    path('profile/delete/', DeleteAccountView.as_view(), name='delete_account'),
+    path('my-ratings/', MyRatingsView.as_view(), name='my_ratings'),
+    path('my-ratings/delete/<int:movie_id>/', DeleteRatingView.as_view(), name='delete_rating'),
+    path('register/', RegisterView.as_view(), name='register'),
+    path('logout/', CustomLogoutView.as_view(), name='custom_logout'),
+    path('landing/', LandingView.as_view(), name='landing'),
 ]

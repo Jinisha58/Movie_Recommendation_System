@@ -76,10 +76,16 @@
         </div>
         <h1>{{ user.username }}'s Profile</h1>
         <p>Member since {{ user.date_joined|date:"F j, Y" }}</p>
-        <form method="post" action="{% url 'logout' %}">
-                {% csrf_token %}
-                <button type="submit" class="btn btn-danger btn-sm">Logout</button>
-        </form>
+        <div class="d-flex gap-2">
+            <form method="post" action="{% url 'logout' %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger btn-sm text-white">Logout</button>
+            </form>
+            <form method="post" action="{% url 'delete_account' %}" onsubmit="return confirm('This will permanently delete your account and data. Continue?');">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger btn-sm text-white">Delete my account</button>
+            </form>
+        </div>
         
         <div class="profile-stats">
             <div class="stat-box">
