@@ -143,6 +143,29 @@ class UserService:
             logger.error(f"Error deleting rating for user {user_id} movie {movie_id}: {e}")
             return False
 
+    # Reviews
+    def save_review(self, user_id: int, movie_id: int, text: str) -> bool:
+        try:
+            self.ratings_repo.upsert_review(user_id, movie_id, text, datetime.now())
+            return True
+        except Exception as e:
+            logger.error(f"Error saving review for user {user_id} movie {movie_id}: {e}")
+            return False
+
+    def delete_review(self, user_id: int, movie_id: int) -> bool:
+        try:
+            return self.ratings_repo.delete_review(user_id, movie_id) > 0
+        except Exception as e:
+            logger.error(f"Error deleting review for user {user_id} movie {movie_id}: {e}")
+            return False
+
+    def list_reviews(self, movie_id: int, limit: int = 50):
+        try:
+            return self.ratings_repo.list_reviews_for_movie(movie_id, limit)
+        except Exception as e:
+            logger.error(f"Error listing reviews for movie {movie_id}: {e}")
+            return []
+
     def delete_account(self, user) -> bool:
         """Delete a user's profile and related data across repositories, then delete Django user."""
         try:

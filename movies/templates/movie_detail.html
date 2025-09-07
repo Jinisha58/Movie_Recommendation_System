@@ -197,6 +197,63 @@
         {% endif %}
     </div>
 
+    <!-- Reviews -->
+    <div class="mt-4">
+        <h2 class="text-white">Reviews</h2>
+        {% if user.is_authenticated %}
+        <form method="post" action="{% url 'review_movie' movie.id %}" class="mb-3">
+            {% csrf_token %}
+            <div class="mb-2">
+                <textarea class="form-control" name="text" rows="3" placeholder="Write your review..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-sm">Save review</button>
+        </form>
+        {% else %}
+        <p><a href="{% url 'login' %}">Login</a> to add a review.</p>
+        {% endif %}
+
+        {% if reviews %}
+        <div class="list-group">
+            {% for r in reviews %}
+            <div class="list-group-item">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <strong>User {{ r.user_id }}</strong>
+                        <small class="text-muted ms-2">{{ r.timestamp|naturaltime }}</small>
+                    </div>
+                    {% if user.is_authenticated and user.id == r.user_id %}
+                    <div class="d-flex align-items-center">
+                        <button type="button" class="btn btn-sm btn-secondary me-2" data-bs-toggle="collapse" data-bs-target="#edit-review-{{ forloop.counter }}" aria-expanded="false" aria-controls="edit-review-{{ forloop.counter }}">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <form method="post" action="{% url 'review_movie' movie.id %}" onsubmit="return confirm('Delete your review?');">
+                            {% csrf_token %}
+                            <input type="hidden" name="_method" value="delete">
+                            <button type="submit" class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i></button>
+                        </form>
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="mt-2">{{ r.text }}</div>
+                {% if user.is_authenticated and user.id == r.user_id %}
+                <div class="collapse mt-2" id="edit-review-{{ forloop.counter }}">
+                    <form method="post" action="{% url 'review_movie' movie.id %}">
+                        {% csrf_token %}
+                        <div class="mb-2">
+                            <textarea class="form-control" name="text" rows="3" required>{{ r.text }}</textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-sm">Update review</button>
+                    </form>
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p>No reviews yet.</p>
+        {% endif %}
+    </div>
+
     <!-- Movies featuring the first cast member -->
     {% if first_cast_movies and movie.first_cast %}
     <div class="related-movies-section">
@@ -230,7 +287,5 @@
         </div>
     </div>
     {% endif %}
-    
-    <!-- Similar movies section would go here if available -->
 </div>
 {% endblock %}

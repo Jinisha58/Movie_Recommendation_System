@@ -3,7 +3,7 @@ from .views.movie_views import HomeView, MovieDetailView, MovieSearchView, Movie
 from .views.user_views import (
     WatchlistView, AddToWatchlistView, RemoveFromWatchlistView,
     RecommendationsView, ProfileView, MyRatingsView, RateMovieView,
-    RegisterView, CustomLogoutView, LandingView, DeleteAccountView, DeleteRatingView
+    RegisterView, CustomLogoutView, LandingView, DeleteAccountView, DeleteRatingView, ReviewView
 )
 
 urlpatterns = [
@@ -11,6 +11,7 @@ urlpatterns = [
     path('', HomeView.as_view(), name='home'),
     path('movie/<int:movie_id>/', MovieDetailView.as_view(), name='movie_detail'),
     path('movie/<int:movie_id>/rate/', RateMovieView.as_view(), name='rate_movie'),
+    path('movie/<int:movie_id>/review/', ReviewView.as_view(), name='review_movie'),
     path('search/', SearchView.as_view(), name='search'),
     path('filter/', MovieSearchView.as_view(), name='movie_filter'),
     path('filter/ajax/', MovieFilterAjaxView.as_view(), name='movie_filter_ajax'),

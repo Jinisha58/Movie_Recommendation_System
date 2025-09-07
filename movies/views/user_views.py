@@ -560,6 +560,44 @@ class DeleteRatingView(LoginRequiredMixin, View):
         return redirect('my_ratings')
 
 
+class ReviewView(LoginRequiredMixin, View):
+    """Create, update, or delete a review for a movie."""
+    login_url = '/login/'
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.user_service = UserService()
+
+    def post(self, request, movie_id):
+        # Support method override for delete
+        if request.POST.get('_method') == 'delete':
+            ok = self.user_service.delete_review(request.user.id, movie_id)
+            if ok:
+                messages.success(request, 'Review deleted.')
+            else:
+                messages.error(request, 'Could not delete review.')
+            return redirect('movie_detail', movie_id=movie_id)
+
+        # Create or update review
+        text = request.POST.get('text', '').strip()
+        if not text:
+            messages.error(request, 'Review cannot be empty.')
+            return redirect('movie_detail', movie_id=movie_id)
+        ok = self.user_service.save_review(request.user.id, movie_id, text)
+        if ok:
+            messages.success(request, 'Review saved.')
+        else:
+            messages.error(request, 'Could not save review.')
+        return redirect('movie_detail', movie_id=movie_id)
+
+    def delete(self, request, movie_id):
+        # Delete review (AJAX-friendly)
+        ok = self.user_service.delete_review(request.user.id, movie_id)
+        if ok:
+            return JsonResponse({'success': True})
+        return JsonResponse({'success': False}, status=400)
+
+
 class RegisterView(TemplateView):
     """Register a new user"""
     template_name = 'register.html'

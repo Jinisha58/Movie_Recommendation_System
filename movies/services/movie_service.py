@@ -4,6 +4,8 @@ Movie Service - Handles all movie-related business logic
 import requests
 import logging
 import time
+import hashlib
+from urllib.parse import urlencode
 import random
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
@@ -46,7 +48,17 @@ class MovieService:
             params = {}
         
         params['api_key'] = self.tmdb_api_key
-        cache_key = f"tmdb_{endpoint}_{str(params)}"
+
+        # Build a memcached-safe cache key: tmdb:<endpoint_sanitized>:<hash>
+        # Normalize params (sorted) and exclude sensitive api_key from the key
+        normalized_params = urlencode(
+            sorted((k, v) for k, v in params.items() if k != 'api_key'),
+            doseq=True
+        )
+        raw_key = f"{endpoint}?{normalized_params}" if normalized_params else endpoint
+        key_hash = hashlib.sha1(raw_key.encode('utf-8')).hexdigest()[:16]
+        safe_endpoint = endpoint.strip('/').replace('/', '_') or 'root'
+        cache_key = f"tmdb:{safe_endpoint}:{key_hash}"
         
         # Try to get from cache first
         cached_response = cache.get(cache_key)

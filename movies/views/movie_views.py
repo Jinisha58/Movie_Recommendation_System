@@ -231,10 +231,18 @@ class MovieDetailView(TemplateView):
                 except Exception:
                     user_rating = None
 
+            # Reviews for this movie
+            try:
+                from ..repositories.ratings_repository import RatingsRepository
+                reviews = RatingsRepository().list_reviews_for_movie(int(movie_id), limit=50)
+            except Exception:
+                reviews = []
+
             context.update({
                 'movie': movie,
                 'first_cast_movies': first_cast_movies,
-                'user_rating': user_rating
+                'user_rating': user_rating,
+                'reviews': reviews
             })
             
         except Exception as e:

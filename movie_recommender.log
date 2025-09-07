@@ -20434,3 +20434,49 @@ INFO 2025-09-07 19:35:45,507 movie_views Retrieved 20 home cast movies from cach
 INFO 2025-09-07 19:36:26,953 autoreload C:\Movie_Recommendation_System-main\movies\urls.py changed, reloading.
 INFO 2025-09-07 19:36:27,449 basehttp "GET / HTTP/1.1" 200 40446
 INFO 2025-09-07 19:36:34,450 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 19:58:41,855 autoreload C:\Movie_Recommendation_System-main\movies\repositories\ratings_repository.py changed, reloading.
+INFO 2025-09-07 19:58:44,662 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 19:59:00,453 autoreload C:\Movie_Recommendation_System-main\movies\services\user_service.py changed, reloading.
+INFO 2025-09-07 19:59:02,586 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 19:59:15,002 autoreload C:\Movie_Recommendation_System-main\movies\views\movie_views.py changed, reloading.
+INFO 2025-09-07 19:59:17,122 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 19:59:29,642 autoreload C:\Movie_Recommendation_System-main\movies\views\user_views.py changed, reloading.
+INFO 2025-09-07 19:59:31,556 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 19:59:39,823 autoreload C:\Movie_Recommendation_System-main\movies\urls.py changed, reloading.
+INFO 2025-09-07 19:59:41,285 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 20:00:15,913 autoreload C:\Movie_Recommendation_System-main\movies\views\user_views.py changed, reloading.
+INFO 2025-09-07 20:00:17,673 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 20:00:35,286 autoreload C:\Movie_Recommendation_System-main\movies\urls.py changed, reloading.
+INFO 2025-09-07 20:00:36,530 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 20:02:01,716 mongodb_client MongoDB connection established successfully
+INFO 2025-09-07 20:02:04,954 user_service Cache miss for user 8 watchlist
+INFO 2025-09-07 20:02:04,958 user_service Retrieved 7 items from MongoDB for user 8
+INFO 2025-09-07 20:02:09,500 basehttp "GET /movie/1242011/ HTTP/1.1" 200 31025
+INFO 2025-09-07 20:02:38,570 basehttp "GET /movie/13494/ HTTP/1.1" 200 29416
+INFO 2025-09-07 20:02:50,067 basehttp "GET /login/ HTTP/1.1" 200 5036
+INFO 2025-09-07 20:02:54,747 basehttp "POST /login/ HTTP/1.1" 302 0
+WARNING 2025-09-07 20:03:10,279 log Forbidden (CSRF token from POST incorrect.): /movie/13494/review/
+WARNING 2025-09-07 20:03:10,281 basehttp "POST /movie/13494/review/ HTTP/1.1" 403 2503
+INFO 2025-09-07 20:03:25,893 movie_views Generated 20 home cast movies for user 8
+INFO 2025-09-07 20:03:31,525 basehttp "GET /profile/ HTTP/1.1" 200 10269
+INFO 2025-09-07 20:03:56,223 basehttp - Broken pipe from ('127.0.0.1', 56750)
+INFO 2025-09-07 20:03:59,278 user_service Cache hit for user 8 watchlist
+INFO 2025-09-07 20:03:59,279 user_views Retrieved 7 watchlist entries for user 8
+INFO 2025-09-07 20:03:59,282 user_views User 8 has 7 movies in watchlist
+INFO 2025-09-07 20:03:59,302 basehttp "GET /watchlist/ HTTP/1.1" 200 15158
+INFO 2025-09-07 20:27:29,837 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 20:28:08,732 mongodb_client MongoDB connection established successfully
+INFO 2025-09-07 20:28:13,021 basehttp "GET /movie/13494/ HTTP/1.1" 200 29416
+INFO 2025-09-07 20:28:16,370 basehttp "POST /movie/13494/review/ HTTP/1.1" 302 0
+INFO 2025-09-07 20:28:16,424 basehttp "GET /movie/13494/ HTTP/1.1" 200 30669
+INFO 2025-09-07 20:28:43,765 basehttp "POST /movie/13494/review/ HTTP/1.1" 302 0
+INFO 2025-09-07 20:28:43,818 basehttp "GET /movie/13494/ HTTP/1.1" 200 30667
+INFO 2025-09-07 20:28:51,948 basehttp "POST /movie/13494/review/ HTTP/1.1" 302 0
+INFO 2025-09-07 20:28:52,018 basehttp "GET /movie/13494/ HTTP/1.1" 200 29714
+INFO 2025-09-07 20:29:06,384 basehttp "POST /movie/13494/review/ HTTP/1.1" 302 0
+INFO 2025-09-07 20:29:06,438 basehttp "GET /movie/13494/ HTTP/1.1" 200 30672
+INFO 2025-09-07 20:30:13,863 basehttp "GET /profile/ HTTP/1.1" 200 10259
+INFO 2025-09-07 20:30:54,057 autoreload C:\Movie_Recommendation_System-main\movies\services\movie_service.py changed, reloading.
+INFO 2025-09-07 20:30:56,136 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 20:31:03,050 autoreload C:\Movie_Recommendation_System-main\movies\services\movie_service.py changed, reloading.
+INFO 2025-09-07 20:31:03,934 autoreload Watching for file changes with StatReloader
