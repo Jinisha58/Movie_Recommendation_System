@@ -317,3 +317,62 @@ class RecommendationService:
         except Exception as e:
             logger.error(f"Error computing featured for user {user_id}: {e}")
             return []
+
+    # New: genre-preference based recommendations
+    def get_recommendations_by_genres(self, selected_genre_ids: List[int], limit: int = 20) -> List[Dict[str, Any]]:
+        """Recommend movies that best match the user's selected genres using cosine similarity.
+
+        selected_genre_ids: list of TMDB genre IDs the user checked.
+        """
+        try:
+            # Guard
+            selected_ids = [int(g) for g in selected_genre_ids if str(g).isdigit()]
+            if not selected_ids:
+                return []
+
+            # Universe of genres
+            genre_dict = self.get_genres()
+            all_genre_ids = list(genre_dict.keys())
+            if not all_genre_ids:
+                return []
+
+            # Candidate pool: popular movies with genre_ids
+            candidates = self.get_popular_movies_with_genres(limit=300)
+            if not candidates:
+                return []
+
+            # Assign vectors to candidates
+            candidates = self.assign_movie_vectors(candidates, all_genre_ids)
+
+            # Build preference vector (like a pseudo-movie)
+            preference = {
+                'vector': [1 if gid in selected_ids else 0 for gid in all_genre_ids]
+            }
+
+            # Score candidates by cosine similarity to the preference vector
+            scored: List[tuple[Dict[str, Any], float]] = []
+            for cand in candidates:
+                score = self.cosine_similarity(preference, cand)
+                scored.append((cand, score))
+
+            # Sort and take top N
+            scored.sort(key=lambda x: x[1], reverse=True)
+            top = scored[:limit]
+
+            # Convert to template format
+            results: List[Dict[str, Any]] = []
+            for cand, score in top:
+                results.append({
+                    'id': cand['id'],
+                    'title': cand['name'],
+                    'poster_url': f"https://image.tmdb.org/t/p/w500{cand['poster_path']}" if cand.get('poster_path') else None,
+                    'release_date': cand.get('release_date', ''),
+                    'vote_average': cand.get('vote_average', 0),
+                    'overview': cand.get('overview', ''),
+                    'similarity_score': round(float(score), 3)
+                })
+
+            return results
+        except Exception as e:
+            logger.error(f"Error getting recommendations by genres: {e}")
+            return []

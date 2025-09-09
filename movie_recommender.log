@@ -20480,3 +20480,244 @@ INFO 2025-09-07 20:30:54,057 autoreload C:\Movie_Recommendation_System-main\movi
 INFO 2025-09-07 20:30:56,136 autoreload Watching for file changes with StatReloader
 INFO 2025-09-07 20:31:03,050 autoreload C:\Movie_Recommendation_System-main\movies\services\movie_service.py changed, reloading.
 INFO 2025-09-07 20:31:03,934 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 20:32:42,541 mongodb_client MongoDB connection established successfully
+INFO 2025-09-07 20:32:46,253 user_service Cache miss for user 6 watchlist
+INFO 2025-09-07 20:32:46,255 user_service Retrieved 0 items from MongoDB for user 6
+INFO 2025-09-07 20:33:42,649 movie_views Generated 20 home cast movies for user 6
+INFO 2025-09-07 20:33:46,621 basehttp "GET /movie/13494/ HTTP/1.1" 200 30387
+INFO 2025-09-07 20:33:57,106 basehttp "GET /movie/13494/ HTTP/1.1" 200 29877
+INFO 2025-09-07 20:33:57,267 basehttp "GET /static/css/movie_details.css HTTP/1.1" 304 0
+INFO 2025-09-07 20:34:04,087 basehttp "GET / HTTP/1.1" 200 40410
+INFO 2025-09-07 20:34:13,323 basehttp "POST /movie/13494/review/ HTTP/1.1" 302 0
+INFO 2025-09-07 20:34:13,389 basehttp "GET /movie/13494/ HTTP/1.1" 200 31097
+INFO 2025-09-07 20:37:37,996 basehttp "GET /movie/13494/ HTTP/1.1" 200 31893
+INFO 2025-09-07 20:37:57,408 basehttp "POST /movie/13494/review/ HTTP/1.1" 302 0
+INFO 2025-09-07 20:37:57,492 basehttp "GET /movie/13494/ HTTP/1.1" 200 32186
+INFO 2025-09-07 20:40:37,849 basehttp "GET /movie/13494/ HTTP/1.1" 200 31897
+INFO 2025-09-07 20:43:03,027 basehttp "GET /actor/1464589/ HTTP/1.1" 200 24932
+INFO 2025-09-07 20:43:22,204 user_service Cache miss for user 8 watchlist
+INFO 2025-09-07 20:43:22,206 user_service Retrieved 7 items from MongoDB for user 8
+INFO 2025-09-07 20:43:47,955 user_views Generated 10 recommendations for user 8
+INFO 2025-09-07 20:43:47,967 basehttp "GET /recommendations/ HTTP/1.1" 200 12699
+INFO 2025-09-07 20:44:59,048 basehttp "GET /profile/ HTTP/1.1" 200 10261
+INFO 2025-09-07 20:45:59,373 basehttp "GET /movie/13494/ HTTP/1.1" 200 31898
+INFO 2025-09-07 20:46:17,630 basehttp - Broken pipe from ('127.0.0.1', 59159)
+INFO 2025-09-07 20:46:19,251 basehttp "GET /movie/413730/ HTTP/1.1" 200 24590
+INFO 2025-09-07 20:46:34,284 basehttp "GET /movie/1115757/ HTTP/1.1" 200 15646
+INFO 2025-09-07 20:56:51,193 autoreload C:\Movie_Recommendation_System-main\movies\services\recommendation_service.py changed, reloading.
+INFO 2025-09-07 20:56:53,900 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 20:57:30,993 autoreload C:\Movie_Recommendation_System-main\movies\views\user_views.py changed, reloading.
+INFO 2025-09-07 20:57:31,760 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 20:58:23,008 autoreload C:\Movie_Recommendation_System-main\movies\services\recommendation_service.py changed, reloading.
+INFO 2025-09-07 20:58:23,616 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 21:11:34,775 mongodb_client MongoDB connection established successfully
+INFO 2025-09-07 21:11:34,820 user_service Cache miss for user 8 watchlist
+INFO 2025-09-07 21:11:34,822 user_service Retrieved 7 items from MongoDB for user 8
+INFO 2025-09-07 21:11:58,703 basehttp "POST /movie/413730/review/ HTTP/1.1" 302 0
+INFO 2025-09-07 21:12:02,416 basehttp "GET /movie/413730/ HTTP/1.1" 200 26894
+INFO 2025-09-07 21:12:14,134 user_views Generated 10 recommendations for user 8
+INFO 2025-09-07 21:12:14,146 basehttp "GET /recommendations/ HTTP/1.1" 200 21678
+INFO 2025-09-07 21:12:58,191 user_views Generated 20 recommendations for user 8
+INFO 2025-09-07 21:12:58,204 basehttp "GET /recommendations/?method=genre&genres=12&genres=16&genres=14 HTTP/1.1" 200 30078
+INFO 2025-09-07 21:13:17,014 user_views Retrieved 10 recommendations from cache for user 8
+INFO 2025-09-07 21:13:17,028 basehttp "GET /recommendations/ HTTP/1.1" 200 21678
+INFO 2025-09-07 21:13:29,198 user_views Generated 20 recommendations for user 8
+INFO 2025-09-07 21:13:29,212 basehttp "GET /recommendations/?method=genre&genres=12&genres=16&genres=14 HTTP/1.1" 200 30078
+INFO 2025-09-07 21:13:30,036 user_views Retrieved 10 recommendations from cache for user 8
+INFO 2025-09-07 21:13:30,047 basehttp "GET /recommendations/ HTTP/1.1" 200 21678
+INFO 2025-09-07 21:15:55,568 autoreload C:\Movie_Recommendation_System-main\movies\views\user_views.py changed, reloading.
+INFO 2025-09-07 21:15:57,186 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 21:17:28,565 mongodb_client MongoDB connection established successfully
+INFO 2025-09-07 21:17:28,570 user_service Cache miss for user 8 watchlist
+INFO 2025-09-07 21:17:28,571 user_service Retrieved 7 items from MongoDB for user 8
+INFO 2025-09-07 21:17:32,466 user_views Generated 20 recommendations for user 8
+INFO 2025-09-07 21:17:32,484 basehttp "GET /recommendations/?method=genre&genres=12&genres=16&genres=14 HTTP/1.1" 200 11594
+INFO 2025-09-07 21:17:44,906 user_views Generated 20 recommendations for user 8
+INFO 2025-09-07 21:17:44,911 basehttp "GET /recommendations/?method=genre&genres=12&genres=16&genres=14 HTTP/1.1" 200 11594
+INFO 2025-09-07 21:18:06,938 user_views Generated 20 recommendations for user 8
+INFO 2025-09-07 21:18:06,943 basehttp "GET /recommendations/?method=genre&genres=12&genres=16&genres=14 HTTP/1.1" 200 11594
+INFO 2025-09-07 21:18:15,628 user_views Generated 10 recommendations for user 8
+INFO 2025-09-07 21:18:15,631 basehttp "GET /recommendations/ HTTP/1.1" 200 11547
+INFO 2025-09-07 21:18:43,381 user_views Generated 20 recommendations for user 8
+INFO 2025-09-07 21:18:43,385 basehttp "GET /recommendations/?method=genre&genres=12&genres=16 HTTP/1.1" 200 11587
+INFO 2025-09-07 21:18:53,704 user_views Generated 20 recommendations for user 8
+INFO 2025-09-07 21:18:53,706 basehttp "GET /recommendations/?method=genre&genres=12 HTTP/1.1" 200 11580
+INFO 2025-09-07 21:19:49,130 autoreload C:\Movie_Recommendation_System-main\movies\views\user_views.py changed, reloading.
+INFO 2025-09-07 21:19:50,576 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 21:20:24,172 autoreload C:\Movie_Recommendation_System-main\movies\views\user_views.py changed, reloading.
+INFO 2025-09-07 21:20:25,397 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 21:20:43,090 autoreload C:\Movie_Recommendation_System-main\movies\views\user_views.py changed, reloading.
+INFO 2025-09-07 21:20:43,907 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 21:40:50,489 mongodb_client MongoDB connection established successfully
+INFO 2025-09-07 21:40:59,266 user_views Generated 20 recommendations for user 8
+INFO 2025-09-07 21:40:59,326 basehttp "GET /recommendations/?method=genre&genres=12 HTTP/1.1" 200 11840
+INFO 2025-09-07 21:41:00,738 user_service Cache miss for user 8 watchlist
+INFO 2025-09-07 21:41:00,740 user_service Retrieved 7 items from MongoDB for user 8
+INFO 2025-09-07 21:41:20,169 user_views Generated 20 recommendations for user 8
+INFO 2025-09-07 21:41:20,174 basehttp - Broken pipe from ('127.0.0.1', 64416)
+INFO 2025-09-07 21:41:22,826 user_views Generated 20 recommendations for user 8
+INFO 2025-09-07 21:41:22,833 basehttp "GET /recommendations/?method=genre&genres=12&min_sim=0.79 HTTP/1.1" 200 11841
+INFO 2025-09-07 21:41:51,198 user_views Generated 10 recommendations for user 8
+INFO 2025-09-07 21:41:51,209 basehttp "GET /recommendations/ HTTP/1.1" 200 21938
+INFO 2025-09-07 21:42:27,093 autoreload C:\Movie_Recommendation_System-main\movies\views\user_views.py changed, reloading.
+INFO 2025-09-07 21:42:29,082 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 21:42:38,714 autoreload C:\Movie_Recommendation_System-main\movies\views\user_views.py changed, reloading.
+INFO 2025-09-07 21:42:39,372 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 21:42:44,806 autoreload C:\Movie_Recommendation_System-main\movies\views\user_views.py changed, reloading.
+INFO 2025-09-07 21:42:45,529 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 21:42:59,932 mongodb_client MongoDB connection established successfully
+INFO 2025-09-07 21:43:01,679 user_service Cache miss for user 8 watchlist
+INFO 2025-09-07 21:43:01,681 user_service Retrieved 7 items from MongoDB for user 8
+INFO 2025-09-07 21:43:01,681 user_views Retrieved 7 watchlist entries for user 8
+INFO 2025-09-07 21:43:03,888 user_views Generated 20 recommendations for user 8
+INFO 2025-09-07 21:43:03,918 basehttp - Broken pipe from ('127.0.0.1', 64860)
+INFO 2025-09-07 21:43:14,243 user_views User 8 has 7 movies in watchlist
+INFO 2025-09-07 21:43:14,270 basehttp "GET /watchlist/ HTTP/1.1" 200 15158
+INFO 2025-09-07 21:43:21,533 user_service Cache hit for user 8 watchlist
+INFO 2025-09-07 21:44:14,963 user_views Generated 10 recommendations for user 8
+INFO 2025-09-07 21:44:14,972 basehttp "GET /recommendations/ HTTP/1.1" 200 21938
+INFO 2025-09-07 21:44:21,725 basehttp "GET /profile/ HTTP/1.1" 200 10215
+INFO 2025-09-07 21:44:56,702 user_views Retrieved 10 recommendations from cache for user 8
+INFO 2025-09-07 21:44:56,712 basehttp "GET /recommendations/ HTTP/1.1" 200 21938
+INFO 2025-09-07 21:45:15,054 user_service Cache hit for user 8 watchlist
+INFO 2025-09-07 21:45:29,456 user_service Cache hit for user 8 watchlist
+INFO 2025-09-07 21:45:49,524 user_views Generated 10 recommendations for user 8
+INFO 2025-09-07 21:45:49,536 basehttp - Broken pipe from ('127.0.0.1', 64995)
+INFO 2025-09-07 21:46:01,263 user_service Cache hit for user 8 watchlist
+INFO 2025-09-07 21:46:09,888 user_service Cache hit for user 8 watchlist
+INFO 2025-09-07 21:46:36,638 user_views Generated 10 recommendations for user 8
+INFO 2025-09-07 21:46:36,647 basehttp "GET /recommendations/?method=personalized&genres=12&genres=35&genres=18&min_sim=0.8 HTTP/1.1" 200 21959
+INFO 2025-09-07 21:46:38,522 user_views Generated 10 recommendations for user 8
+INFO 2025-09-07 21:46:38,535 basehttp - Broken pipe from ('127.0.0.1', 64996)
+INFO 2025-09-07 21:46:51,818 user_views Generated 10 recommendations for user 8
+INFO 2025-09-07 21:46:51,827 basehttp "GET /recommendations/?method=personalized&genres=28&genres=12&genres=16&min_sim=0.8 HTTP/1.1" 200 21959
+INFO 2025-09-07 21:47:41,539 user_service Cache hit for user 8 watchlist
+INFO 2025-09-07 21:47:54,307 user_service Cache hit for user 8 watchlist
+INFO 2025-09-07 21:48:17,246 user_views Generated 10 recommendations for user 8
+INFO 2025-09-07 21:48:17,250 basehttp - Broken pipe from ('127.0.0.1', 65047)
+INFO 2025-09-07 21:48:23,478 user_views Generated 10 recommendations for user 8
+INFO 2025-09-07 21:48:23,484 basehttp "GET /recommendations/?method=personalized&genres=28&genres=12&genres=16&min_sim=0.62 HTTP/1.1" 200 21960
+INFO 2025-09-07 21:49:57,486 autoreload C:\Movie_Recommendation_System-main\movies\views\user_views.py changed, reloading.
+INFO 2025-09-07 21:49:58,801 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 21:50:08,487 autoreload C:\Movie_Recommendation_System-main\movies\views\user_views.py changed, reloading.
+INFO 2025-09-07 21:50:09,129 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 21:52:08,330 autoreload C:\Movie_Recommendation_System-main\movies\views\user_views.py changed, reloading.
+INFO 2025-09-07 21:52:09,087 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 21:54:50,979 autoreload C:\Movie_Recommendation_System-main\movies\views\user_views.py changed, reloading.
+INFO 2025-09-07 21:54:51,967 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 21:55:36,305 autoreload C:\Movie_Recommendation_System-main\movies\views\user_views.py changed, reloading.
+INFO 2025-09-07 21:55:37,013 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 21:55:44,688 autoreload C:\Movie_Recommendation_System-main\movies\views\user_views.py changed, reloading.
+INFO 2025-09-07 21:55:45,413 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 21:56:29,869 mongodb_client MongoDB connection established successfully
+INFO 2025-09-07 21:56:29,874 user_service Cache miss for user 8 watchlist
+INFO 2025-09-07 21:56:29,878 user_service Retrieved 7 items from MongoDB for user 8
+INFO 2025-09-07 21:56:44,133 user_service Cache hit for user 8 watchlist
+INFO 2025-09-07 21:57:01,373 user_views Generated 10 recommendations for user 8
+INFO 2025-09-07 21:57:01,447 basehttp "GET /recommendations/?method=personalized&genres=28&genres=12&genres=16&min_sim=0.62 HTTP/1.1" 200 21802
+INFO 2025-09-07 21:57:10,426 user_views Genre mode: user=8, genres=['28', '12', '16'], min_sim=0.5
+INFO 2025-09-07 21:57:12,360 user_views Genre mode raw results: 20
+INFO 2025-09-07 21:57:12,360 user_views Generated 20 recommendations for user 8
+INFO 2025-09-07 21:57:12,361 user_views Genre mode filtered >= 0.5: 8 of 20
+INFO 2025-09-07 21:57:12,370 basehttp "GET /recommendations/?method=genre&genres=28&genres=12&genres=16 HTTP/1.1" 200 19809
+INFO 2025-09-07 21:57:26,097 user_views Generated 10 recommendations for user 8
+INFO 2025-09-07 21:57:26,107 basehttp "GET /recommendations/?method=personalized&genres=12&genres=35&genres=18&min_sim=0.8 HTTP/1.1" 200 21802
+INFO 2025-09-07 21:57:31,588 user_service Cache hit for user 8 watchlist
+INFO 2025-09-07 21:57:42,883 user_service Cache hit for user 8 watchlist
+INFO 2025-09-07 21:57:59,854 user_views Generated 10 recommendations for user 8
+INFO 2025-09-07 21:57:59,862 basehttp - Broken pipe from ('127.0.0.1', 49922)
+INFO 2025-09-07 21:58:13,932 user_views Generated 10 recommendations for user 8
+INFO 2025-09-07 21:58:13,943 basehttp "GET /recommendations/?method=personalized HTTP/1.1" 200 21781
+INFO 2025-09-07 22:05:28,641 user_views Retrieved 10 recommendations from cache for user 8
+INFO 2025-09-07 22:05:28,649 basehttp "GET /recommendations/?method=personalized HTTP/1.1" 200 21781
+INFO 2025-09-07 22:05:44,597 user_views Retrieved 10 recommendations from cache for user 8
+INFO 2025-09-07 22:05:44,606 basehttp "GET /recommendations/?method=personalized HTTP/1.1" 200 21781
+INFO 2025-09-07 22:06:16,402 user_views Genre mode: user=8, genres=['18', '10749', '37'], min_sim=0.5
+INFO 2025-09-07 22:06:18,541 user_views Genre mode raw results: 20
+INFO 2025-09-07 22:06:18,541 user_views Generated 20 recommendations for user 8
+INFO 2025-09-07 22:06:18,541 user_views Genre mode filtered >= 0.5: 0 of 20
+INFO 2025-09-07 22:06:18,552 basehttp "GET /recommendations/?method=genre&genres=18&genres=10749&genres=37 HTTP/1.1" 200 29380
+INFO 2025-09-07 22:06:57,976 user_views Genre mode: user=8, genres=['18', '10749', '37'], min_sim=0.5
+INFO 2025-09-07 22:06:59,597 user_views Genre mode raw results: 20
+INFO 2025-09-07 22:06:59,597 user_views Generated 20 recommendations for user 8
+INFO 2025-09-07 22:06:59,597 user_views Genre mode filtered >= 0.5: 0 of 20
+INFO 2025-09-07 22:06:59,608 basehttp "GET /recommendations/?method=genre&genres=18&genres=10749&genres=37 HTTP/1.1" 200 29380
+INFO 2025-09-07 22:07:10,543 user_views Genre mode: user=8, genres=['10749'], min_sim=0.5
+INFO 2025-09-07 22:07:12,982 user_views Genre mode raw results: 20
+INFO 2025-09-07 22:07:12,983 user_views Generated 20 recommendations for user 8
+INFO 2025-09-07 22:07:12,983 user_views Genre mode filtered >= 0.5: 1 of 20
+INFO 2025-09-07 22:07:12,987 basehttp "GET /recommendations/?method=genre&genres=10749 HTTP/1.1" 200 12488
+INFO 2025-09-07 22:07:22,009 user_views Genre mode: user=8, genres=['878'], min_sim=0.5
+INFO 2025-09-07 22:07:24,451 user_views Genre mode raw results: 20
+INFO 2025-09-07 22:07:24,452 user_views Generated 20 recommendations for user 8
+INFO 2025-09-07 22:07:24,452 user_views Genre mode filtered >= 0.5: 3 of 20
+INFO 2025-09-07 22:07:24,459 basehttp "GET /recommendations/?method=genre&genres=878 HTTP/1.1" 200 14571
+INFO 2025-09-07 22:07:36,164 user_views Genre mode: user=8, genres=['16', '35'], min_sim=0.5
+INFO 2025-09-07 22:07:38,485 user_views Genre mode raw results: 20
+INFO 2025-09-07 22:07:38,485 user_views Generated 20 recommendations for user 8
+INFO 2025-09-07 22:07:38,486 user_views Genre mode filtered >= 0.5: 2 of 20
+INFO 2025-09-07 22:07:38,490 basehttp "GET /recommendations/?method=genre&genres=16&genres=35 HTTP/1.1" 200 13557
+INFO 2025-09-07 22:07:43,193 user_views Genre mode: user=8, genres=['16'], min_sim=0.5
+INFO 2025-09-07 22:07:45,306 user_views Genre mode raw results: 20
+INFO 2025-09-07 22:07:45,307 user_views Generated 20 recommendations for user 8
+INFO 2025-09-07 22:07:45,307 user_views Genre mode filtered >= 0.5: 1 of 20
+INFO 2025-09-07 22:07:45,312 basehttp "GET /recommendations/?method=genre&genres=16 HTTP/1.1" 200 12552
+INFO 2025-09-07 22:07:53,569 user_views Genre mode: user=8, genres=['28', '12', '16'], min_sim=0.5
+INFO 2025-09-07 22:07:55,852 user_views Genre mode raw results: 20
+INFO 2025-09-07 22:07:55,852 user_views Generated 20 recommendations for user 8
+INFO 2025-09-07 22:07:55,852 user_views Genre mode filtered >= 0.5: 8 of 20
+INFO 2025-09-07 22:07:55,859 basehttp "GET /recommendations/?method=genre&genres=28&genres=12&genres=16 HTTP/1.1" 200 19809
+INFO 2025-09-07 22:08:44,764 basehttp "GET /login/ HTTP/1.1" 200 5036
+INFO 2025-09-07 22:08:47,649 basehttp "POST /login/ HTTP/1.1" 302 0
+INFO 2025-09-07 22:09:31,895 basehttp "GET /profile/ HTTP/1.1" 200 10208
+INFO 2025-09-07 22:10:09,779 user_views Retrieved 10 recommendations from cache for user 8
+INFO 2025-09-07 22:10:09,784 basehttp "GET /recommendations/ HTTP/1.1" 200 21781
+INFO 2025-09-07 22:11:38,025 autoreload C:\Movie_Recommendation_System-main\movies\views\user_views.py changed, reloading.
+INFO 2025-09-07 22:11:39,618 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 22:12:01,427 autoreload C:\Movie_Recommendation_System-main\movies\views\user_views.py changed, reloading.
+INFO 2025-09-07 22:12:02,148 autoreload Watching for file changes with StatReloader
+INFO 2025-09-07 22:12:08,829 autoreload C:\Movie_Recommendation_System-main\movies\views\user_views.py changed, reloading.
+INFO 2025-09-07 22:12:09,705 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 21:23:38,597 autoreload Watching for file changes with StatReloader
+INFO 2025-09-08 21:34:39,035 mongodb_client MongoDB connection established successfully
+INFO 2025-09-08 21:34:42,566 user_service Cache miss for user 8 watchlist
+INFO 2025-09-08 21:34:42,644 user_service Retrieved 7 items from MongoDB for user 8
+INFO 2025-09-08 21:36:06,263 movie_views Generated 20 home cast movies for user 8
+INFO 2025-09-08 21:36:37,056 basehttp "GET / HTTP/1.1" 200 40483
+WARNING 2025-09-08 21:36:37,545 log Not Found: /favicon.ico
+WARNING 2025-09-08 21:36:37,547 basehttp "GET /favicon.ico HTTP/1.1" 404 7929
+INFO 2025-09-08 22:06:04,670 user_service Cache miss for user 8 watchlist
+INFO 2025-09-08 22:06:04,675 user_service Retrieved 7 items from MongoDB for user 8
+INFO 2025-09-09 14:24:45,018 autoreload Watching for file changes with StatReloader
+INFO 2025-09-09 14:24:52,111 mongodb_client MongoDB connection established successfully
+INFO 2025-09-09 14:24:54,351 user_service Cache miss for user 8 watchlist
+INFO 2025-09-09 14:24:54,478 user_service Retrieved 7 items from MongoDB for user 8
+INFO 2025-09-09 14:26:26,198 movie_views Generated 20 home cast movies for user 8
+INFO 2025-09-09 14:26:58,298 basehttp "GET /movie/13494/ HTTP/1.1" 200 31901
+WARNING 2025-09-09 14:27:03,104 log Not Found: /favicon.ico
+WARNING 2025-09-09 14:27:03,120 basehttp "GET /favicon.ico HTTP/1.1" 404 7929
+INFO 2025-09-09 14:27:05,291 basehttp "GET / HTTP/1.1" 200 40509
+INFO 2025-09-09 14:27:05,409 basehttp "GET /static/css/base.css HTTP/1.1" 304 0
+INFO 2025-09-09 14:27:05,489 basehttp "GET /static/css/home.css HTTP/1.1" 304 0
+WARNING 2025-09-09 14:27:07,113 log Not Found: /favicon.ico
+WARNING 2025-09-09 14:27:07,114 basehttp "GET /favicon.ico HTTP/1.1" 404 7929
+INFO 2025-09-09 14:30:02,190 basehttp "GET /profile/ HTTP/1.1" 200 10252
+INFO 2025-09-09 14:30:21,641 movie_views Retrieved 20 home cast movies from cache for user 8
+INFO 2025-09-09 14:30:53,980 basehttp "GET / HTTP/1.1" 200 40509
+INFO 2025-09-09 14:35:35,882 user_service Cache hit for user 8 watchlist
+INFO 2025-09-09 14:35:54,970 user_views Generated 11 recommendations for user 8
+INFO 2025-09-09 14:35:55,102 basehttp "GET /recommendations/ HTTP/1.1" 200 22801
+INFO 2025-09-09 14:38:07,420 autoreload C:\Movie_Recommendation_System-main\movies\views\user_views.py changed, reloading.
+INFO 2025-09-09 14:38:10,656 autoreload Watching for file changes with StatReloader
+INFO 2025-09-09 14:38:18,081 autoreload C:\Movie_Recommendation_System-main\movies\views\user_views.py changed, reloading.
+INFO 2025-09-09 14:38:19,099 autoreload Watching for file changes with StatReloader
+INFO 2025-09-09 15:13:34,002 mongodb_client MongoDB connection established successfully
+INFO 2025-09-09 15:13:34,041 user_service Cache miss for user 8 watchlist
+INFO 2025-09-09 15:13:34,044 user_service Retrieved 7 items from MongoDB for user 8
+INFO 2025-09-09 15:13:57,139 user_views Generated 11 recommendations for user 8
+INFO 2025-09-09 15:13:57,410 basehttp "GET /recommendations/ HTTP/1.1" 200 21008
+INFO 2025-09-09 15:22:44,624 user_views Genre mode: user=8, genres=['28', '80'], min_sim=0.5
+INFO 2025-09-09 15:22:46,558 user_views Genre mode raw results: 20
+INFO 2025-09-09 15:22:46,559 user_views Generated 20 recommendations for user 8
+INFO 2025-09-09 15:22:46,560 user_views Genre mode filtered >= 0.5: 6 of 20
+INFO 2025-09-09 15:22:46,591 basehttp "GET /recommendations/?method=genre&genres=28&genres=80 HTTP/1.1" 200 17603

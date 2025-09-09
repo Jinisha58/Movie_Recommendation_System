@@ -252,65 +252,100 @@ class RecommendationsView(LoginRequiredMixin, TemplateView):
             # Get current date for filtering unreleased movies
             current_date = datetime.now().strftime('%Y-%m-%d')
             
-            # Try to get recommendations from cache
-            cache_key = f"user_recommendations_{self.request.user.id}"
-            recommendations = cache.get(cache_key)
+            # Read method and genres from query params
+            method = self.request.GET.get('method', 'personalized')
+            selected_genres = self.request.GET.getlist('genres')
+            # Fixed similarity threshold for genre mode
+            min_sim = 0.5
+            message = " "
+            recommendation_type = method
+            recommendations = None
+            cache_key = None
+            
+            # If using personalized method without explicit filters, use cache
+            if method == 'personalized' and not selected_genres:
+                cache_key = f"user_recommendations_{self.request.user.id}"
+                recommendations = cache.get(cache_key)
             
             if recommendations is None:
-                # Get user's viewed movies and watchlist via service
-                viewed_entries = self.user_service.get_user_viewed_movies(self.request.user.id, limit=1000)
-                viewed_movie_ids = [item['movie_id'] for item in viewed_entries]
-                watchlist_items = self.user_service.get_user_watchlist(self.request.user.id)
-                watchlist_movie_ids = [item['movie_id'] for item in watchlist_items]
-                
-                # Combine all user movie interactions
-                all_user_movie_ids = list(set(viewed_movie_ids + watchlist_movie_ids))
-                
-                # If user has no history, return popular movies
-                if not all_user_movie_ids:
-                    recommendations = self.movie_service.get_popular_movies(limit=20)
-                    message = "Explore some movies to get personalized recommendations!"
-                    recommendation_type = "popular"
+                if method == 'genre':
+                    # Genre preference based recommendations (no caching for now due to many combinations)
+                    if not selected_genres:
+                        recommendations = []
+                        message = "Select at least one genre to generate recommendations."
+                    else:
+                        logger.info(f"Genre mode: user={self.request.user.id}, genres={selected_genres}, min_sim={min_sim}")
+                        recommendations = self.recommendation_service.get_recommendations_by_genres(selected_genres, limit=50)
+                        logger.info(f"Genre mode raw results: {len(recommendations)}")
+                        message = "Genre-based recommendations"
                 else:
-                    # Get recommendations using cosine similarity based on user's movie history
-                    recommendations = self.recommendation_service.get_cosine_similarity_recommendations(all_user_movie_ids, num_recommendations=20)
-                    
-                    # Filter out unreleased movies
-                    recommendations = [
-                        movie for movie in recommendations 
-                        if movie.get('release_date', '') <= current_date
-                    ]
-                    
-                    # If we don't have enough movies, supplement with popular movies
-                    if len(recommendations) < 20:
-                        popular_movies = self.movie_service.get_popular_movies(limit=20 - len(recommendations))
-                        
-                        # Filter out movies the user has already interacted with or that are already in recommendations
-                        processed_movie_ids = set(all_user_movie_ids + [m['id'] for m in recommendations])
-                        popular_movies = [
-                            movie for movie in popular_movies 
-                            if movie['id'] not in processed_movie_ids
-                        ]
-                        
-                        recommendations.extend(popular_movies)
-                        recommendations = recommendations[:20]
-                    
-                    message = " "
-                    recommendation_type = "personalized"
+                    # Personalized path
+                    viewed_entries = self.user_service.get_user_viewed_movies(self.request.user.id, limit=1000)
+                    viewed_movie_ids = [item['movie_id'] for item in viewed_entries]
+                    watchlist_items = self.user_service.get_user_watchlist(self.request.user.id)
+                    watchlist_movie_ids = [item['movie_id'] for item in watchlist_items]
+                    all_user_movie_ids = list(set(viewed_movie_ids + watchlist_movie_ids))
+                    if not all_user_movie_ids:
+                        recommendations = self.movie_service.get_popular_movies(limit=20)
+                        message = "Explore some movies to get personalized recommendations!"
+                        recommendation_type = "popular"
+                    else:
+                        recommendations = self.recommendation_service.get_cosine_similarity_recommendations(all_user_movie_ids, num_recommendations=20)
+                        recommendations = [m for m in recommendations if m.get('release_date', '') <= current_date]
+                        if len(recommendations) < 20:
+                            popular_movies = self.movie_service.get_popular_movies(limit=20 - len(recommendations))
+                            processed_movie_ids = set(all_user_movie_ids + [m['id'] for m in recommendations])
+                            popular_movies = [m for m in popular_movies if m['id'] not in processed_movie_ids]
+                            recommendations.extend(popular_movies)
+                            recommendations = recommendations[:20]
+                        # Remove similarity score from personalized results
+                        for m in recommendations:
+                            if isinstance(m, dict) and 'similarity_score' in m:
+                                try:
+                                    m.pop('similarity_score', None)
+                                except Exception:
+                                    pass
+                        recommendation_type = "personalized"
                 
-                # Cache the recommendations for 1 hour
-                cache.set(cache_key, recommendations, timeout=3600)
+                # Cache personalized results for 1 hour
+                if cache_key and method == 'personalized' and not selected_genres:
+                    cache.set(cache_key, recommendations, timeout=3600)
                 
                 logger.info(f"Generated {len(recommendations)} recommendations for user {self.request.user.id}")
             else:
                 logger.info(f"Retrieved {len(recommendations)} recommendations from cache for user {self.request.user.id}")
-                message = " "
-                recommendation_type = "personalized"
+                if method == 'personalized':
+                    message = " "
+                    recommendation_type = "personalized"
+
+            # Apply similarity threshold filter for genre mode where similarity is present
+            if method == 'genre':
+                try:
+                    filtered = [
+                        m for m in recommendations
+                        if 'similarity_score' in m and float(m.get('similarity_score', 0)) >= min_sim
+                    ]
+                    logger.info(f"Genre mode filtered >= {min_sim}: {len(filtered)} of {len(recommendations)}")
+                    # If nothing meets the threshold, fall back to top matches without filtering
+                    if filtered:
+                        recommendations = filtered
+                    else:
+                        if recommendations:
+                            message = "No movies >= 0.5; showing top matches."
+                            # Already sorted by similarity from the service
+                            recommendations = recommendations[:20]
+                        else:
+                            logger.info("Genre mode: no recommendations returned from service")
+                except Exception:
+                    pass
             
             context.update({
                 'recommendations': recommendations,
                 'recommendation_type': recommendation_type,
-                'message': message
+                'message': message,
+                'method': method,
+                'selected_genres': [int(g) for g in selected_genres if str(g).isdigit()],
+                'genre_map': self.recommendation_service.get_genres(),
             })
             
         except Exception as e:
