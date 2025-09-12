@@ -30,7 +30,7 @@
 <div class="container mt-5">
     <div class="text-center mb-4">
         <h2 class="fw-bold" style="letter-spacing: 2px;">METHODS OF RECOMMENDATION</h2>
-        <p class="text-muted">Ever loved movies so much that you ended up looking for similar movies? Just enter your preferences and we will do the rest</p>
+        <p class="text-muted">Some films feel like memories you never made. Let’s find the next one that feels like home.</p>
     </div>
 
     <!-- Controls: method and genres -->
@@ -39,8 +39,9 @@
             <div class="mb-3">
                 <label for="method" class="form-label me-2">Choose method of recommendation</label>
                 <select id="method" name="method" class="form-select d-inline-block" style="width: auto; min-width: 220px;">
-                    <option value="personalized" {% if method != 'genre' %}selected{% endif %}>Personalized</option>
+                    <option value="personalized" {% if method == 'personalized' %}selected{% endif %}>Personalized</option>
                     <option value="genre" {% if method == 'genre' %}selected{% endif %}>Genre based</option>
+                    <option value="item_based" {% if method == 'item_based' %}selected{% endif %}>Item-based Collaborative</option>
                 </select>
             </div>
             <div class="mb-3">
@@ -88,7 +89,7 @@
                         <span class="release-year">{{ movie.release_date|slice:":4"|default:"N/A" }}</span>
                         <span class="rating"><i class="fas fa-star"></i> {{ movie.vote_average|floatformat:1 }}</span>
                     </div>
-                    {% if movie.similarity_score %}
+                    {% if movie.similarity_score and method != 'item_based' %}
                     <div class="mt-1">
                         <small class="text-muted">Similarity: {{ movie.similarity_score }}</small>
                     </div>

@@ -9,7 +9,6 @@ from django.views.generic import View, TemplateView
 from django.http import JsonResponse
 from django.core.cache import cache
 from datetime import datetime
-from typing import Dict, Any
 
 from ..services.movie_service import MovieService
 from ..services.user_service import UserService

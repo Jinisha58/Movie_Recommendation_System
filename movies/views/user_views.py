@@ -9,9 +9,7 @@ from django.views.generic import View, TemplateView
 from django.http import JsonResponse
 from django.core.cache import cache
 from django.contrib.auth.forms import UserCreationForm
-from django.views.decorators.http import require_POST
 from datetime import datetime
-from typing import Dict, Any
 
 from ..services.movie_service import MovieService
 from ..services.user_service import UserService
@@ -278,6 +276,17 @@ class RecommendationsView(LoginRequiredMixin, TemplateView):
                         recommendations = self.recommendation_service.get_recommendations_by_genres(selected_genres, limit=50)
                         logger.info(f"Genre mode raw results: {len(recommendations)}")
                         message = "Genre-based recommendations"
+                elif method == 'item_based':
+                    # Item-based collaborative filtering using the recommendation engine
+                    from ..services.recommendation_engine import RecommendationEngine
+                    rec_engine = RecommendationEngine()
+                    recommendations = rec_engine.get_personalized_recommendations(
+                        user_id=self.request.user.id, 
+                        limit=20, 
+                        algorithm='item_based'
+                    )
+                    message = "Item-based collaborative recommendations"
+                    recommendation_type = "item_based"
                 else:
                     # Personalized path
                     viewed_entries = self.user_service.get_user_viewed_movies(self.request.user.id, limit=1000)

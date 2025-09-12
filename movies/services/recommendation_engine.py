@@ -2,10 +2,8 @@
 Advanced Recommendation Engine - Centralized recommendation system
 """
 import logging
-from typing import List, Dict, Optional, Any, Tuple
+from typing import List, Dict, Any, Tuple
 from django.core.cache import cache
-from django.conf import settings
-from datetime import datetime
 import math
 
 from .movie_service import MovieService
@@ -20,8 +18,6 @@ class RecommendationEngine:
     def __init__(self):
         self.movie_service = MovieService()
         self.user_service = UserService()
-        self.genre_cache = {}
-        self.movie_vectors_cache = {}
     
     def get_personalized_recommendations(self, user_id: int, limit: int = 20, 
                                        algorithm: str = 'hybrid') -> List[Dict[str, Any]]:
@@ -38,6 +34,8 @@ class RecommendationEngine:
                 recommendations = self._content_based_recommendations(user_id, limit)
             elif algorithm == 'collaborative':
                 recommendations = self._collaborative_filtering_recommendations(user_id, limit)
+            elif algorithm == 'item_based':
+                recommendations = self._item_based_collaborative_recommendations(user_id, limit)
             elif algorithm == 'hybrid':
                 recommendations = self._hybrid_recommendations(user_id, limit)
             else:
@@ -132,6 +130,114 @@ class RecommendationEngine:
         except Exception as e:
             logger.error(f"Error in hybrid recommendations: {e}")
             return self._fallback_recommendations(limit)
+
+    def _item_based_collaborative_recommendations(self, user_id: int, limit: int) -> List[Dict[str, Any]]:
+        """Item-based collaborative filtering using the exact same algorithm as MyRatingsView"""
+        try:
+            from math import sqrt
+            from ..repositories.ratings_repository import RatingsRepository
+            
+            logger.info(f"Starting item-based recommendations for user {user_id}")
+            
+            # Fetch all ratings from the database via repository (same as MyRatingsView)
+            ratings_repo = RatingsRepository()
+            all_ratings = list(ratings_repo.collection.find({}))
+            logger.info(f"Found {len(all_ratings)} total ratings in database")
+            
+            if not all_ratings:
+                logger.warning("No ratings found in database")
+                return self._fallback_recommendations(limit)
+
+            # Build user ratings dictionary (same as MyRatingsView)
+            user_ratings_dict = {}  # user_id -> {movie_id: rating}
+            for r in all_ratings:
+                uid = r['user_id']
+                mid = r['movie_id']
+                rating = r.get('rating', 0)
+                user_ratings_dict.setdefault(uid, {})[mid] = rating
+
+            # Get current user's ratings
+            user_ratings = user_ratings_dict.get(user_id, {})
+            if not user_ratings:
+                logger.warning(f"User {user_id} has no ratings")
+                return self._fallback_recommendations(limit)
+            
+            logger.info(f"User {user_id} has rated {len(user_ratings)} movies")
+
+            # Transpose ratings: movie_id -> {user_id: rating} (same as MyRatingsView)
+            movie_ratings = {}
+            for uid, movies in user_ratings_dict.items():
+                for mid, rating in movies.items():
+                    movie_ratings.setdefault(mid, {})[uid] = rating
+
+            # Compute similarity between movies using cosine similarity (same as MyRatingsView)
+            movie_sim = {}  # movie_id -> {movie_id: similarity}
+            movie_ids = list(movie_ratings.keys())
+
+            for i in range(len(movie_ids)):
+                m1 = movie_ids[i]
+                movie_sim.setdefault(m1, {})
+                for j in range(i + 1, len(movie_ids)):
+                    m2 = movie_ids[j]
+                    users_in_common = set(movie_ratings[m1].keys()) & set(movie_ratings[m2].keys())
+                    if not users_in_common:
+                        continue
+                    num = sum(movie_ratings[m1][u] * movie_ratings[m2][u] for u in users_in_common)
+                    denom = sqrt(sum(movie_ratings[m1][u]**2 for u in users_in_common)) * \
+                            sqrt(sum(movie_ratings[m2][u]**2 for u in users_in_common))
+                    if denom > 0:
+                        sim = num / denom
+                        movie_sim[m1][m2] = sim
+                        movie_sim.setdefault(m2, {})[m1] = sim
+
+            # Generate recommendations for the user (same as MyRatingsView)
+            scores = {}
+
+            for mid, rating in user_ratings.items():
+                if rating < 4:
+                    continue  # only consider movies the current user rated 4 or 5
+
+                for similar_mid, sim in movie_sim.get(mid, {}).items():
+                    if similar_mid in user_ratings:
+                        continue  # skip movies already rated by the current user
+
+                    # Only consider movies that have a high average rating in the system
+                    similar_ratings = movie_ratings.get(similar_mid, {}).values()
+                    if not any(r >= 4 for r in similar_ratings):
+                        continue
+
+                    avg_rating = sum(similar_ratings) / len(similar_ratings)
+                    if avg_rating < 4:
+                        continue  # skip if the system average rating is less than 4
+
+                    # Add to score
+                    scores[similar_mid] = scores.get(similar_mid, 0) + sim * rating
+
+            if not scores:
+                logger.warning("No recommendations generated - no suitable similar movies found")
+                return self._fallback_recommendations(limit)
+
+            # Sort recommended movies by score (same as MyRatingsView)
+            recommended_ids = sorted(scores, key=lambda x: scores[x], reverse=True)[:limit]
+            recommended_movies = []
+            
+            for mid in recommended_ids:
+                movie = self.movie_service.get_movie(mid)
+                if movie:
+                    # Filter recommended movies to only include those with TMDB rating >= 4 (same as MyRatingsView)
+                    if movie.get('vote_average', 0) >= 4:
+                        movie['recommendation_score'] = scores[mid]
+                        recommended_movies.append(movie)
+
+            logger.info(f"Returning {len(recommended_movies)} item-based recommendations")
+            return recommended_movies
+
+        except Exception as e:
+            logger.error(f"Error in item-based collaborative recommendations: {e}")
+            import traceback
+            logger.error(traceback.format_exc())
+            return self._fallback_recommendations(limit)
+
     
     def _get_user_movie_history(self, user_id: int) -> List[Dict[str, Any]]:
         """Get user's movie history (viewed + watchlist + rated)"""
@@ -341,71 +447,4 @@ class RecommendationEngine:
             return self.movie_service.get_popular_movies(limit=limit)
         except Exception as e:
             logger.error(f"Error in fallback recommendations: {e}")
-            return []
-    
-    def get_trending_recommendations(self, limit: int = 20) -> List[Dict[str, Any]]:
-        """Get trending movie recommendations"""
-        try:
-            cache_key = f"trending_recommendations_{limit}"
-            recommendations = cache.get(cache_key)
-            
-            if recommendations is not None:
-                return recommendations
-            
-            recommendations = self.movie_service.get_trending_movies(limit=limit)
-            cache.set(cache_key, recommendations, timeout=3600)  # Cache for 1 hour
-            
-            return recommendations
-            
-        except Exception as e:
-            logger.error(f"Error getting trending recommendations: {e}")
-            return self._fallback_recommendations(limit)
-    
-    def get_similar_movies(self, movie_id: int, limit: int = 10) -> List[Dict[str, Any]]:
-        """Get movies similar to a given movie"""
-        try:
-            cache_key = f"similar_movies_{movie_id}_{limit}"
-            similar_movies = cache.get(cache_key)
-            
-            if similar_movies is not None:
-                return similar_movies
-            
-            # Get the target movie
-            target_movie = self.movie_service.get_movie(movie_id)
-            if not target_movie:
-                return []
-            
-            # Get candidate movies
-            candidate_movies = self.movie_service.get_popular_movies(limit=100)
-            
-            # Calculate similarity scores
-            scored_movies = []
-            target_genres = set(target_movie.get('genres', []))
-            
-            for movie in candidate_movies:
-                if movie['id'] == movie_id:
-                    continue
-                
-                movie_genres = set(movie.get('genres', []))
-                if not movie_genres:
-                    continue
-                
-                # Calculate Jaccard similarity for genres
-                intersection = len(target_genres & movie_genres)
-                union = len(target_genres | movie_genres)
-                similarity = intersection / union if union > 0 else 0
-                
-                if similarity > 0:
-                    movie['similarity_score'] = similarity
-                    scored_movies.append(movie)
-            
-            # Sort by similarity and return top recommendations
-            scored_movies.sort(key=lambda x: x['similarity_score'], reverse=True)
-            similar_movies = scored_movies[:limit]
-            
-            cache.set(cache_key, similar_movies, timeout=3600)  # Cache for 1 hour
-            return similar_movies
-            
-        except Exception as e:
-            logger.error(f"Error getting similar movies for {movie_id}: {e}")
             return []
