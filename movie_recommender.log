@@ -22726,3 +22726,4 @@ INFO 2025-09-17 19:34:27,253 basehttp "GET / HTTP/1.1" 302 0
 INFO 2025-09-17 19:34:27,323 basehttp "GET /preferences/ HTTP/1.1" 200 9164
 INFO 2025-09-17 19:34:52,006 basehttp "POST /preferences/ HTTP/1.1" 302 0
 INFO 2025-09-17 19:34:52,081 basehttp "GET / HTTP/1.1" 200 42368
+INFO 2025-09-17 19:54:48,130 autoreload Watching for file changes with StatReloader

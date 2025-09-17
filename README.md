@@ -73,7 +73,8 @@ Content-Based Filtering – uses cosine similarity on genres/features to find re
  
 
 
-Future Improvements
+Future Improvements:
+
 Implement hybrid recommendation (weighted CF + content-based).
 
 Deploy the system on Heroku / AWS / Render.
