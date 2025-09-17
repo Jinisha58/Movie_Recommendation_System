@@ -13,7 +13,7 @@ from datetime import datetime
 
 from ..services.movie_service import MovieService
 from ..services.user_service import UserService
-from ..services.recommendation_service import RecommendationService
+ 
 
 logger = logging.getLogger(__name__)
 
@@ -27,6 +27,8 @@ class WatchlistView(LoginRequiredMixin, TemplateView):
         super().__init__(**kwargs)
         self.movie_service = MovieService()
         self.user_service = UserService()
+        from ..services.recommendation_engine import RecommendationEngine
+        self.recommendation_engine = RecommendationEngine()
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -85,41 +87,31 @@ class WatchlistView(LoginRequiredMixin, TemplateView):
                         logger.error(f"Error setting cache: {cache_error}")
             
             logger.info(f"User {self.request.user.id} has {len(movies)} movies in watchlist")
+
+            # Build recommendations based on watchlist genres using cosine similarity
+            try:
+                recommended_movies = self.recommendation_engine.get_watchlist_based_recommendations(self.request.user.id, limit=12)
+            except Exception as rec_err:
+                logger.error(f"Error computing watchlist-based recommendations: {rec_err}")
+                recommended_movies = []
+            
+            # Filter out zero-similarity recommendations
+            try:
+                recommended_movies = [m for m in recommended_movies if float(m.get('similarity_score', 0.0)) > 0.0]
+            except Exception:
+                recommended_movies = []
+            
+            # Show recommendations section if we have few items or we have any recs
+            has_few = len(movies) < 6 or bool(recommended_movies)
             
             # If we couldn't fetch any movies due to API errors, show a specific message
             if not movies and watchlist_entries:
                 messages.warning(self.request, "We're having trouble connecting to our movie database. Your watchlist is still saved, but we can't display the movies right now. Please try again later.")
             
-            # If watchlist is empty or has very few movies, add some recommended movies
-            recommended_movies = []
-            if len(movies) < 5:
-                try:
-                    # Try to get recommendations from cache
-                    rec_cache_key = f"user_recommendations_{self.request.user.id}"
-                    recommended_movies = cache.get(rec_cache_key)
-                    
-                    if recommended_movies is None:
-                        # Get some popular movies as recommendations
-                        popular_movies = self.movie_service.get_popular_movies(limit=10)
-                        
-                        # Filter out movies already in watchlist
-                        watchlist_ids = [m.get('id') for m in movies if m.get('id')]
-                        recommended_movies = [m for m in popular_movies if m.get('id') not in watchlist_ids]
-                        
-                        # Limit to 5 recommendations
-                        recommended_movies = recommended_movies[:5]
-                        
-                        # Cache recommendations for 1 hour
-                        cache.set(rec_cache_key, recommended_movies, timeout=3600)
-                except Exception as rec_error:
-                    logger.error(f"Error getting recommendations: {rec_error}")
-                    logger.error(traceback.format_exc())
-                    recommended_movies = []
-            
             context.update({
                 'movies': movies,
                 'recommended_movies': recommended_movies,
-                'has_few_movies': len(movies) < 5 and len(recommended_movies) > 0
+                'has_few_movies': has_few
             })
             
         except Exception as e:
@@ -229,149 +221,7 @@ class RemoveFromWatchlistView(LoginRequiredMixin, View):
             return redirect('watchlist')
 
 
-class RecommendationsView(LoginRequiredMixin, TemplateView):
-    """Show personalized movie recommendations for the user"""
-    template_name = 'recommendations.html'
-    login_url = '/login/'
-    
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
-        self.movie_service = MovieService()
-        self.user_service = UserService()
-        self.recommendation_service = RecommendationService()
-    
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        
-        try:
-            import traceback
-            from datetime import datetime
-            
-            # Get current date for filtering unreleased movies
-            current_date = datetime.now().strftime('%Y-%m-%d')
-            
-            # Read method and genres from query params
-            method = self.request.GET.get('method', 'personalized')
-            selected_genres = self.request.GET.getlist('genres')
-            # Fixed similarity threshold for genre mode
-            min_sim = 0.5
-            message = " "
-            recommendation_type = method
-            recommendations = None
-            cache_key = None
-            
-            # If using personalized method without explicit filters, use cache
-            if method == 'personalized' and not selected_genres:
-                cache_key = f"user_recommendations_{self.request.user.id}"
-                recommendations = cache.get(cache_key)
-            
-            if recommendations is None:
-                if method == 'genre':
-                    # Genre preference based recommendations (no caching for now due to many combinations)
-                    if not selected_genres:
-                        recommendations = []
-                        message = "Select at least one genre to generate recommendations."
-                    else:
-                        logger.info(f"Genre mode: user={self.request.user.id}, genres={selected_genres}, min_sim={min_sim}")
-                        recommendations = self.recommendation_service.get_recommendations_by_genres(selected_genres, limit=50)
-                        logger.info(f"Genre mode raw results: {len(recommendations)}")
-                        message = "Genre-based recommendations"
-                elif method == 'item_based':
-                    # Item-based collaborative filtering using the recommendation engine
-                    from ..services.recommendation_engine import RecommendationEngine
-                    rec_engine = RecommendationEngine()
-                    recommendations = rec_engine.get_personalized_recommendations(
-                        user_id=self.request.user.id, 
-                        limit=20, 
-                        algorithm='item_based'
-                    )
-                    message = "Item-based collaborative recommendations"
-                    recommendation_type = "item_based"
-                else:
-                    # Personalized path
-                    viewed_entries = self.user_service.get_user_viewed_movies(self.request.user.id, limit=1000)
-                    viewed_movie_ids = [item['movie_id'] for item in viewed_entries]
-                    watchlist_items = self.user_service.get_user_watchlist(self.request.user.id)
-                    watchlist_movie_ids = [item['movie_id'] for item in watchlist_items]
-                    all_user_movie_ids = list(set(viewed_movie_ids + watchlist_movie_ids))
-                    if not all_user_movie_ids:
-                        recommendations = self.movie_service.get_popular_movies(limit=20)
-                        message = "Explore some movies to get personalized recommendations!"
-                        recommendation_type = "popular"
-                    else:
-                        recommendations = self.recommendation_service.get_cosine_similarity_recommendations(all_user_movie_ids, num_recommendations=20)
-                        recommendations = [m for m in recommendations if m.get('release_date', '') <= current_date]
-                        if len(recommendations) < 20:
-                            popular_movies = self.movie_service.get_popular_movies(limit=20 - len(recommendations))
-                            processed_movie_ids = set(all_user_movie_ids + [m['id'] for m in recommendations])
-                            popular_movies = [m for m in popular_movies if m['id'] not in processed_movie_ids]
-                            recommendations.extend(popular_movies)
-                            recommendations = recommendations[:20]
-                        # Remove similarity score from personalized results
-                        for m in recommendations:
-                            if isinstance(m, dict) and 'similarity_score' in m:
-                                try:
-                                    m.pop('similarity_score', None)
-                                except Exception:
-                                    pass
-                        recommendation_type = "personalized"
-                
-                # Cache personalized results for 1 hour
-                if cache_key and method == 'personalized' and not selected_genres:
-                    cache.set(cache_key, recommendations, timeout=3600)
-                
-                logger.info(f"Generated {len(recommendations)} recommendations for user {self.request.user.id}")
-            else:
-                logger.info(f"Retrieved {len(recommendations)} recommendations from cache for user {self.request.user.id}")
-                if method == 'personalized':
-                    message = " "
-                    recommendation_type = "personalized"
-
-            # Apply similarity threshold filter for genre mode where similarity is present
-            if method == 'genre':
-                try:
-                    filtered = [
-                        m for m in recommendations
-                        if 'similarity_score' in m and float(m.get('similarity_score', 0)) >= min_sim
-                    ]
-                    logger.info(f"Genre mode filtered >= {min_sim}: {len(filtered)} of {len(recommendations)}")
-                    # If nothing meets the threshold, fall back to top matches without filtering
-                    if filtered:
-                        recommendations = filtered
-                    else:
-                        if recommendations:
-                            message = "No movies >= 0.5; showing top matches."
-                            # Already sorted by similarity from the service
-                            recommendations = recommendations[:20]
-                        else:
-                            logger.info("Genre mode: no recommendations returned from service")
-                except Exception:
-                    pass
-            
-            context.update({
-                'recommendations': recommendations,
-                'recommendation_type': recommendation_type,
-                'message': message,
-                'method': method,
-                'selected_genres': [int(g) for g in selected_genres if str(g).isdigit()],
-                'genre_map': self.recommendation_service.get_genres(),
-            })
-            
-        except Exception as e:
-            logger.error(f"Error generating recommendations for user {self.request.user.id}: {e}")
-            logger.error(traceback.format_exc())
-            messages.error(self.request, "An error occurred while generating recommendations. Please try again later.")
-            
-            # Fallback to popular movies
-            popular_movies = self.movie_service.get_popular_movies(limit=20)
-            context.update({
-                'recommendations': popular_movies,
-                'recommendation_type': 'popular',
-                'message': "Popular movies (error occurred with personalized recommendations)"
-            })
-        
-        return context
-
+ 
 
 class ProfileView(LoginRequiredMixin, TemplateView):
     """User profile view"""
@@ -382,7 +232,7 @@ class ProfileView(LoginRequiredMixin, TemplateView):
         super().__init__(**kwargs)
         self.movie_service = MovieService()
         self.user_service = UserService()
-        self.recommendation_service = RecommendationService()
+        
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -409,17 +259,13 @@ class ProfileView(LoginRequiredMixin, TemplateView):
                     movie['last_viewed'] = view.get('last_viewed')
                     recent_movies.append(movie)
             
-            # Ratings-based recommendations
-            ratings_recs = self.recommendation_service.get_recommendations_from_ratings(self.request.user.id, min_similarity=0.5, limit=20)
-            
             context.update({
                 'user': self.request.user,
                 'viewed_count': stats['viewed_count'],
                 'watchlist_count': stats['watchlist_count'],
                 'ratings_count': stats['ratings_count'],
                 'recent_movies': recent_movies,
-                'rated_movies': rated_movies,
-                'ratings_recommendations': ratings_recs
+                'rated_movies': rated_movies
             })
             
         except Exception as e:
@@ -431,7 +277,7 @@ class ProfileView(LoginRequiredMixin, TemplateView):
 
 
 class MyRatingsView(LoginRequiredMixin, TemplateView):
-    """Dedicated page to show user's ratings and item-based collaborative filtering recommendations"""
+    """Show only the user's rated movies with their ratings and details."""
     template_name = 'ratings.html'
     login_url = '/login/'
     
@@ -444,21 +290,16 @@ class MyRatingsView(LoginRequiredMixin, TemplateView):
         context = super().get_context_data(**kwargs)
         
         try:
-            from math import sqrt
-
-            # Fetch all ratings from the database via repository
+            # Fetch only current user's ratings
             from ..repositories.ratings_repository import RatingsRepository
             ratings_repo = RatingsRepository()
-            all_ratings = list(ratings_repo.collection.find({}))
-            user_ratings_dict = {}  # user_id -> {movie_id: rating}
-            for r in all_ratings:
-                uid = r['user_id']
-                mid = r['movie_id']
+            user_ratings = {}
+            for r in ratings_repo.find_by_user(self.request.user.id):
+                mid = r.get('movie_id')
                 rating = r.get('rating', 0)
-                user_ratings_dict.setdefault(uid, {})[mid] = rating
+                if mid is not None:
+                    user_ratings[int(mid)] = int(rating)
 
-            # Get current user's ratings
-            user_ratings = user_ratings_dict.get(self.request.user.id, {})
             rated_movies = []
             for mid, rating in user_ratings.items():
                 m = self.movie_service.get_movie(mid)
@@ -466,84 +307,20 @@ class MyRatingsView(LoginRequiredMixin, TemplateView):
                     m['user_rating'] = rating
                     rated_movies.append(m)
 
-            # Transpose ratings: movie_id -> {user_id: rating}
-            movie_ratings = {}
-            for uid, movies in user_ratings_dict.items():
-                for mid, rating in movies.items():
-                    movie_ratings.setdefault(mid, {})[uid] = rating
-
-            # Compute similarity between movies using cosine similarity
-            movie_sim = {}  # movie_id -> {movie_id: similarity}
-            movie_ids = list(movie_ratings.keys())
-
-            for i in range(len(movie_ids)):
-                m1 = movie_ids[i]
-                movie_sim.setdefault(m1, {})
-                for j in range(i + 1, len(movie_ids)):
-                    m2 = movie_ids[j]
-                    users_in_common = set(movie_ratings[m1].keys()) & set(movie_ratings[m2].keys())
-                    if not users_in_common:
-                        continue
-                    num = sum(movie_ratings[m1][u] * movie_ratings[m2][u] for u in users_in_common)
-                    denom = sqrt(sum(movie_ratings[m1][u]**2 for u in users_in_common)) * \
-                            sqrt(sum(movie_ratings[m2][u]**2 for u in users_in_common))
-                    if denom > 0:
-                        sim = num / denom
-                        movie_sim[m1][m2] = sim
-                        movie_sim.setdefault(m2, {})[m1] = sim
-
-            # Generate recommendations for the user
-            scores = {}
-
-            for mid, rating in user_ratings.items():
-                if rating < 4:
-                    continue  # only consider movies the current user rated 4 or 5
-
-                for similar_mid, sim in movie_sim.get(mid, {}).items():
-                    if similar_mid in user_ratings:
-                        continue  # skip movies already rated by the current user
-
-                    # Only consider movies that have a high average rating in the system
-                    similar_ratings = movie_ratings.get(similar_mid, {}).values()
-                    if not any(r >= 4 for r in similar_ratings):
-                        continue
-
-                    avg_rating = sum(similar_ratings) / len(similar_ratings)
-                    if avg_rating < 4:
-                        continue  # skip if the system average rating is less than 4
-
-                    # Add to score
-                    scores[similar_mid] = scores.get(similar_mid, 0) + sim * rating
-
-            # Sort recommended movies by score
-            recommended_ids = sorted(scores, key=lambda x: scores[x], reverse=True)[:24]
-            recommended_movies = [self.movie_service.get_movie(mid) for mid in recommended_ids if self.movie_service.get_movie(mid)]
-
-            # Filter recommended movies to only include those with TMDB rating >= 4
-            recommended_movies = [
-                movie for movie in recommended_movies 
-                if movie.get('vote_average', 0) >= 4
-            ]
-
             context.update({
                 'rated_movies': rated_movies,
-                'ratings_recommendations': recommended_movies
             })
-            # Expose repo for deletion endpoint usage
-            self.ratings_repo = ratings_repo
-
         except Exception as e:
             logger.error(f"Error loading my_ratings for user {self.request.user.id}: {e}")
             context.update({
                 'rated_movies': [],
-                'ratings_recommendations': []
             })
         
         return context
 
 
 class RateMovieView(LoginRequiredMixin, View):
-    """Create or update a user's rating for a movie (1-5)"""
+    """Create or update a user's rating for a movie (1-10)"""
     login_url = '/login/'
     
     def __init__(self, **kwargs):
@@ -556,8 +333,8 @@ class RateMovieView(LoginRequiredMixin, View):
         except ValueError:
             rating = 0
 
-        if rating < 1 or rating > 5:
-            return JsonResponse({'success': False, 'message': 'Rating must be between 1 and 5'}, status=400)
+        if rating < 1 or rating > 10:
+            return JsonResponse({'success': False, 'message': 'Rating must be between 1 and 10'}, status=400)
 
         try:
             success = self.user_service.save_user_rating(request.user.id, movie_id, rating)
@@ -654,7 +431,7 @@ class RegisterView(TemplateView):
     def post(self, request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
-            form.save()
+            user = form.save()
             messages.success(request, "Account created successfully! You can now log in.")
             return redirect('login')
         
@@ -693,3 +470,121 @@ class DeleteAccountView(LoginRequiredMixin, View):
 class LandingView(TemplateView):
     """Landing page view"""
     template_name = 'landing.html'
+
+
+class PreferencesView(LoginRequiredMixin, TemplateView):
+    """Collect initial genre preferences from the user."""
+    template_name = 'preferences.html'
+    login_url = '/login/'
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.movie_service = MovieService()
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        # Fetch TMDB genres via MovieService and expose as label list
+        try:
+            genre_map = self.movie_service.get_movie_genres_map()
+            genres_sorted = sorted(genre_map.values())
+            context.update({ 'genre_options': [{ 'label': g } for g in genres_sorted] })
+        except Exception:
+            context.update({ 'genre_options': [] })
+        return context
+
+    def post(self, request):
+        try:
+            selected = request.POST.getlist('genres')
+            # Keep between 0..5 as suggested
+            selected = selected[:5]
+            cache.set(f"user_selected_genres_{request.user.id}", selected, timeout=60*60*24)
+            messages.success(request, 'Preferences saved.')
+            return redirect('home')
+        except Exception as e:
+            logger.error(f"Error saving preferred genres for user {request.user.id}: {e}")
+            messages.error(request, 'Could not save your preferences. Please try again.')
+            return redirect('preferences')
+
+
+class ForYouView(LoginRequiredMixin, TemplateView):
+    """Genre-based cold-start recommendations for the user."""
+    template_name = 'for_you.html'
+    login_url = '/login/'
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.movie_service = MovieService()
+        self.user_service = UserService()
+
+    def _cosine_similarity(self, user_genres: list[str], movie_genres: list[str]) -> float:
+        try:
+            if not user_genres or not movie_genres:
+                return 0.0
+            user_set = set(g.lower() for g in user_genres)
+            movie_set = set(g.lower() for g in movie_genres)
+            overlap = len(user_set & movie_set)
+            if overlap == 0:
+                return 0.0
+            import math
+            return overlap / (math.sqrt(len(user_set)) * math.sqrt(len(movie_set)))
+        except Exception:
+            return 0.0
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        try:
+            # Load user selected genres from cache
+            selected = cache.get(f"user_selected_genres_{self.request.user.id}") or []
+
+            # Cache recommendations for one hour keyed by selection
+            cache_key = f"for_you_{self.request.user.id}_{'_'.join(sorted([s.lower() for s in selected]))}"
+            cached = cache.get(cache_key)
+            if cached is not None:
+                context.update({ 'recommendations': cached, 'selected_genres': selected })
+                return context
+
+            # Candidate pool
+            candidates = self.movie_service.get_popular_movies(limit=200)
+
+            scored = []
+            for m in candidates:
+                try:
+                    movie_genres = m.get('genres', []) or []
+                    sim = self._cosine_similarity(selected, movie_genres)
+                    pop = float(m.get('vote_average', 0.0))
+                    score = 0.8 * sim + 0.2 * (pop / 10.0)
+                    scored.append((score, m))
+                except Exception:
+                    continue
+
+            # Fallbacks if sparse input or no overlap
+            if not selected:
+                recommendations = candidates[:20]
+            else:
+                scored.sort(key=lambda t: t[0], reverse=True)
+                top = [m for _s, m in scored[:20]]
+                # If too few with signal, blend with popular
+                if len(top) < 20:
+                    seen = {m.get('id') for m in top}
+                    for p in candidates:
+                        if p.get('id') not in seen:
+                            top.append(p)
+                        if len(top) >= 20:
+                            break
+                recommendations = top
+
+            cache.set(cache_key, recommendations, timeout=60*60)
+
+            context.update({
+                'recommendations': recommendations,
+                'selected_genres': selected,
+            })
+        except Exception as e:
+            logger.error(f"Error building for_you for user {self.request.user.id}: {e}")
+            context.update({
+                'recommendations': self.movie_service.get_popular_movies(limit=20),
+                'selected_genres': [],
+            })
+
+        return context

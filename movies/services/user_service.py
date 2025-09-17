@@ -27,6 +27,8 @@ class UserService:
         self.ratings_repo = ratings_repo or RatingsRepository()
         self.viewed_repo = viewed_repo or ViewedMoviesRepository()
         self.search_repo = search_repo or SearchHistoryRepository()
+
+    # Preferences removed: user preferred genres feature disabled
     
     def get_user_watchlist(self, user_id: int) -> List[Dict[str, Any]]:
         """Get watchlist for a user from cache or MongoDB"""
@@ -111,7 +113,7 @@ class UserService:
     def save_user_rating(self, user_id: int, movie_id: int, rating: int) -> bool:
         """Save or update a user's rating for a movie"""
         try:
-            if rating < 1 or rating > 5:
+            if rating < 1 or rating > 10:
                 return False
             
             self.ratings_repo.upsert(user_id, movie_id, rating)

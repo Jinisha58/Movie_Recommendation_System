@@ -94,47 +94,32 @@
             <div class="mt-3">
                 <form id="rating-form" action="{% url 'rate_movie' movie.id %}" method="post">
                     {% csrf_token %}
-                    <div class="d-flex align-items-center">
-                        <div id="star-container" class="me-2">
-                            <span class="star" data-value="1">&#9733;</span>
-                            <span class="star" data-value="2">&#9733;</span>
-                            <span class="star" data-value="3">&#9733;</span>
-                            <span class="star" data-value="4">&#9733;</span>
-                            <span class="star" data-value="5">&#9733;</span>
+                    <div class="d-flex align-items-center" style="gap: 0.75rem;">
+                        <div class="d-flex align-items-center me-2" style="gap: 0.5rem; min-width: 260px;">
+                            <span class="small text-muted">1</span>
+                            <input type="range" class="form-range" id="rating-slider" min="1" max="10" step="1" value="{{ user_rating|default:5 }}" style="flex: 1;">
+                            <span class="small text-muted">10</span>
                         </div>
-                        <input type="hidden" name="rating" id="rating-input" value="{{ user_rating|default:0 }}">
+                        <span id="rating-value" class="badge bg-warning text-dark me-2" style="min-width: 2rem; text-align: center;">{{ user_rating|default:5 }}</span>
+                        <input type="hidden" name="rating" id="rating-input" value="{{ user_rating|default:5 }}">
                         <button type="submit" class="btn btn-warning btn-sm">Save Rating</button>
                         {% if user_rating %}
-                        <span class="ms-2">Your rating: {{ user_rating }}/5</span>
+                        <span class="ms-2">Your rating: {{ user_rating }}/10</span>
                         {% endif %}
                     </div>
                 </form>
             </div>
-            <style>
-                .star { cursor: pointer; font-size: 1.4rem; color: #ccc; }
-                .star.active, .star.hover { color: #ffc107; }
-            </style>
             <script>
                 (function(){
-                    const stars = document.querySelectorAll('#star-container .star');
+                    const slider = document.getElementById('rating-slider');
                     const input = document.getElementById('rating-input');
-                    const current = parseInt(input.value || '0');
-                    function paint(n){
-                        stars.forEach((s,i)=>{ s.classList.toggle('active', i < n); });
+                    const valueEl = document.getElementById('rating-value');
+                    function sync(){
+                        input.value = slider.value;
+                        valueEl.textContent = slider.value;
                     }
-                    if(current>0) paint(current);
-                    stars.forEach((star)=>{
-                        star.addEventListener('mouseover', ()=>{
-                            paint(parseInt(star.dataset.value));
-                        });
-                        star.addEventListener('mouseout', ()=>{
-                            paint(parseInt(input.value||'0'));
-                        });
-                        star.addEventListener('click', ()=>{
-                            input.value = star.dataset.value;
-                            paint(parseInt(input.value));
-                        });
-                    });
+                    slider.addEventListener('input', sync);
+                    sync();
                 })();
             </script>
             {% endif %}

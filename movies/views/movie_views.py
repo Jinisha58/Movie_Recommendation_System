@@ -12,7 +12,8 @@ from datetime import datetime
 
 from ..services.movie_service import MovieService
 from ..services.user_service import UserService
-from ..services.recommendation_service import RecommendationService
+from ..services.recommendation_engine import RecommendationEngine
+ 
 
 logger = logging.getLogger(__name__)
 
@@ -25,7 +26,17 @@ class HomeView(TemplateView):
         super().__init__(**kwargs)
         self.movie_service = MovieService()
         self.user_service = UserService()
-        self.recommendation_service = RecommendationService()
+        self.recommendation_engine = RecommendationEngine()
+        
+    def get(self, request, *args, **kwargs):
+        # Redirect only true new users (no prefs, no ratings, no watchlist, no views)
+        try:
+            if request.user.is_authenticated:
+                if self.recommendation_engine.is_new_user(request.user.id):
+                    return redirect('preferences')
+        except Exception:
+            pass
+        return super().get(request, *args, **kwargs)
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -36,39 +47,45 @@ class HomeView(TemplateView):
                 trending_movies = self.movie_service.get_trending_movies(time_window='week', page=1)[:10]
             except Exception:
                 trending_movies = []
+            # Fallback: if TMDB trending is empty/unavailable, use popular
+            if not trending_movies:
+                try:
+                    trending_movies = self.movie_service.get_popular_movies(limit=10)
+                except Exception:
+                    trending_movies = []
 
             if self.request.user.is_authenticated:
-                # Cache recommendations for 24 hours (1 day)
-                cache_key = f"user_home_cast_movies_{self.request.user.id}"
-                movies = cache.get(cache_key)
-                
-                if movies is None:
-                    movies = self._get_personalized_movies()
-                    # Cache for 24 hours
-                    cache.set(cache_key, movies, timeout=60*60*24)
-                    logger.info(f"Generated {len(movies)} home cast movies for user {self.request.user.id}")
-                else:
-                    logger.info(f"Retrieved {len(movies)} home cast movies from cache for user {self.request.user.id}")
-                
-                # Personalized featured for user
+                # Personalized Featured For You using preferences-based engine
                 try:
-                    featured_for_you = self.recommendation_service.get_featured_for_user(self.request.user.id, limit=12)
+                    featured_for_you = self.recommendation_engine.get_featured_for_you(self.request.user.id, limit=12)
                 except Exception:
                     featured_for_you = []
+                # Item-based CF
+                try:
+                    item_based = self.recommendation_engine.get_item_based_recommendations(self.request.user.id, limit=12)
+                except Exception:
+                    item_based = []
+                # User-based CF
+                try:
+                    user_based = self.recommendation_engine.get_user_based_recommendations(self.request.user.id, limit=12)
+                except Exception:
+                    user_based = []
             else:
-                movies = self.movie_service.get_popular_movies(limit=20)
                 featured_for_you = []
+                item_based = []
+                user_based = []
+
+            # Featured movies (base grid)
+            movies = self.movie_service.get_popular_movies(limit=20)
             
-            # Global featured aggregation
-            try:
-                featured_movies = self.recommendation_service.get_global_featured(limit=20)
-            except Exception:
-                featured_movies = movies
+            featured_movies = movies
 
             context.update({
                 'movies': featured_movies,
                 'trending_movies': trending_movies,
                 'featured_for_you': featured_for_you,
+                'item_based_recs': item_based,
+                'user_based_recs': user_based,
                 'page_title': 'Featured Movies'
             })
             
@@ -81,10 +98,7 @@ class HomeView(TemplateView):
                 trending_movies = self.movie_service.get_trending_movies(time_window='week', page=1)[:10]
             except Exception:
                 trending_movies = []
-            try:
-                featured_movies = self.recommendation_service.get_global_featured(limit=20)
-            except Exception:
-                featured_movies = movies
+            featured_movies = movies
             
             context.update({
                 'movies': featured_movies,
@@ -95,83 +109,6 @@ class HomeView(TemplateView):
         
         return context
     
-    def _get_personalized_movies(self) -> list:
-        """Get personalized movies based on user's history"""
-        try:
-            
-            # Get current date for filtering unreleased movies
-            current_date = datetime.now().strftime('%Y-%m-%d')
-            
-            # Get viewed movie IDs
-            viewed_entries = self.user_service.get_user_viewed_movies(self.request.user.id, limit=1000)
-            viewed_movie_ids = [item['movie_id'] for item in viewed_entries]
-            
-            # Get watchlist movie IDs
-            watchlist_items = self.user_service.get_user_watchlist(self.request.user.id)
-            watchlist_movie_ids = [item['movie_id'] for item in watchlist_items]
-            
-            # Combine all user movie interactions
-            all_user_movie_ids = list(set(viewed_movie_ids + watchlist_movie_ids))
-            
-            # Get first cast members from these movies
-            first_cast_members = []
-            for movie_id in all_user_movie_ids:
-                movie = self.movie_service.get_movie(movie_id)
-                if not movie or not movie.get('first_cast'):
-                    continue
-                    
-                first_cast = movie['first_cast']
-                first_cast_members.append({
-                    'actor_id': first_cast['id'],
-                    'name': first_cast['name'],
-                    'source_movie_id': movie_id
-                })
-            
-            # Get movies from these cast members
-            cast_movies = []
-            processed_movie_ids = set(all_user_movie_ids)
-            
-            for cast_member in first_cast_members:
-                actor_movies = self.movie_service.get_actor_movies(cast_member['actor_id'])
-                
-                # Filter out movies the user has already interacted with and unreleased movies
-                new_movies = [
-                    movie for movie in actor_movies 
-                    if movie['id'] not in processed_movie_ids
-                    and movie.get('release_date', '') <= current_date
-                ]
-                
-                # Add to our list and tracking set
-                for movie in new_movies:
-                    if movie['id'] not in processed_movie_ids:
-                        cast_movies.append(movie)
-                        processed_movie_ids.add(movie['id'])
-            
-            # Sort by release date (newest first)
-            cast_movies.sort(key=lambda x: x.get('release_date', ''), reverse=True)
-            
-            # Limit to 20 movies
-            movies = cast_movies[:20]
-            
-            # If we don't have enough movies, supplement with popular movies
-            if len(movies) < 20:
-                popular_movies = self.movie_service.get_popular_movies(limit=20 - len(movies))
-                
-                # Filter out movies the user has already interacted with or that are already in recommendations
-                popular_movies = [
-                    movie for movie in popular_movies 
-                    if movie['id'] not in processed_movie_ids
-                ]
-                
-                movies.extend(popular_movies)
-                movies = movies[:20]
-            
-            return movies
-            
-        except Exception as e:
-            logger.error(f"Error in _get_personalized_movies: {e}")
-            return self.movie_service.get_popular_movies(limit=20)
-
 
 class MovieDetailView(TemplateView):
     """Show details for a specific movie"""

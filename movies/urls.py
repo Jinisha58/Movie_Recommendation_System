@@ -2,8 +2,9 @@ from django.urls import path
 from .views.movie_views import HomeView, MovieDetailView, MovieSearchView, MovieFilterAjaxView, ActorMoviesView, SearchView
 from .views.user_views import (
     WatchlistView, AddToWatchlistView, RemoveFromWatchlistView,
-    RecommendationsView, ProfileView, MyRatingsView, RateMovieView,
-    RegisterView, CustomLogoutView, LandingView, DeleteAccountView, DeleteRatingView, ReviewView
+    ProfileView, MyRatingsView, RateMovieView,
+    RegisterView, CustomLogoutView, LandingView, DeleteAccountView, DeleteRatingView, ReviewView,
+    PreferencesView, ForYouView
 )
 
 urlpatterns = [
@@ -18,7 +19,6 @@ urlpatterns = [
     path('watchlist/', WatchlistView.as_view(), name='watchlist'),
     path('add-to-watchlist/<int:movie_id>/', AddToWatchlistView.as_view(), name='add_to_watchlist'),
     path('remove-from-watchlist/<int:movie_id>/', RemoveFromWatchlistView.as_view(), name='remove_from_watchlist'),
-    path('recommendations/', RecommendationsView.as_view(), name='recommendations'),
     path('actor/<int:actor_id>/', ActorMoviesView.as_view(), name='actor_movies'),
     path('profile/', ProfileView.as_view(), name='profile'),
     path('profile/delete/', DeleteAccountView.as_view(), name='delete_account'),
@@ -27,4 +27,6 @@ urlpatterns = [
     path('register/', RegisterView.as_view(), name='register'),
     path('logout/', CustomLogoutView.as_view(), name='custom_logout'),
     path('landing/', LandingView.as_view(), name='landing'),
+    path('preferences/', PreferencesView.as_view(), name='preferences'),
+    path('for-you/', ForYouView.as_view(), name='for_you'),
 ]

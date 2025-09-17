@@ -25,6 +25,7 @@ try:
     search_history_collection = db.get_collection('search_history')
     ratings_collection = db.get_collection('ratings')
     reviews_collection = db.get_collection('reviews')
+    user_preferences_collection = db.get_collection('user_preferences')
     
     # Create indexes for better performance
     watchlists_collection.create_index([('user_id', 1), ('movie_id', 1)], unique=True)
@@ -33,6 +34,7 @@ try:
     ratings_collection.create_index([('user_id', 1), ('movie_id', 1)], unique=True)
     reviews_collection.create_index([('movie_id', -1), ('timestamp', -1)])
     reviews_collection.create_index([('user_id', 1), ('movie_id', 1)], unique=True)
+    user_preferences_collection.create_index([('user_id', 1)], unique=True)
     
     logger.info("MongoDB connection established successfully")
 except Exception as e:
@@ -72,6 +74,7 @@ except Exception as e:
     search_history_collection = FallbackCollection('search_history')
     ratings_collection = FallbackCollection('ratings')
     reviews_collection = FallbackCollection('reviews')
+    user_preferences_collection = FallbackCollection('user_preferences')
 
 
 

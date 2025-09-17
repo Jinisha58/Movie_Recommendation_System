@@ -49,8 +49,6 @@ class MovieService:
         
         params['api_key'] = self.tmdb_api_key
 
-        # Build a memcached-safe cache key: tmdb:<endpoint_sanitized>:<hash>
-        # Normalize params (sorted) and exclude sensitive api_key from the key
         normalized_params = urlencode(
             sorted((k, v) for k, v in params.items() if k != 'api_key'),
             doseq=True
@@ -262,7 +260,18 @@ class MovieService:
             
             movies = []
             for movie in data.get('results', [])[:limit]:
-                movies.append(self._format_movie_summary(movie))
+                movie_data = self._format_movie_summary(movie)
+                # Enrich with genre names when available
+                try:
+                    genres: list[str] = []
+                    for gid in movie.get('genre_ids', []) or []:
+                        name = self.get_genre_name(int(gid))
+                        if name:
+                            genres.append(name)
+                    movie_data['genres'] = genres
+                except Exception:
+                    movie_data['genres'] = []
+                movies.append(movie_data)
             
             return movies
             
@@ -399,12 +408,33 @@ class MovieService:
     
     def get_genre_name(self, genre_id: int) -> Optional[str]:
         """Convert genre ID to genre name"""
-        genre_map = {
-            28: 'Action', 12: 'Adventure', 16: 'Animation', 35: 'Comedy',
-            80: 'Crime', 99: 'Documentary', 18: 'Drama', 10751: 'Family',
-            14: 'Fantasy', 36: 'History', 27: 'Horror', 10402: 'Music',
-            9648: 'Mystery', 10749: 'Romance', 878: 'Science Fiction',
-            10770: 'TV Movie', 53: 'Thriller', 10752: 'War', 37: 'Western'
-        }
+        genre_map = self.get_movie_genres_map()
         return genre_map.get(genre_id)
+
+    def get_movie_genres_map(self, language: str = 'en-US') -> Dict[int, str]:
+        """Fetch and cache TMDB movie genres map: id -> name."""
+        try:
+            cache_key = f"tmdb:genres_map:{language}"
+            cached = cache.get(cache_key)
+            if cached is not None:
+                return cached
+            data = self._make_tmdb_request(
+                "/genre/movie/list",
+                params={"language": language},
+                cache_timeout=24*3600,
+            )
+            genres = data.get('genres', [])
+            genre_map: Dict[int, str] = {int(g['id']): str(g['name']) for g in genres if 'id' in g and 'name' in g}
+            cache.set(cache_key, genre_map, timeout=24*3600)
+            return genre_map
+        except Exception as e:
+            logger.error(f"Error fetching TMDB genre list: {e}")
+            # Fallback to static map
+            return {
+                28: 'Action', 12: 'Adventure', 16: 'Animation', 35: 'Comedy',
+                80: 'Crime', 99: 'Documentary', 18: 'Drama', 10751: 'Family',
+                14: 'Fantasy', 36: 'History', 27: 'Horror', 10402: 'Music',
+                9648: 'Mystery', 10749: 'Romance', 878: 'Science Fiction',
+                10770: 'TV Movie', 53: 'Thriller', 10752: 'War', 37: 'Western'
+            }
 

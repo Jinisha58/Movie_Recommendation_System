@@ -47,15 +47,7 @@
                 <h3 class="movie-title">{{ movie.title }}</h3>
                 <div class="movie-meta">
                     <span class="release-year">{{ movie.release_date|slice:":4" }}</span>
-                    <span class="rating">
-                        {% for i in "12345" %}
-                            {% if forloop.counter <= movie.user_rating %}
-                                &#9733;
-                            {% else %}
-                                <span style="color:#ccc">&#9733;</span>
-                            {% endif %}
-                        {% endfor %}
-                    </span>
+                    <span class="rating"><i class="fas fa-star"></i> {{ movie.user_rating|floatformat:1 }}</span>
                 </div>
             </div>
         </div>
@@ -65,38 +57,6 @@
     <div class="alert alert-info">You haven't rated any movies yet.</div>
     {% endif %}
 
-    {% if ratings_recommendations %}
-    <h1>Recommended For You</h1>
-    <h2 class="section-title">Recommended For You</h2>
-    <div class="movie-grid">
-        {% for m in ratings_recommendations %}
-        <div class="movie-card">
-            <a href="{% url 'movie_detail' m.id %}">
-                <div class="movie-poster">
-                    {% if m.poster_url %}
-                    <img src="{{ m.poster_url }}" alt="{{ m.title }}">
-                    {% else %}
-                    <div class="movie-poster-placeholder">
-                        <div class="poster-placeholder-content">
-                            <i class="fas fa-film"></i>
-                            <p>{{ m.title }}</p>
-                        </div>
-                    </div>
-                    {% endif %}
-                </div>
-            </a>
-            <div class="movie-info">
-                <h3 class="movie-title">{{ m.title }}</h3>
-                <div class="movie-meta">
-                    <span class="release-year">{{ m.release_date|slice:":4" }}</span>
-                    {% if m.similarity_score %}
-                    <span class="rating">{{ m.similarity_score|floatformat:2 }}</span>
-                    {% endif %}
-                </div>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-    {% endif %}
+    
 </div>
 {% endblock %}

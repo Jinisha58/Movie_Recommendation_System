@@ -96,7 +96,7 @@ TMDB_API_KEY = os.getenv('TMDB_API_KEY', '')
 
 MOVIE_DATA_DIR = os.path.join(BASE_DIR, 'data')
 
-LOGIN_REDIRECT_URL = 'profile' 
+LOGIN_REDIRECT_URL = 'home' 
 LOGIN_URL = 'login'  
 
 LOGGING = {

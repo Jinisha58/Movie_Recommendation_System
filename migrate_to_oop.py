@@ -46,7 +46,7 @@ from . import views_new
 from .views.movie_views import HomeView, MovieDetailView, MovieSearchView, MovieFilterAjaxView, ActorMoviesView
 from .views.user_views import (
     WatchlistView, AddToWatchlistView, RemoveFromWatchlistView,
-    RecommendationsView, ProfileView, MyRatingsView, RateMovieView,
+    ProfileView, MyRatingsView, RateMovieView,
     RegisterView, CustomLogoutView, LandingView
 )
 
@@ -61,7 +61,7 @@ urlpatterns = [
     path('watchlist/', WatchlistView.as_view(), name='watchlist'),
     path('add-to-watchlist/<int:movie_id>/', AddToWatchlistView.as_view(), name='add_to_watchlist'),
     path('remove-from-watchlist/<int:movie_id>/', RemoveFromWatchlistView.as_view(), name='remove_from_watchlist'),
-    path('recommendations/', RecommendationsView.as_view(), name='recommendations'),
+    
     path('actor/<int:actor_id>/', ActorMoviesView.as_view(), name='actor_movies'),
     path('profile/', ProfileView.as_view(), name='profile'),
     path('my-ratings/', MyRatingsView.as_view(), name='my_ratings'),
@@ -98,14 +98,12 @@ def test_services():
     try:
         from movies.services.movie_service import MovieService
         from movies.services.user_service import UserService
-        from movies.services.recommendation_service import RecommendationService
-        from movies.services.recommendation_engine import RecommendationEngine
+        
         
         # Test instantiation
         movie_service = MovieService()
         user_service = UserService()
-        recommendation_service = RecommendationService()
-        recommendation_engine = RecommendationEngine()
+        
         
         print("✅ All services imported and instantiated successfully")
         return True
@@ -118,7 +116,7 @@ def test_views():
     """Test that all views can be imported"""
     try:
         from movies.views.movie_views import HomeView, MovieDetailView, MovieSearchView
-        from movies.views.user_views import WatchlistView, RecommendationsView, ProfileView
+        from movies.views.user_views import WatchlistView, ProfileView
         
         print("✅ All views imported successfully")
         return True

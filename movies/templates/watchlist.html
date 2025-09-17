@@ -51,7 +51,7 @@
             {% endfor %}
         </div>
         
-        {% if has_few_movies and recommended_movies %}
+        {% if recommended_movies %}
         <div class="recommendations-section mt-5">
             <div class="section-header">
                 <h2>Recommended for You</h2>
@@ -59,6 +59,7 @@
             </div>
             <div class="movie-grid">
                 {% for movie in recommended_movies %}
+                {% if movie.similarity_score and movie.similarity_score|floatformat:2 != '0.00' %}
                 <div class="movie-card">
                     <a href="{% url 'movie_detail' movie.id %}">
                         <div class="movie-poster">
@@ -78,10 +79,16 @@
                             <div class="movie-meta">
                                 <span class="release-year">{{ movie.release_date|slice:":4"|default:"N/A" }}</span>
                                 <span class="rating"><i class="fas fa-star"></i> {{ movie.vote_average|floatformat:1 }}</span>
+                                {% if movie.similarity_score is not None %}
+                                <span class="badge bg-primary ms-2" title="Genre similarity score">
+                                    Match: {{ movie.similarity_score|floatformat:2 }}
+                                </span>
+                                {% endif %}
                             </div>
                         </div>
                     </a>
                 </div>
+                {% endif %}
                 {% endfor %}
             </div>
         </div>

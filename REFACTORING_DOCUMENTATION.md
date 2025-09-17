@@ -38,8 +38,7 @@ movies/
 │   ├── __init__.py
 │   ├── movie_service.py           # Movie-related business logic
 │   ├── user_service.py            # User-related business logic
-│   ├── recommendation_service.py  # Recommendation algorithms
-│   └── recommendation_engine.py   # Advanced recommendation engine
+│   └── recommendation_engine.py   # Stubbed recommendation engine (disabled)
 ├── views/
 │   ├── __init__.py
 │   ├── movie_views.py             # Movie-related class-based views
@@ -72,22 +71,8 @@ movies/
   - `save_user_rating(user_id, movie_id, rating)`: Save user rating
   - `get_user_statistics(user_id)`: Get user statistics
 
-#### RecommendationService
-- **Purpose**: Handles recommendation algorithms
-- **Key Methods**:
-  - `get_cosine_similarity_recommendations()`: Content-based recommendations
-  - `get_recommendations_from_ratings()`: Rating-based recommendations
-  - `get_global_featured()`: Global featured movies
-  - `get_featured_for_user()`: Personalized featured movies
-
 #### RecommendationEngine
-- **Purpose**: Advanced recommendation system with multiple algorithms
-- **Key Methods**:
-  - `get_personalized_recommendations()`: Main recommendation method
-  - `_content_based_recommendations()`: Content-based filtering
-  - `_collaborative_filtering_recommendations()`: Collaborative filtering
-  - `_hybrid_recommendations()`: Hybrid approach
-  - `get_similar_movies()`: Find similar movies
+- **Purpose**: Disabled. Engine is stubbed; methods return empty lists.
 
 ### 2. Class-Based Views
 
@@ -102,7 +87,6 @@ movies/
 - `WatchlistView`: User's watchlist
 - `AddToWatchlistView`: Add to watchlist functionality
 - `RemoveFromWatchlistView`: Remove from watchlist functionality
-- `RecommendationsView`: Personalized recommendations
 - `ProfileView`: User profile page
 - `MyRatingsView`: User's ratings page
 - `RateMovieView`: Rate movie functionality
@@ -191,7 +175,6 @@ class HomeView(TemplateView):
         super().__init__(**kwargs)
         self.movie_service = MovieService()
         self.user_service = UserService()
-        self.recommendation_service = RecommendationService()
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -199,12 +182,7 @@ class HomeView(TemplateView):
         # Get trending movies
         trending_movies = self.movie_service.get_trending_movies(limit=10)
         
-        # Get personalized recommendations for authenticated users
-        if self.request.user.is_authenticated:
-            recommendations = self.recommendation_service.get_featured_for_user(
-                self.request.user.id, limit=12
-            )
-            context['featured_for_you'] = recommendations
+        # Personalized recommendations are currently disabled
         
         context['trending_movies'] = trending_movies
         return context
@@ -213,26 +191,9 @@ class HomeView(TemplateView):
 ### Using Services Independently
 
 ```python
-# In a management command or background task
 movie_service = MovieService()
 user_service = UserService()
-recommendation_engine = RecommendationEngine()
-
-# Get user's watchlist
 watchlist = user_service.get_user_watchlist(user_id=123)
-
-# Get personalized recommendations
-recommendations = recommendation_engine.get_personalized_recommendations(
-    user_id=123, 
-    algorithm='hybrid',
-    limit=20
-)
-
-# Get similar movies
-similar_movies = recommendation_engine.get_similar_movies(
-    movie_id=456, 
-    limit=10
-)
 ```
 
 ## Performance Improvements
